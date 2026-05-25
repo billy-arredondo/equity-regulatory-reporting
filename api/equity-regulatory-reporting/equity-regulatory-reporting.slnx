@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Folder Name="/src/Api/">
+    <Project Path="equity-regulatory-reporting.Api/equity-regulatory-reporting.Api.csproj" />
+  </Folder>
+  <Folder Name="/src/Core/">
+    <Project Path="equity-regulatory-reporting.Application/equity-regulatory-reporting.Application.csproj" />
+    <Project Path="equity-regulatory-reporting.Domain/equity-regulatory-reporting.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/Infrastructure/">
+    <Project Path="equity-regulatory-reporting.Persistence/equity-regulatory-reporting.Persistence.csproj" />
+  </Folder>
+  <Folder Name="/tests/" />
+</Solution>
