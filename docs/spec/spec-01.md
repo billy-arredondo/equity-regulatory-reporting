@@ -75,6 +75,8 @@ El proyecto está dentro de un mismo repositorio.
 
 ### Frontend
 
+> **Regla de proyecto:** Nunca usar `npm` para instalar dependencias ni ejecutar scripts. Usar exclusivamente `pnpm`. Esto aplica a todos los comandos (`pnpm install`, `pnpm add`, `pnpm run`, etc.). Motivo: vulnerabilidad de seguridad identificada en `npm`.
+
 - Ya he creado el proyecto base en la carpeta `/app`
 - Debe tener un sidebar en el lado izquierdo colapsable: cuando está colapsado se apreciarán solo los íconos de las opciones, y persistirá en `localStorage` vía Zustand
 - Debe tener theme light/dark con persistencia en `localStorage` vía Zustand
