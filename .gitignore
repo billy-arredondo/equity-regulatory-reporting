@@ -1,0 +1,6 @@
+# Agent skills — regenerable with `npx skills install`
+.agents/
+.claude/skills/
+
+# Local Claude Code settings (personal overrides)
+.claude/settings.local.json
