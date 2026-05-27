@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:17-alpine
+    container_name: equity_regulatory_postgres
+    environment:
+      POSTGRES_DB: equity_regulatory
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - equity_regulatory_pgdata:/var/lib/postgresql/data
+
+volumes:
+  equity_regulatory_pgdata:

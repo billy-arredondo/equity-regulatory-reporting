@@ -8,7 +8,19 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.8" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.OpenApi" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\equity-regulatory-reporting.Application\equity-regulatory-reporting.Application.csproj" />
+    <ProjectReference Include="..\equity-regulatory-reporting.Infrastructure\equity-regulatory-reporting.Infrastructure.csproj" />
+    <ProjectReference Include="..\equity-regulatory-reporting.Persistence\equity-regulatory-reporting.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
