@@ -24,16 +24,28 @@ public class DatabaseSeeder(
 
     private async Task SeedRolesAsync()
     {
-        var roles = new[]
-        {
-            new ApplicationRole { Name = "Admin", NormalizedName = "ADMIN", Permissions = Permission.Admin },
-            new ApplicationRole
+        ApplicationRole[] roles =
+        [
+            new ()
+            {
+                Name = "Admin",
+                NormalizedName = "ADMIN",
+                Permissions = Permission.Admin
+            },
+            new ()
             {
                 Name = "Guest",
                 NormalizedName = "GUEST",
-                Permissions = Permission.PersonRead | Permission.ParticipationRead | Permission.BoardRead | Permission.ReportRead
+                Permissions =
+                    Permission.PersonRead |
+                    Permission.ParticipationRead |
+                    Permission.BoardRead |
+                    Permission.ReportRead |
+                    Permission.CountryRead |
+                    Permission.DocumentTypeRead |
+                    Permission.PositionRead
             }
-        };
+        ];
 
         foreach (var role in roles)
         {

@@ -1,7 +1,7 @@
-using equity_regulatory_reporting.Application.Auth.Commands.Login;
-using equity_regulatory_reporting.Application.Auth.Commands.RefreshToken;
-using equity_regulatory_reporting.Application.Auth.Commands.Register;
-using equity_regulatory_reporting.Application.Auth.Commands.RevokeToken;
+using equity_regulatory_reporting.Application.Features.Auth.Commands.Login;
+using equity_regulatory_reporting.Application.Features.Auth.Commands.RefreshToken;
+using equity_regulatory_reporting.Application.Features.Auth.Commands.Register;
+using equity_regulatory_reporting.Application.Features.Auth.Commands.RevokeToken;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

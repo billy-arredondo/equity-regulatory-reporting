@@ -66,7 +66,21 @@ Api             ← Application, Infrastructure, Persistence
 
 **Domain** — Entities (`Person`, `Country`, `DocumentType`, `DocumentTypePersonType`, `Participation`, `Position`, `BoardMember`), enums (`PersonType`, `Permission`), and `AuditableEntity` base class. No external dependencies.
 
-**Application** — CQRS via MediatR. Each feature lives in `Auth/Commands/<Name>/` with three files: `<Name>Command.cs` (record + result record), `<Name>CommandHandler.cs`, `<Name>CommandValidator.cs`. Interfaces (`IRepository<T>`, `ICurrentUser`, `IJwtTokenService`, etc.) are defined here and implemented elsewhere. The `ValidationBehavior<,>` MediatR pipeline behavior runs all `IValidator<TRequest>` automatically before every handler — **handlers never call validation explicitly**.
+**Application** — CQRS via MediatR. All features live under `Features/<FeatureName>/` with this internal layout:
+
+```
+Features/<FeatureName>/
+├── Commands/<CommandName>/   ← <Name>Command.cs, <Name>CommandHandler.cs, <Name>CommandValidator.cs
+├── Queries/<QueryName>/      ← <Name>Query.cs, <Name>QueryHandler.cs
+├── Dtos/                     ← per-feature record DTOs
+└── MappingProfile.cs         ← AutoMapper Profile (scanned automatically)
+```
+
+Implemented features: `Auth`, `Persons`, `Countries`, `DocumentTypes`, `Positions`, `PersonTypes`, `Participations`, `BoardMembers`, `Users`.
+
+Command records and their result types are co-located in the same `<Name>Command.cs` file. Interfaces (`IRepository<T>`, `ICurrentUser`, `IJwtTokenService`, `IIdentityService`, etc.) are defined in `Common/Interfaces/` and implemented in other layers. The `ValidationBehavior<,>` MediatR pipeline behavior runs all `IValidator<TRequest>` automatically before every handler — **handlers never call validation explicitly**.
+
+`Common/Models/` contains `PageRequest` and `PagedResult<T>` (used by all list queries). `Common/Exceptions/NotFoundException` is thrown by handlers and mapped to HTTP 404 by `NotFoundExceptionHandler`.
 
 **Persistence** — `ApplicationDbContext` extends `IdentityDbContext<ApplicationUser, ApplicationRole, Guid>`. One `IEntityTypeConfiguration<T>` per entity in `Configurations/`. Identity classes (`ApplicationUser`, `ApplicationRole`, `RefreshToken`) live in `Persistence/Identity/`. Generic `Repository<T>` is registered as an open generic (`AddScoped(typeof(IRepository<>), typeof(Repository<>))`). `AuditableEntityInterceptor` fills audit fields from `ICurrentUser` on every `SaveChanges`.
 

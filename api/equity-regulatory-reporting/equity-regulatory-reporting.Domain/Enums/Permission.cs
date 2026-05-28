@@ -29,5 +29,20 @@ public enum Permission
     UserWrite  = 1 << 12,  // 4096
     UserDelete = 1 << 13,  // 8192
 
+    // Countries
+    CountryRead   = 1 << 14,  // 16384
+    CountryWrite  = 1 << 15,  // 32768
+    CountryDelete = 1 << 16,  // 65536
+
+    // Document types
+    DocumentTypeRead   = 1 << 17,  // 131072
+    DocumentTypeWrite  = 1 << 18,  // 262144
+    DocumentTypeDelete = 1 << 19,  // 524288
+
+    // Positions
+    PositionRead   = 1 << 20,  // 1048576
+    PositionWrite  = 1 << 21,  // 2097152
+    PositionDelete = 1 << 22,  // 4194304
+
     Admin = ~0
 }

@@ -1,7 +1,10 @@
 using equity_regulatory_reporting.Application.Common.Interfaces;
+using equity_regulatory_reporting.Application.Common.Models;
+using equity_regulatory_reporting.Application.Features.Users.Dtos;
 using equity_regulatory_reporting.Domain.Enums;
 using equity_regulatory_reporting.Persistence.Identity;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace equity_regulatory_reporting.Infrastructure.Services;
 
@@ -43,6 +46,12 @@ public class IdentityService(
             : (false, Guid.Empty, "Invalid credentials.");
     }
 
+    public async Task<string?> GetEmailAsync(Guid userId)
+    {
+        var user = await userManager.FindByIdAsync(userId.ToString());
+        return user?.Email;
+    }
+
     public async Task<IEnumerable<string>> GetRolesAsync(Guid userId)
     {
         var user = await userManager.FindByIdAsync(userId.ToString());
@@ -63,5 +72,85 @@ public class IdentityService(
         }
 
         return permissions;
+    }
+
+    public async Task<PagedResult<UserDto>> ListUsersAsync(int page, int pageSize, string? search, CancellationToken cancellationToken = default)
+    {
+        var query = userManager.Users;
+
+        if (!string.IsNullOrWhiteSpace(search))
+            query = query.Where(u => u.Email!.Contains(search) || u.FirstName.Contains(search) || u.LastName.Contains(search));
+
+        var total = await query.CountAsync(cancellationToken);
+        var users = await query
+            .OrderBy(u => u.Email)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToListAsync(cancellationToken);
+
+        var dtos = new List<UserDto>();
+        foreach (var user in users)
+        {
+            var roles = await userManager.GetRolesAsync(user);
+            dtos.Add(new UserDto(user.Id, user.Email!, user.FirstName, user.LastName, roles.ToList()));
+        }
+
+        return new PagedResult<UserDto>(dtos, page, pageSize, total);
+    }
+
+    public async Task<UserDto?> GetUserByIdAsync(Guid userId, CancellationToken cancellationToken = default)
+    {
+        var user = await userManager.FindByIdAsync(userId.ToString());
+        if (user is null) return null;
+
+        var roles = await userManager.GetRolesAsync(user);
+        return new UserDto(user.Id, user.Email!, user.FirstName, user.LastName, roles.ToList());
+    }
+
+    public async Task<(bool Success, string? Error)> UpdateUserAsync(Guid userId, string firstName, string lastName, CancellationToken cancellationToken = default)
+    {
+        var user = await userManager.FindByIdAsync(userId.ToString());
+        if (user is null) return (false, "User not found.");
+
+        user.FirstName = firstName;
+        user.LastName = lastName;
+
+        var result = await userManager.UpdateAsync(user);
+        return result.Succeeded
+            ? (true, null)
+            : (false, string.Join("; ", result.Errors.Select(e => e.Description)));
+    }
+
+    public async Task<(bool Success, string? Error)> DeleteUserAsync(Guid userId, CancellationToken cancellationToken = default)
+    {
+        var user = await userManager.FindByIdAsync(userId.ToString());
+        if (user is null) return (false, "User not found.");
+
+        var result = await userManager.DeleteAsync(user);
+        return result.Succeeded
+            ? (true, null)
+            : (false, string.Join("; ", result.Errors.Select(e => e.Description)));
+    }
+
+    public async Task<(bool Success, string? Error)> AssignRoleAsync(Guid userId, string role, CancellationToken cancellationToken = default)
+    {
+        var user = await userManager.FindByIdAsync(userId.ToString());
+        if (user is null) return (false, "User not found.");
+
+        if (!await roleManager.RoleExistsAsync(role))
+            return (false, $"Role '{role}' does not exist.");
+
+        var currentRoles = await userManager.GetRolesAsync(user);
+        await userManager.RemoveFromRolesAsync(user, currentRoles);
+
+        var result = await userManager.AddToRoleAsync(user, role);
+        return result.Succeeded
+            ? (true, null)
+            : (false, string.Join("; ", result.Errors.Select(e => e.Description)));
+    }
+
+    public async Task<IEnumerable<string>> GetAllRolesAsync(CancellationToken cancellationToken = default)
+    {
+        return await roleManager.Roles.Select(r => r.Name!).ToListAsync(cancellationToken);
     }
 }
