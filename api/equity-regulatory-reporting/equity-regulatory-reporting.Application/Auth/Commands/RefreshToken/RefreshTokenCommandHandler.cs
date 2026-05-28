@@ -19,7 +19,7 @@ public class RefreshTokenCommandHandler(
         var roles = (await identityService.GetRolesAsync(userId)).ToList();
         var permissions = await identityService.GetEffectivePermissionsAsync(userId);
 
-        var accessToken = jwtTokenService.GenerateAccessToken(userId, string.Empty, roles, permissions);
+        var accessToken = jwtTokenService.GenerateAccessToken(userId, email, roles, permissions);
 
         return new RefreshTokenResult(true, accessToken, newRawToken, null);
     }

@@ -1,5 +1,4 @@
 using equity_regulatory_reporting.Application.Common.Interfaces;
-using equity_regulatory_reporting.Domain.Enums;
 using MediatR;
 
 namespace equity_regulatory_reporting.Application.Auth.Commands.Login;
