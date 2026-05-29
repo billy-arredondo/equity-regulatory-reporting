@@ -6,6 +6,7 @@ using equity_regulatory_reporting.Persistence.Extensions;
 using equity_regulatory_reporting.Persistence.Seeders;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,23 +22,28 @@ builder.Services.AddProblemDetails();
 
 builder.Services.AddScoped<DatabaseSeeder>();
 
-builder.Services.AddSwaggerGen(c =>
+builder.Services.AddOpenApi(options =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Equity Regulatory Reporting API", Version = "v1" });
-
-    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    options.AddDocumentTransformer((document, context, ct) =>
     {
-        Name = "Authorization",
-        Type = SecuritySchemeType.Http,
-        Scheme = "bearer",
-        BearerFormat = "JWT",
-        In = ParameterLocation.Header,
-        Description = "Enter your JWT access token."
+        document.Info = new OpenApiInfo { Title = "Equity Regulatory Reporting API", Version = "v1" };
+        document.Components ??= new OpenApiComponents();
+        document.Components.SecuritySchemes ??= new Dictionary<string, IOpenApiSecurityScheme>();
+        document.Components.SecuritySchemes["Bearer"] = new OpenApiSecurityScheme
+        {
+            Type = SecuritySchemeType.Http,
+            Scheme = "bearer",
+            BearerFormat = "JWT",
+            In = ParameterLocation.Header,
+            Description = "Enter your JWT access token."
+        };
+        return Task.CompletedTask;
     });
 
-    c.AddSecurityRequirement(doc => new OpenApiSecurityRequirement
+    options.AddOperationTransformer((operation, context, ct) =>
     {
-        { new OpenApiSecuritySchemeReference("Bearer", doc), [] }
+        (operation.Security ??= []).Add(new OpenApiSecurityRequirement { [new OpenApiSecuritySchemeReference("Bearer")] = [] });
+        return Task.CompletedTask;
     });
 });
 
@@ -52,8 +58,8 @@ if (app.Environment.IsDevelopment())
     var seeder = scope.ServiceProvider.GetRequiredService<DatabaseSeeder>();
     await seeder.SeedAsync();
 
-    app.UseSwagger();
-    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Equity Regulatory Reporting v1"));
+    app.MapOpenApi();
+    app.MapScalarApiReference();
 }
 
 app.UseExceptionHandler();

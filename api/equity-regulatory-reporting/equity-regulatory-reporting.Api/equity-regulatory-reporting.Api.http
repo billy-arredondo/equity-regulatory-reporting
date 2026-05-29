@@ -1,6 +1,0 @@
-@equity_regulatory_reporting.Api_HostAddress = http://localhost:5074
-
-GET {{equity_regulatory_reporting.Api_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
