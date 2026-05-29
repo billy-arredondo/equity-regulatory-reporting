@@ -18,6 +18,7 @@ public class UpdatePositionCommandHandler(IRepository<Position> repository)
             throw new ValidationException("The 'No position' sentinel record cannot be renamed.");
 
         position.Name = request.Name;
+        position.ReportCode = request.ReportCode.Trim();
 
         repository.Update(position);
         await repository.SaveChangesAsync(cancellationToken);

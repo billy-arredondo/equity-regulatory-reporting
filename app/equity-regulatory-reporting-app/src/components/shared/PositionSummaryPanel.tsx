@@ -16,10 +16,16 @@ export function PositionSummaryPanel({ positionId, open, onOpenChange }: Props) 
       title="Ficha del cargo"
       isLoading={isLoading}
       hasData={!!data}
+      detailPath={`/positions/${positionId}`}
       open={open}
       onOpenChange={onOpenChange}
     >
-      {data && <SummaryRow label="Nombre" value={data.name} />}
+      {data && (
+        <>
+          <SummaryRow label="Nombre" value={data.name} />
+          <SummaryRow label="Código de reporte" value={data.reportCode} />
+        </>
+      )}
     </SummaryPanel>
   );
 }

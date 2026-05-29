@@ -14,6 +14,7 @@ import type { PositionDto } from "@/types/position";
 
 const columns: Column<PositionDto>[] = [
   { key: "name", header: "Nombre", render: (r) => r.name, priority: "high" },
+  { key: "reportCode", header: "Código", render: (r) => r.reportCode, priority: "medium" },
 ];
 
 const PAGE_SIZE = 25;

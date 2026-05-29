@@ -8,5 +8,7 @@ public class UpdatePositionCommandValidator : AbstractValidator<UpdatePositionCo
     {
         RuleFor(x => x.Id).NotEmpty();
         RuleFor(x => x.Name).NotEmpty().MaximumLength(100);
+        RuleFor(x => x.ReportCode).NotEmpty().Length(2).Matches(@"^\d{2}$")
+            .WithMessage("ReportCode must be exactly 2 digits (e.g. '01').");
     }
 }

@@ -59,9 +59,15 @@ export function PositionDetailPage() {
         }
       />
       <div className="mt-4 max-w-lg">
-        <div className="space-y-1.5">
-          <p className="text-xs text-muted-foreground">Nombre</p>
-          <p className="flex h-9 items-center text-sm font-medium">{data.name}</p>
+        <div className="grid grid-cols-2 gap-3">
+          <div className="space-y-1.5">
+            <p className="text-xs text-muted-foreground">Nombre</p>
+            <p className="flex h-9 items-center text-sm font-medium">{data.name}</p>
+          </div>
+          <div className="space-y-1.5">
+            <p className="text-xs text-muted-foreground">Código de reporte</p>
+            <p className="flex h-9 items-center text-sm font-medium">{data.reportCode}</p>
+          </div>
         </div>
       </div>
       <ConfirmDialog

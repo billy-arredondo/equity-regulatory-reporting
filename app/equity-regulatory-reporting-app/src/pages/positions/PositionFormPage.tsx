@@ -18,7 +18,7 @@ export function PositionFormPage() {
   const isEdit = !!id;
   const navigate = useNavigate();
   const [initialized, setInitialized] = useState(false);
-  const [form, setForm] = useState<CreatePositionDto>({ name: "" });
+  const [form, setForm] = useState<CreatePositionDto>({ name: "", reportCode: "" });
 
   const { data } = usePositionDetailQuery(id ?? "");
   const { mutate: create, isPending: isCreating } = useCreatePositionMutation();
@@ -29,7 +29,7 @@ export function PositionFormPage() {
 
   useEffect(() => {
     if (!isEdit || initialized || !data) return;
-    setForm({ name: data.name });
+    setForm({ name: data.name, reportCode: data.reportCode });
     setInitialized(true);
   }, [isEdit, data, initialized]);
 
@@ -58,7 +58,7 @@ export function PositionFormPage() {
             id="name"
             value={form.name}
             disabled={isProtected}
-            onChange={(e) => setForm({ name: e.target.value })}
+            onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
             required
           />
           {isProtected && (
@@ -66,6 +66,18 @@ export function PositionFormPage() {
               Este cargo del sistema no puede modificarse.
             </p>
           )}
+        </div>
+        <div className="space-y-2">
+          <Label htmlFor="reportCode">Código de reporte</Label>
+          <Input
+            id="reportCode"
+            value={form.reportCode}
+            disabled={isProtected}
+            onChange={(e) => setForm((f) => ({ ...f, reportCode: e.target.value }))}
+            maxLength={2}
+            placeholder="00"
+            required
+          />
         </div>
         <div className="mt-6 flex gap-2">
           <ActionButton type="submit" isLoading={isPending} disabled={isProtected}>

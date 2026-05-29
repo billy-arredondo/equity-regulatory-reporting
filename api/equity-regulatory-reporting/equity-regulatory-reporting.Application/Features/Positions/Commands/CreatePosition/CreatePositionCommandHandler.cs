@@ -9,7 +9,7 @@ public class CreatePositionCommandHandler(IRepository<Position> repository)
 {
     public async Task<Guid> Handle(CreatePositionCommand request, CancellationToken cancellationToken)
     {
-        var position = new Position { Name = request.Name };
+        var position = new Position { Name = request.Name, ReportCode = request.ReportCode.Trim() };
 
         await repository.AddAsync(position, cancellationToken);
         await repository.SaveChangesAsync(cancellationToken);
