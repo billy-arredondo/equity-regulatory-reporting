@@ -1,30 +1,20 @@
 import type { AccessTokenVm } from "@/types/auth";
+import { useAuthStore } from "@/stores/auth.store";
 
 type RequestInitExtended = RequestInit & { _retry?: boolean };
 
 let refreshPromise: Promise<string | null> | null = null;
 
 function getAccessToken(): string | null {
-  try {
-    const raw = localStorage.getItem("auth-storage");
-    if (!raw) return null;
-    const parsed = JSON.parse(raw) as { state?: { accessToken?: string } };
-    return parsed.state?.accessToken ?? null;
-  } catch {
-    return null;
-  }
+  return useAuthStore.getState().accessToken;
 }
 
-function setAccessToken(token: string): void {
+function isTokenExpired(token: string): boolean {
   try {
-    const raw = localStorage.getItem("auth-storage");
-    const parsed = raw
-      ? (JSON.parse(raw) as { state?: Record<string, unknown> })
-      : { state: {} };
-    parsed.state = { ...parsed.state, accessToken: token };
-    localStorage.setItem("auth-storage", JSON.stringify(parsed));
+    const payload = JSON.parse(atob(token.split(".")[1].replace(/-/g, "+").replace(/_/g, "/")));
+    return typeof payload.exp === "number" && payload.exp * 1000 < Date.now();
   } catch {
-    // ignore
+    return true;
   }
 }
 
@@ -36,7 +26,7 @@ async function attemptRefresh(): Promise<string | null> {
     });
     if (!res.ok) return null;
     const data = (await res.json()) as AccessTokenVm;
-    setAccessToken(data.accessToken);
+    useAuthStore.getState().setAccessToken(data.accessToken);
     return data.accessToken;
   } catch {
     return null;
@@ -44,7 +34,7 @@ async function attemptRefresh(): Promise<string | null> {
 }
 
 function clearSession(): void {
-  localStorage.removeItem("auth-storage");
+  useAuthStore.getState().clearAuth();
   window.location.href = "/login";
 }
 
@@ -52,7 +42,19 @@ async function http<T = void>(
   path: string,
   init: RequestInitExtended = {},
 ): Promise<T> {
-  const accessToken = getAccessToken();
+  let accessToken = getAccessToken();
+
+  if (accessToken && isTokenExpired(accessToken) && !init._retry) {
+    if (!refreshPromise) {
+      refreshPromise = attemptRefresh().finally(() => { refreshPromise = null; });
+    }
+    accessToken = await refreshPromise;
+    if (!accessToken) {
+      clearSession();
+      throw new Error("Session expired.");
+    }
+  }
+
   const headers = new Headers(init.headers);
 
   if (!headers.has("Content-Type") && !(init.body instanceof FormData)) {

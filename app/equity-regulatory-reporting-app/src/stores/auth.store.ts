@@ -39,12 +39,6 @@ function decodeUser(token: string): JwtUser | null {
   };
 }
 
-function isTokenExpired(token: string): boolean {
-  const claims = parseJwt(token);
-  if (!claims || typeof claims["exp"] !== "number") return true;
-  return claims["exp"] * 1000 < Date.now();
-}
-
 interface AuthState {
   accessToken: string | null;
   user: JwtUser | null;
@@ -74,11 +68,7 @@ export const useAuthStore = create<AuthState>()(
       partialize: (state) => ({ accessToken: state.accessToken }),
       onRehydrateStorage: () => (state) => {
         if (state?.accessToken) {
-          if (isTokenExpired(state.accessToken)) {
-            state.clearAuth();
-          } else {
-            state.user = decodeUser(state.accessToken);
-          }
+          state.user = decodeUser(state.accessToken);
         }
       },
     },

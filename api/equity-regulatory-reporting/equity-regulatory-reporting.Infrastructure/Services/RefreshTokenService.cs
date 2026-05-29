@@ -18,6 +18,8 @@ public class RefreshTokenService(ApplicationDbContext context, IOptions<JwtOptio
         var rawToken = GenerateRawToken();
         var tokenHash = Hash(rawToken);
 
+        await PurgeExpiredAsync(userId);
+
         context.RefreshTokens.Add(new RefreshToken
         {
             UserId = userId,
@@ -38,6 +40,8 @@ public class RefreshTokenService(ApplicationDbContext context, IOptions<JwtOptio
 
         if (stored is null || !stored.IsActive)
             return (false, Guid.Empty, string.Empty);
+
+        await PurgeExpiredAsync(stored.UserId);
 
         var newRawToken = GenerateRawToken();
         var newHash = Hash(newRawToken);
@@ -67,6 +71,11 @@ public class RefreshTokenService(ApplicationDbContext context, IOptions<JwtOptio
         stored.RevokedAt = DateTimeOffset.UtcNow;
         await context.SaveChangesAsync();
     }
+
+    private Task PurgeExpiredAsync(Guid userId) =>
+        context.RefreshTokens
+            .Where(t => t.UserId == userId && t.ExpiresAt < DateTimeOffset.UtcNow)
+            .ExecuteDeleteAsync();
 
     private static string GenerateRawToken()
         => Convert.ToBase64String(RandomNumberGenerator.GetBytes(64));
