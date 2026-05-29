@@ -9,7 +9,7 @@ public class DocumentTypesMappingProfile : Profile
     public DocumentTypesMappingProfile()
     {
         CreateMap<DocumentType, DocumentTypeDto>()
-            .ForMember(d => d.AllowedPersonTypes,
+            .ForCtorParam(nameof(DocumentTypeDto.AllowedPersonTypes),
                 opt => opt.MapFrom(s => s.AllowedPersonTypes.Select(a => a.PersonType).ToList()));
     }
 }
