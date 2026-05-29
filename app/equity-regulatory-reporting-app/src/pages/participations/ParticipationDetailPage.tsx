@@ -7,6 +7,7 @@ import { PageLoading } from "@/components/shared/LoadingSpinner";
 import { PermissionGuard } from "@/components/shared/PermissionGuard";
 import { Permission } from "@/lib/permissions";
 import { useParticipationDetailQuery, useDeleteParticipationMutation } from "@/hooks/useParticipations";
+import { personBaseRoute } from "@/lib/person-routes";
 
 function formatDate(d: string) {
   return new Date(d + "T00:00:00").toLocaleDateString("es-CO", {
@@ -60,7 +61,7 @@ export function ParticipationDetailPage() {
         <div className="space-y-1.5">
           <p className="text-xs text-muted-foreground">Empresa</p>
           <p className="flex h-9 items-center text-sm font-medium">
-            <Link to={`/persons/${data.companyId}`} className="hover:underline">
+            <Link to={`${personBaseRoute(data.companyPersonType)}/${data.companyId}`} className="hover:underline">
               {data.companyName}
             </Link>
           </p>
@@ -68,7 +69,7 @@ export function ParticipationDetailPage() {
         <div className="space-y-1.5">
           <p className="text-xs text-muted-foreground">Accionista</p>
           <p className="flex h-9 items-center text-sm font-medium">
-            <Link to={`/persons/${data.shareholderId}`} className="hover:underline">
+            <Link to={`${personBaseRoute(data.shareholderPersonType)}/${data.shareholderId}`} className="hover:underline">
               {data.shareholderName}
             </Link>
           </p>

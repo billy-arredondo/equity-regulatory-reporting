@@ -10,7 +10,11 @@ import { Permission } from "@/lib/permissions";
 import { personTypeLabel } from "@/lib/person-types";
 import { usePersonDetailQuery, useDeletePersonMutation } from "@/hooks/usePersons";
 
-export function PersonDetailPage() {
+interface Props {
+  baseRoute: string;
+}
+
+export function PersonDetailPage({ baseRoute }: Props) {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { data, isLoading } = usePersonDetailQuery(id ?? "");
@@ -23,17 +27,17 @@ export function PersonDetailPage() {
   return (
     <div>
       <Link
-        to="/persons"
+        to={baseRoute}
         className="mb-5 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
-        ← Volver a personas
+        ← Volver
       </Link>
       <PageHeader
         title={data.name}
         actions={
           <PermissionGuard perm={Permission.PersonWrite}>
             <div className="flex gap-2">
-              <Button variant="outline" size="sm" render={<Link to={`/persons/${id}/edit`} />}>
+              <Button variant="outline" size="sm" render={<Link to={`${baseRoute}/${id}/edit`} />}>
                 Editar
               </Button>
               <PermissionGuard perm={Permission.PersonDelete}>
@@ -90,7 +94,7 @@ export function PersonDetailPage() {
             <p className="text-xs text-muted-foreground">Representante</p>
             <p className="flex h-9 items-center text-sm">
               <Link
-                to={`/persons/${data.representativeId}`}
+                to={`/people/${data.representativeId}`}
                 className="font-medium hover:underline"
               >
                 {data.representativeName}
@@ -114,7 +118,7 @@ export function PersonDetailPage() {
         description={`Se eliminará "${data.name}". Esta acción no se puede deshacer.`}
         confirmLabel="Eliminar"
         onConfirm={() => {
-          remove(id!, { onSuccess: () => void navigate("/persons") });
+          remove(id!, { onSuccess: () => void navigate(baseRoute) });
           setConfirmOpen(false);
         }}
       />

@@ -1,7 +1,10 @@
+import type { PersonTypeValue } from "@/lib/person-types";
+
 export interface BoardMemberDto {
   id: string;
   companyId: string;
   companyName: string;
+  companyPersonType: PersonTypeValue;
   memberId: string;
   memberName: string;
   primaryPositionId: string;

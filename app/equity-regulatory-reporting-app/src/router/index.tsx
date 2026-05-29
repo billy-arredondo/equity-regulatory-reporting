@@ -6,6 +6,9 @@ import { Permission } from "@/lib/permissions";
 import { LoginPage } from "@/pages/auth/LoginPage";
 import { CountriesPage } from "@/pages/countries";
 import { PersonsPage } from "@/pages/persons";
+import { PeoplePage } from "@/pages/people";
+import { CompaniesPage } from "@/pages/companies";
+import { EntitiesPage } from "@/pages/entities";
 import { PersonTypesPage } from "@/pages/person-types";
 import { DocumentTypesPage } from "@/pages/document-types";
 import { ParticipationsPage } from "@/pages/participations";
@@ -29,7 +32,10 @@ export function AppRouter() {
 
       <Route element={<AuthGuard />}>
         <Route element={<AppLayout />}>
-          <Route index element={<Navigate to="/persons" replace />} />
+          <Route index element={<Navigate to="/people" replace />} />
+          <Route path="people/*" element={<PeoplePage />} />
+          <Route path="companies/*" element={<CompaniesPage />} />
+          <Route path="entities/*" element={<EntitiesPage />} />
           <Route path="persons/*" element={<PersonsPage />} />
           <Route path="person-types" element={<PersonTypesPage />} />
           <Route path="document-types/*" element={<DocumentTypesPage />} />

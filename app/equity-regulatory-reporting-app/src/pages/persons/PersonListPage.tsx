@@ -10,37 +10,21 @@ import { PermissionGuard } from "@/components/shared/PermissionGuard";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { usePersonsQuery } from "@/hooks/usePersons";
 import { Permission } from "@/lib/permissions";
-import { PERSON_TYPE_OPTIONS, personTypeLabel, type PersonTypeValue } from "@/lib/person-types";
+import { PersonType, type PersonTypeValue } from "@/lib/person-types";
 import type { PersonDto } from "@/types/person";
 
-const columns: Column<PersonDto>[] = [
-  { key: "name", header: "Nombre", render: (r) => r.name, priority: "high" },
-  {
-    key: "personType",
-    header: "Tipo",
-    render: (r) => personTypeLabel(r.personType),
-    priority: "medium",
-  },
-  {
-    key: "documentNumber",
-    header: "Documento",
-    render: (r) => r.documentNumber,
-    priority: "medium",
-  },
-  {
-    key: "reportFlag",
-    header: "En reporte",
-    render: (r) => r.reportFlag ? <Check className="size-4" /> : null,
-    priority: "low",
-  },
-];
+interface Props {
+  personType: PersonTypeValue;
+  title: string;
+  baseRoute: string;
+  newLabel: string;
+}
 
 const PAGE_SIZE = 25;
 
-export function PersonListPage() {
+export function PersonListPage({ personType, title, baseRoute, newLabel }: Props) {
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState("");
-  const [personType, setPersonType] = useState<PersonTypeValue | "">("");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [panelOpen, setPanelOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 1024px)");
@@ -49,8 +33,23 @@ export function PersonListPage() {
     page,
     pageSize: PAGE_SIZE,
     search: search || undefined,
-    personType: personType !== "" ? personType : undefined,
+    personType,
   });
+
+  const showReportFlag = personType !== PersonType.Natural;
+
+  const columns: Column<PersonDto>[] = [
+    { key: "name", header: "Nombre", render: (r) => r.name, priority: "high" },
+    { key: "documentNumber", header: "Documento", render: (r) => r.documentNumber, priority: "medium" },
+    ...(showReportFlag
+      ? [{
+          key: "reportFlag" as const,
+          header: "En reporte",
+          render: (r: PersonDto) => r.reportFlag ? <Check className="size-4" /> : null,
+          priority: "low" as const,
+        }]
+      : []),
+  ];
 
   function handleRowClick(row: PersonDto) {
     setSelectedId(row.id);
@@ -60,41 +59,23 @@ export function PersonListPage() {
   return (
     <div>
       <PageHeader
-        title="Personas"
+        title={title}
         actions={
           <PermissionGuard perm={Permission.PersonWrite}>
-            <Button size="sm" render={<Link to="/persons/new" />}>
+            <Button size="sm" render={<Link to={`${baseRoute}/new`} />}>
               <Plus className="mr-1 h-4 w-4" />
-              <span className="hidden sm:inline">Nueva persona</span>
+              <span className="hidden sm:inline">{newLabel}</span>
             </Button>
           </PermissionGuard>
         }
       />
-      <div className="mb-4 flex flex-wrap gap-2">
+      <div className="mb-4">
         <Input
-          placeholder="Buscar personas..."
+          placeholder={`Buscar ${title.toLowerCase()}...`}
           value={search}
-          onChange={(e) => {
-            setSearch(e.target.value);
-            setPage(1);
-          }}
+          onChange={(e) => { setSearch(e.target.value); setPage(1); }}
           className="max-w-xs"
         />
-        <select
-          value={personType}
-          onChange={(e) => {
-            setPersonType(e.target.value as PersonTypeValue | "");
-            setPage(1);
-          }}
-          className="h-9 rounded-md border border-input bg-background px-3 text-sm"
-        >
-          <option value="">Todos los tipos</option>
-          {PERSON_TYPE_OPTIONS.map((o) => (
-            <option key={o.value} value={o.value}>
-              {personTypeLabel(o.value)}
-            </option>
-          ))}
-        </select>
       </div>
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_288px] lg:items-start">
         <DataTable
@@ -112,7 +93,7 @@ export function PersonListPage() {
         {isDesktop ? (
           selectedId ? (
             <div className="lg:sticky lg:top-4">
-              <PersonSummaryPanel personId={selectedId} />
+              <PersonSummaryPanel personId={selectedId} baseRoute={baseRoute} />
             </div>
           ) : (
             <div className="lg:sticky lg:top-4 flex items-center justify-center rounded-md border border-dashed px-4 py-12 text-center text-sm text-muted-foreground">
@@ -123,6 +104,7 @@ export function PersonListPage() {
           selectedId && (
             <PersonSummaryPanel
               personId={selectedId}
+              baseRoute={baseRoute}
               open={panelOpen}
               onOpenChange={setPanelOpen}
             />

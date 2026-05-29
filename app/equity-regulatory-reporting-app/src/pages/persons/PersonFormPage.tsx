@@ -10,12 +10,7 @@ import { ActionButton } from "@/elements/ActionButton";
 import { FieldTip } from "@/elements/FieldTip";
 import { SelectField } from "@/elements/SelectField";
 import { SearchableCombobox, type ComboboxOption } from "@/elements/SearchableCombobox";
-import {
-  PERSON_TYPE_OPTIONS,
-  PersonType,
-  personTypeLabel,
-  type PersonTypeValue,
-} from "@/lib/person-types";
+import { PersonType, type PersonTypeValue } from "@/lib/person-types";
 import { useDebounce } from "@/hooks/useDebounce";
 import { usePersonDetailQuery, useCreatePersonMutation, useUpdatePersonMutation } from "@/hooks/usePersons";
 import { usePersonsQuery } from "@/hooks/usePersons";
@@ -26,10 +21,16 @@ import type { CreatePersonDto } from "@/types/person";
 const CIIU_REGEX = /^\d{4}$/;
 const PAGE_SIZE = 25;
 
-function emptyForm(): CreatePersonDto {
+interface Props {
+  personType: PersonTypeValue;
+  baseRoute: string;
+  entityLabel: string;
+}
+
+function emptyForm(personType: PersonTypeValue): CreatePersonDto {
   return {
     name: "",
-    personType: PersonType.Natural,
+    personType,
     ciiu: "",
     address: "",
     documentTypeId: "",
@@ -42,12 +43,12 @@ function emptyForm(): CreatePersonDto {
   };
 }
 
-export function PersonFormPage() {
+export function PersonFormPage({ personType, baseRoute, entityLabel }: Props) {
   const { id } = useParams<{ id: string }>();
   const isEdit = !!id;
   const navigate = useNavigate();
   const [initialized, setInitialized] = useState(false);
-  const [form, setForm] = useState<CreatePersonDto>(emptyForm());
+  const [form, setForm] = useState<CreatePersonDto>(emptyForm(personType));
   const [docNumError, setDocNumError] = useState<string | null>(null);
   const [repSearch, setRepSearch] = useState("");
   const [countrySearch, setCountrySearch] = useState("");
@@ -56,6 +57,9 @@ export function PersonFormPage() {
   const { mutate: create, isPending: isCreating } = useCreatePersonMutation();
   const { mutate: update, isPending: isUpdating } = useUpdatePersonMutation();
   const isPending = isCreating || isUpdating;
+
+  const requiresRepresentative =
+    personType === PersonType.Legal || personType === PersonType.LegalEntity;
 
   const { data: representatives, isLoading: repLoading } = usePersonsQuery({
     page: 1,
@@ -76,7 +80,7 @@ export function PersonFormPage() {
   });
 
   const filteredDocTypes = documentTypes?.items.filter((dt) =>
-    dt.allowedPersonTypes.includes(form.personType),
+    dt.allowedPersonTypes.includes(personType),
   ) ?? [];
 
   const countryOptions: ComboboxOption[] = (countries?.items ?? []).map((c) => ({
@@ -90,9 +94,6 @@ export function PersonFormPage() {
     label: p.name,
     sublabel: p.documentNumber,
   }));
-
-  const requiresRepresentative =
-    form.personType === PersonType.Legal || form.personType === PersonType.LegalEntity;
 
   const selectedDocType = documentTypes?.items.find((dt) => dt.id === form.documentTypeId);
 
@@ -117,7 +118,7 @@ export function PersonFormPage() {
     if (!isEdit || initialized || !editData) return;
     setForm({
       name: editData.name,
-      personType: editData.personType,
+      personType,
       ciiu: editData.ciiu,
       address: editData.address,
       documentTypeId: editData.documentTypeId,
@@ -129,19 +130,7 @@ export function PersonFormPage() {
       internalLocation: editData.internalLocation,
     });
     setInitialized(true);
-  }, [isEdit, editData, initialized]);
-
-  function handlePersonTypeChange(value: PersonTypeValue) {
-    setForm((f) => ({
-      ...f,
-      personType: value,
-      documentTypeId: "",
-      documentNumber: "",
-      reportFlag: value === PersonType.Natural ? false : f.reportFlag,
-      representativeId: value === PersonType.Natural ? null : f.representativeId,
-    }));
-    setDocNumError(null);
-  }
+  }, [isEdit, editData, initialized, personType]);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -149,21 +138,21 @@ export function PersonFormPage() {
     if (requiresRepresentative && !form.representativeId) return;
     const dto: CreatePersonDto = { ...form, entityCode: form.entityCode || null };
     if (isEdit) {
-      update({ id: id!, dto }, { onSuccess: () => void navigate(`/persons/${id}`) });
+      update({ id: id!, dto }, { onSuccess: () => void navigate(`${baseRoute}/${id}`) });
     } else {
-      create(dto, { onSuccess: (res) => void navigate(`/persons/${res.id}`) });
+      create(dto, { onSuccess: (res) => void navigate(`${baseRoute}/${res.id}`) });
     }
   }
 
   return (
     <div>
       <Link
-        to={isEdit ? `/persons/${id}` : "/persons"}
+        to={isEdit ? `${baseRoute}/${id}` : baseRoute}
         className="mb-5 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
-        ← {isEdit ? "Volver al detalle" : "Volver a personas"}
+        ← {isEdit ? "Volver al detalle" : `Volver a ${entityLabel}s`}
       </Link>
-      <PageHeader title={isEdit ? "Editar persona" : "Nueva persona"} />
+      <PageHeader title={isEdit ? `Editar ${entityLabel}` : `Nueva ${entityLabel}`} />
       <form onSubmit={handleSubmit} className="mt-4 max-w-lg space-y-4">
         <div className="space-y-2">
           <Label>Nombre / Razón social</Label>
@@ -171,14 +160,6 @@ export function PersonFormPage() {
             value={form.name}
             onChange={(e) => setForm((f) => ({ ...f, name: e.target.value }))}
             required
-          />
-        </div>
-        <div className="space-y-2">
-          <Label>Tipo de persona</Label>
-          <SelectField
-            value={form.personType}
-            onChange={handlePersonTypeChange}
-            options={PERSON_TYPE_OPTIONS.map((o) => ({ value: o.value, label: personTypeLabel(o.value) }))}
           />
         </div>
         <div className="space-y-2">
@@ -272,7 +253,7 @@ export function PersonFormPage() {
             )}
           </div>
         )}
-        {form.personType !== PersonType.Natural && (
+        {requiresRepresentative && (
           <div className="flex items-center gap-2">
             <div
               role="checkbox"
@@ -309,7 +290,7 @@ export function PersonFormPage() {
               (requiresRepresentative && !form.representativeId)
             }
           >
-            {isEdit ? "Guardar cambios" : "Crear persona"}
+            {isEdit ? "Guardar cambios" : `Crear ${entityLabel}`}
           </ActionButton>
           <Button type="button" variant="ghost" onClick={() => void navigate(-1)}>
             Cancelar

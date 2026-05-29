@@ -7,6 +7,7 @@ import { PageLoading } from "@/components/shared/LoadingSpinner";
 import { PermissionGuard } from "@/components/shared/PermissionGuard";
 import { Permission } from "@/lib/permissions";
 import { useBoardMemberDetailQuery, useDeleteBoardMemberMutation } from "@/hooks/useBoardMembers";
+import { personBaseRoute } from "@/lib/person-routes";
 
 export function BoardMemberDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -52,7 +53,7 @@ export function BoardMemberDetailPage() {
         <div className="space-y-1.5">
           <p className="text-xs text-muted-foreground">Empresa</p>
           <p className="flex h-9 items-center text-sm font-medium">
-            <Link to={`/persons/${data.companyId}`} className="hover:underline">
+            <Link to={`${personBaseRoute(data.companyPersonType)}/${data.companyId}`} className="hover:underline">
               {data.companyName}
             </Link>
           </p>
@@ -60,7 +61,7 @@ export function BoardMemberDetailPage() {
         <div className="space-y-1.5">
           <p className="text-xs text-muted-foreground">Miembro</p>
           <p className="flex h-9 items-center text-sm font-medium">
-            <Link to={`/persons/${data.memberId}`} className="hover:underline">
+            <Link to={`/people/${data.memberId}`} className="hover:underline">
               {data.memberName}
             </Link>
           </p>

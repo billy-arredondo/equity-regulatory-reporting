@@ -5,11 +5,12 @@ import { usePersonDetailQuery } from "@/hooks/usePersons";
 
 interface Props {
   personId: string;
+  baseRoute: string;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 }
 
-export function PersonSummaryPanel({ personId, open, onOpenChange }: Props) {
+export function PersonSummaryPanel({ personId, baseRoute, open, onOpenChange }: Props) {
   const { data, isLoading } = usePersonDetailQuery(personId);
   return (
     <SummaryPanel
@@ -17,7 +18,7 @@ export function PersonSummaryPanel({ personId, open, onOpenChange }: Props) {
       title="Ficha de la persona"
       isLoading={isLoading}
       hasData={!!data}
-      detailPath={`/persons/${personId}`}
+      detailPath={`${baseRoute}/${personId}`}
       open={open}
       onOpenChange={onOpenChange}
     >

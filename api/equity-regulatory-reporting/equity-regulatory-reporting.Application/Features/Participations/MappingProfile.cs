@@ -10,6 +10,8 @@ public class ParticipationsMappingProfile : Profile
     {
         CreateMap<Participation, ParticipationDto>()
             .ForMember(d => d.CompanyName, opt => opt.MapFrom(s => s.Company.Name))
-            .ForMember(d => d.ShareholderName, opt => opt.MapFrom(s => s.Shareholder.Name));
+            .ForCtorParam(nameof(ParticipationDto.CompanyPersonType), opt => opt.MapFrom(s => s.Company.PersonType))
+            .ForMember(d => d.ShareholderName, opt => opt.MapFrom(s => s.Shareholder.Name))
+            .ForCtorParam(nameof(ParticipationDto.ShareholderPersonType), opt => opt.MapFrom(s => s.Shareholder.PersonType));
     }
 }

@@ -7,6 +7,7 @@ import {
   FolderOpen,
   Globe,
   LayoutDashboard,
+  Landmark,
   LogOut,
   TrendingUp,
   Users,
@@ -29,11 +30,22 @@ interface NavItem {
 }
 
 const topNavItems: NavItem[] = [
-  { to: "/persons",       icon: <Users className="h-4 w-4" />,         label: "Personas",          perm: Permission.PersonRead },
-  { to: "/person-types",  icon: <LayoutDashboard className="h-4 w-4" />, label: "Tipos de persona", perm: Permission.PersonRead },
-  { to: "/participations",icon: <TrendingUp className="h-4 w-4" />,    label: "Participaciones",   perm: Permission.ParticipationRead },
-  { to: "/board",         icon: <Building2 className="h-4 w-4" />,     label: "Junta directiva",   perm: Permission.BoardRead },
+  { to: "/participations", icon: <TrendingUp className="h-4 w-4" />, label: "Participaciones", perm: Permission.ParticipationRead },
+  { to: "/board",          icon: <Building2 className="h-4 w-4" />,  label: "Junta directiva", perm: Permission.BoardRead },
 ];
+
+const personItems: NavItem[] = [
+  { to: "/people",    icon: <Users className="h-4 w-4" />,    label: "Personas Naturales", perm: Permission.PersonRead },
+  { to: "/companies", icon: <Building2 className="h-4 w-4" />, label: "Personas Jurídicas", perm: Permission.PersonRead },
+  { to: "/entities",  icon: <Landmark className="h-4 w-4" />,  label: "Entes Jurídicos",    perm: Permission.PersonRead },
+];
+
+const personTypeItem: NavItem = {
+  to: "/person-types",
+  icon: <LayoutDashboard className="h-4 w-4" />,
+  label: "Tipos de persona",
+  perm: Permission.PersonRead,
+};
 
 const generalItems: NavItem[] = [
   { to: "/document-types", icon: <FileText className="h-4 w-4" />, label: "Tipos de documento", perm: Permission.DocumentTypeRead },
@@ -64,6 +76,7 @@ export function Sidebar({ onNavigate }: SidebarProps) {
   const user = useAuthStore((s) => s.user);
   const { mutate: logout } = useLogoutMutation();
   const navigate = useNavigate();
+  const [personasOpen, setPersonasOpen] = useState(true);
   const [generalOpen, setGeneralOpen] = useState(false);
 
   function renderNavItem(item: NavItem) {
@@ -82,6 +95,41 @@ export function Sidebar({ onNavigate }: SidebarProps) {
     );
   }
 
+  function renderGroup(
+    label: string,
+    icon: React.ReactNode,
+    items: NavItem[],
+    isOpen: boolean,
+    toggle: () => void,
+    extra?: React.ReactNode,
+  ) {
+    return (
+      <>
+        {!collapsed && (
+          <button
+            onClick={toggle}
+            className={cn(
+              "flex w-full items-center gap-3 rounded-md px-2 py-2 text-sm transition-colors",
+              "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sidebar-foreground",
+            )}
+          >
+            {icon}
+            <span className="flex-1 truncate text-left">{label}</span>
+            <ChevronDown
+              className={cn("h-3.5 w-3.5 shrink-0 transition-transform duration-200", isOpen && "rotate-180")}
+            />
+          </button>
+        )}
+        {(collapsed || isOpen) && (
+          <div className={cn("space-y-1", !collapsed && "pl-3")}>
+            {items.map((item) => renderNavItem(item))}
+            {extra}
+          </div>
+        )}
+      </>
+    );
+  }
+
   return (
     <div
       className={cn(
@@ -96,31 +144,36 @@ export function Sidebar({ onNavigate }: SidebarProps) {
       </div>
 
       <nav className="flex-1 space-y-1 overflow-y-auto p-2">
-        {topNavItems.map(renderNavItem)}
+        {topNavItems.map((item) => renderNavItem(item))}
+
+        {/* Personas group */}
+        {renderGroup(
+          "Personas",
+          <Users className="h-4 w-4 shrink-0" />,
+          personItems,
+          personasOpen,
+          () => setPersonasOpen((o) => !o),
+          /* Divider + Tipos de persona inside the group */
+          !collapsed ? (
+            <>
+              <hr className="my-1 border-border" />
+              {renderNavItem(personTypeItem)}
+            </>
+          ) : (
+            renderNavItem(personTypeItem)
+          ),
+        )}
 
         {/* General group */}
-        {!collapsed && (
-          <button
-            onClick={() => setGeneralOpen((o) => !o)}
-            className={cn(
-              "flex w-full items-center gap-3 rounded-md px-2 py-2 text-sm transition-colors",
-              "hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sidebar-foreground",
-            )}
-          >
-            <FolderOpen className="h-4 w-4 shrink-0" />
-            <span className="flex-1 truncate text-left">General</span>
-            <ChevronDown
-              className={cn("h-3.5 w-3.5 shrink-0 transition-transform duration-200", generalOpen && "rotate-180")}
-            />
-          </button>
-        )}
-        {(collapsed || generalOpen) && (
-          <div className={cn("space-y-1", !collapsed && "pl-3")}>
-            {generalItems.map(renderNavItem)}
-          </div>
+        {renderGroup(
+          "General",
+          <FolderOpen className="h-4 w-4 shrink-0" />,
+          generalItems,
+          generalOpen,
+          () => setGeneralOpen((o) => !o),
         )}
 
-        {bottomNavItems.map(renderNavItem)}
+        {bottomNavItems.map((item) => renderNavItem(item))}
       </nav>
 
       <div className="border-t p-2 space-y-1">

@@ -73,5 +73,5 @@ export function useDeletePositionMutation() {
 }
 
 export function useCreatePositionDto(): CreatePositionDto {
-  return { name: "" };
+  return { name: "", reportCode: "" };
 }
