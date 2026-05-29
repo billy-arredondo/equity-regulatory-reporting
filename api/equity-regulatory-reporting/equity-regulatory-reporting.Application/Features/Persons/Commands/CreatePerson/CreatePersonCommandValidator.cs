@@ -1,3 +1,4 @@
+using equity_regulatory_reporting.Domain.Enums;
 using FluentValidation;
 
 namespace equity_regulatory_reporting.Application.Features.Persons.Commands.CreatePerson;
@@ -15,5 +16,8 @@ public class CreatePersonCommandValidator : AbstractValidator<CreatePersonComman
         RuleFor(x => x.EntityCode).MaximumLength(50).When(x => x.EntityCode is not null);
         RuleFor(x => x.CountryId).NotEmpty();
         RuleFor(x => x.InternalLocation).NotEmpty().MaximumLength(500);
+        RuleFor(x => x.ReportFlag).Equal(false)
+            .When(x => x.PersonType == PersonType.Natural)
+            .WithMessage("Natural persons cannot be included in the report.");
     }
 }

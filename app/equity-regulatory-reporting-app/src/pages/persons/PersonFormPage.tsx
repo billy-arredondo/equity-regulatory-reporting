@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Check } from "lucide-react";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { ActionButton } from "@/elements/ActionButton";
 import { FieldTip } from "@/elements/FieldTip";
@@ -15,6 +16,7 @@ import {
   personTypeLabel,
   type PersonTypeValue,
 } from "@/lib/person-types";
+import { useDebounce } from "@/hooks/useDebounce";
 import { usePersonDetailQuery, useCreatePersonMutation, useUpdatePersonMutation } from "@/hooks/usePersons";
 import { usePersonsQuery } from "@/hooks/usePersons";
 import { useCountriesQuery } from "@/hooks/useCountries";
@@ -94,11 +96,19 @@ export function PersonFormPage() {
 
   const selectedDocType = documentTypes?.items.find((dt) => dt.id === form.documentTypeId);
 
-  function validateDocNumber(value: string) {
+  const debouncedDocNumber = useDebounce(form.documentNumber, 400);
+
+  const docNumValid =
+    form.documentNumber.length > 0 &&
+    (!selectedDocType?.validationRegex ||
+      new RegExp(selectedDocType.validationRegex).test(form.documentNumber));
+
+  useEffect(() => {
+    if (!debouncedDocNumber) { setDocNumError(null); return; }
     if (!selectedDocType?.validationRegex) { setDocNumError(null); return; }
     const regex = new RegExp(selectedDocType.validationRegex);
-    setDocNumError(regex.test(value) ? null : "Formato inválido para este tipo de documento.");
-  }
+    setDocNumError(regex.test(debouncedDocNumber) ? null : "Formato inválido para este tipo de documento.");
+  }, [debouncedDocNumber, selectedDocType?.validationRegex]);
 
   const handleRepSearch = useCallback((s: string) => setRepSearch(s), []);
   const handleCountrySearch = useCallback((s: string) => setCountrySearch(s), []);
@@ -127,6 +137,7 @@ export function PersonFormPage() {
       personType: value,
       documentTypeId: "",
       documentNumber: "",
+      reportFlag: value === PersonType.Natural ? false : f.reportFlag,
       representativeId: value === PersonType.Natural ? null : f.representativeId,
     }));
     setDocNumError(null);
@@ -181,14 +192,17 @@ export function PersonFormPage() {
         </div>
         <div className="space-y-2">
           <Label>Número de documento</Label>
-          <Input
-            value={form.documentNumber}
-            onChange={(e) => {
-              setForm((f) => ({ ...f, documentNumber: e.target.value }));
-            }}
-            onBlur={(e) => validateDocNumber(e.target.value)}
-            required
-          />
+          <div className="relative">
+            <Input
+              value={form.documentNumber}
+              onChange={(e) => setForm((f) => ({ ...f, documentNumber: e.target.value }))}
+              className={docNumValid ? "pr-8" : undefined}
+              required
+            />
+            {docNumValid && (
+              <Check className="pointer-events-none absolute right-2.5 top-1/2 size-4 -translate-y-1/2 text-foreground" />
+            )}
+          </div>
           {docNumError && <p className="text-xs text-destructive">{docNumError}</p>}
         </div>
         <div className="space-y-2">
@@ -258,30 +272,32 @@ export function PersonFormPage() {
             )}
           </div>
         )}
-        <div className="flex items-center gap-2">
-          <div
-            role="checkbox"
-            aria-checked={form.reportFlag}
-            tabIndex={0}
-            onClick={() => setForm((f) => ({ ...f, reportFlag: !f.reportFlag }))}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" || e.key === " ") {
-                e.preventDefault();
-                setForm((f) => ({ ...f, reportFlag: !f.reportFlag }));
-              }
-            }}
-          >
-            <Checkbox
-              id="reportFlag"
-              checked={form.reportFlag}
-              className="pointer-events-none"
-              tabIndex={-1}
-            />
+        {form.personType !== PersonType.Natural && (
+          <div className="flex items-center gap-2">
+            <div
+              role="checkbox"
+              aria-checked={form.reportFlag}
+              tabIndex={0}
+              onClick={() => setForm((f) => ({ ...f, reportFlag: !f.reportFlag }))}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setForm((f) => ({ ...f, reportFlag: !f.reportFlag }));
+                }
+              }}
+            >
+              <Checkbox
+                id="reportFlag"
+                checked={form.reportFlag}
+                className="pointer-events-none"
+                tabIndex={-1}
+              />
+            </div>
+            <Label htmlFor="reportFlag" className="cursor-pointer font-normal">
+              Incluir como raíz en cálculo de acciones
+            </Label>
           </div>
-          <Label htmlFor="reportFlag" className="cursor-pointer font-normal">
-            Incluir como raíz en cálculo de acciones
-          </Label>
-        </div>
+        )}
         <div className="mt-6 flex gap-2">
           <ActionButton
             type="submit"

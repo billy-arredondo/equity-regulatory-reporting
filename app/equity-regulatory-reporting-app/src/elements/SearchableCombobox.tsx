@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Check, ChevronsUpDown, X } from "lucide-react";
-import { buttonVariants } from "@/components/ui/button";
+import { Check, ChevronDown, X } from "lucide-react";
 import {
   Command,
   CommandEmpty,
@@ -64,8 +63,7 @@ export function SearchableCombobox({
         aria-expanded={open}
         disabled={disabled}
         className={cn(
-          buttonVariants({ variant: "outline" }),
-          "w-full justify-between font-normal",
+          "flex h-8 w-full items-center justify-between rounded-lg border border-input bg-transparent pl-2.5 pr-2 py-1 text-sm whitespace-nowrap transition-colors outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:cursor-not-allowed disabled:opacity-50 dark:bg-input/30 dark:hover:bg-input/50",
         )}
       >
         <span className="truncate">
@@ -93,7 +91,7 @@ export function SearchableCombobox({
               <X className="h-3.5 w-3.5" />
             </span>
           )}
-          <ChevronsUpDown className="h-3.5 w-3.5 text-muted-foreground" />
+          <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground" />
         </div>
       </PopoverTrigger>
       <PopoverContent className="w-[var(--radix-popover-trigger-width)] p-0" align="start">

@@ -26,15 +26,21 @@ export function SelectField<T extends string | number>({
   placeholder = "Seleccionar...",
   disabled,
 }: Props<T>) {
-  const safeValue = value != null && value !== "" ? String(value) : undefined;
+  const safeValue = value != null && value !== "" ? String(value) : null;
+  const selectItems = options.map((o) => ({ value: String(o.value), label: o.label }));
 
   return (
     <Select
       value={safeValue}
-      onValueChange={(v) => onChange(v as T)}
+      items={selectItems}
+      onValueChange={(v) => {
+        if (v == null) return;
+        const matched = options.find((o) => String(o.value) === v);
+        onChange((matched?.value ?? v) as T);
+      }}
       disabled={disabled}
     >
-      <SelectTrigger>
+      <SelectTrigger className="w-full">
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent>

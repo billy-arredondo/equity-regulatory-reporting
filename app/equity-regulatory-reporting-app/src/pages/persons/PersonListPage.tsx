@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Plus } from "lucide-react";
+import { Check, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Badge } from "@/components/ui/badge";
 import { DataTable, type Column } from "@/components/shared/DataTable";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { PersonSummaryPanel } from "@/components/shared/PersonSummaryPanel";
@@ -31,11 +30,7 @@ const columns: Column<PersonDto>[] = [
   {
     key: "reportFlag",
     header: "En reporte",
-    render: (r) => (
-      <Badge variant={r.reportFlag ? "default" : "secondary"}>
-        {r.reportFlag ? "Sí" : "No"}
-      </Badge>
-    ),
+    render: (r) => r.reportFlag ? <Check className="size-4" /> : null,
     priority: "low",
   },
 ];
