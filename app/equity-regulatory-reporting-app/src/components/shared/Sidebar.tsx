@@ -4,12 +4,13 @@ import {
   Building2,
   ChevronDown,
   FileText,
-  FolderOpen,
   Globe,
   LayoutDashboard,
   Landmark,
   LogOut,
+  Settings2,
   TrendingUp,
+  UserRoundCog,
   Users,
 } from "lucide-react";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -40,17 +41,11 @@ const personItems: NavItem[] = [
   { to: "/entities",  icon: <Landmark className="h-4 w-4" />,  label: "Entes Jurídicos",    perm: Permission.PersonRead },
 ];
 
-const personTypeItem: NavItem = {
-  to: "/person-types",
-  icon: <LayoutDashboard className="h-4 w-4" />,
-  label: "Tipos de persona",
-  perm: Permission.PersonRead,
-};
-
 const generalItems: NavItem[] = [
-  { to: "/document-types", icon: <FileText className="h-4 w-4" />, label: "Tipos de documento", perm: Permission.DocumentTypeRead },
-  { to: "/countries",      icon: <Globe className="h-4 w-4" />,    label: "Países",              perm: Permission.CountryRead },
-  { to: "/positions",      icon: <BookOpen className="h-4 w-4" />, label: "Cargos",              perm: Permission.PositionRead },
+  { to: "/person-types",   icon: <LayoutDashboard className="h-4 w-4" />, label: "Tipos de persona",   perm: Permission.PersonRead },
+  { to: "/document-types", icon: <FileText className="h-4 w-4" />,        label: "Tipos de documento", perm: Permission.DocumentTypeRead },
+  { to: "/countries",      icon: <Globe className="h-4 w-4" />,           label: "Países",             perm: Permission.CountryRead },
+  { to: "/positions",      icon: <BookOpen className="h-4 w-4" />,        label: "Cargos",             perm: Permission.PositionRead },
 ];
 
 const bottomNavItems: NavItem[] = [
@@ -120,12 +115,17 @@ export function Sidebar({ onNavigate }: SidebarProps) {
             />
           </button>
         )}
-        {(collapsed || isOpen) && (
-          <div className={cn("space-y-1", !collapsed && "pl-3")}>
-            {items.map((item) => renderNavItem(item))}
-            {extra}
+        <div className={cn(
+          "grid transition-[grid-template-rows] duration-200 ease-in-out",
+          (collapsed || isOpen) ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+        )}>
+          <div className={cn("overflow-hidden min-h-0", !collapsed && "pl-3")}>
+            <div className="space-y-1">
+              {items.map((item) => renderNavItem(item))}
+              {extra}
+            </div>
           </div>
-        )}
+        </div>
       </>
     );
   }
@@ -149,25 +149,16 @@ export function Sidebar({ onNavigate }: SidebarProps) {
         {/* Personas group */}
         {renderGroup(
           "Personas",
-          <Users className="h-4 w-4 shrink-0" />,
+          <UserRoundCog className="h-4 w-4 shrink-0" />,
           personItems,
           personasOpen,
           () => setPersonasOpen((o) => !o),
-          /* Divider + Tipos de persona inside the group */
-          !collapsed ? (
-            <>
-              <hr className="my-1 border-border" />
-              {renderNavItem(personTypeItem)}
-            </>
-          ) : (
-            renderNavItem(personTypeItem)
-          ),
         )}
 
         {/* General group */}
         {renderGroup(
           "General",
-          <FolderOpen className="h-4 w-4 shrink-0" />,
+          <Settings2 className="h-4 w-4 shrink-0" />,
           generalItems,
           generalOpen,
           () => setGeneralOpen((o) => !o),
