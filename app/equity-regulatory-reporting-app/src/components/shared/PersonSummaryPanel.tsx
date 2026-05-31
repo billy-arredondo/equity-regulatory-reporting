@@ -1,5 +1,5 @@
 import { Users } from "lucide-react";
-import { personTypeLabel } from "@/lib/person-types";
+import { PersonType, personTypeLabel } from "@/lib/person-types";
 import { SummaryPanel, SummaryRow } from "./SummaryPanel";
 import { usePersonDetailQuery } from "@/hooks/usePersons";
 
@@ -30,6 +30,9 @@ export function PersonSummaryPanel({ personId, baseRoute, open, onOpenChange }: 
           <SummaryRow label="País" value={data.countryName} />
           {data.representativeName && (
             <SummaryRow label="Representante" value={data.representativeName} />
+          )}
+          {data.personType !== PersonType.Natural && (
+            <SummaryRow label="En reporte" value={data.reportFlag ? "Sí" : "No"} />
           )}
         </>
       )}

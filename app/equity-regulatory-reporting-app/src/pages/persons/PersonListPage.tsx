@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Check, Plus } from "lucide-react";
+import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { DataTable, type Column } from "@/components/shared/DataTable";
@@ -10,7 +10,7 @@ import { PermissionGuard } from "@/components/shared/PermissionGuard";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { usePersonsQuery } from "@/hooks/usePersons";
 import { Permission } from "@/lib/permissions";
-import { PersonType, type PersonTypeValue } from "@/lib/person-types";
+import { type PersonTypeValue } from "@/lib/person-types";
 import type { PersonDto } from "@/types/person";
 
 interface Props {
@@ -36,19 +36,9 @@ export function PersonListPage({ personType, title, baseRoute, newLabel }: Props
     personType,
   });
 
-  const showReportFlag = personType !== PersonType.Natural;
-
   const columns: Column<PersonDto>[] = [
     { key: "name", header: "Nombre", render: (r) => r.name, priority: "high" },
     { key: "documentNumber", header: "Documento", render: (r) => r.documentNumber, priority: "medium" },
-    ...(showReportFlag
-      ? [{
-          key: "reportFlag" as const,
-          header: "En reporte",
-          render: (r: PersonDto) => r.reportFlag ? <Check className="size-4" /> : null,
-          priority: "low" as const,
-        }]
-      : []),
   ];
 
   function handleRowClick(row: PersonDto) {
