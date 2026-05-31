@@ -8,6 +8,7 @@
     <Project Path="equity-regulatory-reporting.Domain/equity-regulatory-reporting.Domain.csproj" />
   </Folder>
   <Folder Name="/src/Infrastructure/">
+    <Project Path="equity-regulatory-reporting.Infrastructure/equity-regulatory-reporting.Infrastructure.csproj" />
     <Project Path="equity-regulatory-reporting.Persistence/equity-regulatory-reporting.Persistence.csproj" />
   </Folder>
   <Folder Name="/tests/" />
