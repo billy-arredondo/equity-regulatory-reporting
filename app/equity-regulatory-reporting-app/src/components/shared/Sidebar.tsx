@@ -9,7 +9,6 @@ import {
   Landmark,
   LogOut,
   Settings2,
-  TrendingUp,
   UserRoundCog,
   Users,
 } from "lucide-react";
@@ -29,11 +28,6 @@ interface NavItem {
   label: string;
   perm: number;
 }
-
-const topNavItems: NavItem[] = [
-  { to: "/participations", icon: <TrendingUp className="h-4 w-4" />, label: "Participaciones", perm: Permission.ParticipationRead },
-  { to: "/board",          icon: <Building2 className="h-4 w-4" />,  label: "Junta directiva", perm: Permission.BoardRead },
-];
 
 const personItems: NavItem[] = [
   { to: "/people",    icon: <Users className="h-4 w-4" />,    label: "Personas Naturales", perm: Permission.PersonRead },
@@ -144,8 +138,6 @@ export function Sidebar({ onNavigate }: SidebarProps) {
       </div>
 
       <nav className="flex-1 space-y-1 overflow-y-auto p-2">
-        {topNavItems.map((item) => renderNavItem(item))}
-
         {/* Personas group */}
         {renderGroup(
           "Personas",

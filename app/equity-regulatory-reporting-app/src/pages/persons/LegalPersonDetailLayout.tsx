@@ -1,24 +1,38 @@
 import { useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, NavLink, Route, Routes, useNavigate, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { ConfirmDialog } from "@/components/shared/ConfirmDialog";
 import { PageLoading } from "@/components/shared/LoadingSpinner";
 import { PermissionGuard } from "@/components/shared/PermissionGuard";
 import { Permission } from "@/lib/permissions";
+import { cn } from "@/lib/utils";
 import { usePersonDetailQuery, useDeletePersonMutation } from "@/hooks/usePersons";
 import { PersonDetailFields } from "./PersonDetailFields";
+import { PersonParticipationsSection } from "@/pages/participations";
+import { PersonBoardSection } from "@/pages/board";
 
 interface Props {
   baseRoute: string;
 }
 
-export function PersonDetailPage({ baseRoute }: Props) {
+function tabClass({ isActive }: { isActive: boolean }) {
+  return cn(
+    "-mb-px border-b-2 px-4 py-2 text-sm font-medium transition-colors",
+    isActive
+      ? "border-primary text-foreground"
+      : "border-transparent text-muted-foreground hover:border-muted-foreground/40 hover:text-foreground",
+  );
+}
+
+export function LegalPersonDetailLayout({ baseRoute }: Props) {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { data, isLoading } = usePersonDetailQuery(id ?? "");
   const { mutate: remove, isPending } = useDeletePersonMutation();
   const [confirmOpen, setConfirmOpen] = useState(false);
+
+  const basePath = `${baseRoute}/${id}`;
 
   if (isLoading) return <PageLoading />;
   if (!data) return <p className="text-muted-foreground">Persona no encontrada.</p>;
@@ -36,7 +50,7 @@ export function PersonDetailPage({ baseRoute }: Props) {
         actions={
           <PermissionGuard perm={Permission.PersonWrite}>
             <div className="flex gap-2">
-              <Button variant="outline" size="sm" render={<Link to={`${baseRoute}/${id}/edit`} />}>
+              <Button variant="outline" size="sm" render={<Link to={`${basePath}/edit`} />}>
                 Editar
               </Button>
               <PermissionGuard perm={Permission.PersonDelete}>
@@ -53,7 +67,49 @@ export function PersonDetailPage({ baseRoute }: Props) {
           </PermissionGuard>
         }
       />
-      <PersonDetailFields data={data} />
+
+      {/* Tab strip */}
+      <div className="mt-4 mb-6 flex border-b">
+        <NavLink to={basePath} end className={tabClass}>
+          General
+        </NavLink>
+        <PermissionGuard perm={Permission.ParticipationRead}>
+          <NavLink to={`${basePath}/participations`} className={tabClass}>
+            Participaciones
+          </NavLink>
+        </PermissionGuard>
+        <PermissionGuard perm={Permission.BoardRead}>
+          <NavLink to={`${basePath}/board`} className={tabClass}>
+            Junta directiva
+          </NavLink>
+        </PermissionGuard>
+      </div>
+
+      {/* Tab content */}
+      <Routes>
+        <Route index element={<PersonDetailFields data={data} />} />
+        <Route
+          path="participations/*"
+          element={
+            <PersonParticipationsSection
+              companyId={id!}
+              companyName={data.name}
+              basePath={`${basePath}/participations`}
+            />
+          }
+        />
+        <Route
+          path="board/*"
+          element={
+            <PersonBoardSection
+              companyId={id!}
+              companyName={data.name}
+              basePath={`${basePath}/board`}
+            />
+          }
+        />
+      </Routes>
+
       <ConfirmDialog
         open={confirmOpen}
         onOpenChange={setConfirmOpen}

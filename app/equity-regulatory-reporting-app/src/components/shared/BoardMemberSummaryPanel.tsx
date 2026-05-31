@@ -4,11 +4,12 @@ import { useBoardMemberDetailQuery } from "@/hooks/useBoardMembers";
 
 interface Props {
   boardMemberId: string;
+  basePath: string;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 }
 
-export function BoardMemberSummaryPanel({ boardMemberId, open, onOpenChange }: Props) {
+export function BoardMemberSummaryPanel({ boardMemberId, basePath, open, onOpenChange }: Props) {
   const { data, isLoading } = useBoardMemberDetailQuery(boardMemberId);
   return (
     <SummaryPanel
@@ -16,7 +17,7 @@ export function BoardMemberSummaryPanel({ boardMemberId, open, onOpenChange }: P
       title="Ficha de miembro"
       isLoading={isLoading}
       hasData={!!data}
-      detailPath={`/board/${boardMemberId}`}
+      detailPath={`${basePath}/${boardMemberId}`}
       open={open}
       onOpenChange={onOpenChange}
     >

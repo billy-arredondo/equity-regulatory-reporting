@@ -4,6 +4,7 @@ import { useParticipationDetailQuery } from "@/hooks/useParticipations";
 
 interface Props {
   participationId: string;
+  basePath: string;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 }
@@ -16,7 +17,7 @@ function formatDate(d: string) {
   });
 }
 
-export function ParticipationSummaryPanel({ participationId, open, onOpenChange }: Props) {
+export function ParticipationSummaryPanel({ participationId, basePath, open, onOpenChange }: Props) {
   const { data, isLoading } = useParticipationDetailQuery(participationId);
   return (
     <SummaryPanel
@@ -24,7 +25,7 @@ export function ParticipationSummaryPanel({ participationId, open, onOpenChange 
       title="Ficha de participación"
       isLoading={isLoading}
       hasData={!!data}
-      detailPath={`/participations/${participationId}`}
+      detailPath={`${basePath}/${participationId}`}
       open={open}
       onOpenChange={onOpenChange}
     >

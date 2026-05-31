@@ -16,38 +16,36 @@ import {
 import { PersonType } from "@/lib/person-types";
 import type { CreateBoardMemberDto } from "@/types/board-member";
 
+interface Props {
+  lockedCompanyId: string;
+  lockedCompanyName: string;
+  basePath: string;
+}
+
 const PAGE_SIZE = 25;
 const POSITIONS_PAGE_SIZE = 100;
 
-function emptyForm(): CreateBoardMemberDto {
+function emptyForm(lockedCompanyId: string): CreateBoardMemberDto {
   return {
-    companyId: "",
+    companyId: lockedCompanyId,
     memberId: "",
     primaryPositionId: "",
     secondaryPositionId: null,
   };
 }
 
-export function BoardMemberFormPage() {
-  const { id } = useParams<{ id: string }>();
-  const isEdit = !!id;
+export function BoardMemberFormPage({ lockedCompanyId, lockedCompanyName, basePath }: Props) {
+  const { boardMemberId } = useParams<{ boardMemberId: string }>();
+  const isEdit = !!boardMemberId;
   const navigate = useNavigate();
   const [initialized, setInitialized] = useState(false);
-  const [form, setForm] = useState<CreateBoardMemberDto>(emptyForm());
-  const [companySearch, setCompanySearch] = useState("");
+  const [form, setForm] = useState<CreateBoardMemberDto>(emptyForm(lockedCompanyId));
   const [memberSearch, setMemberSearch] = useState("");
 
-  const { data: editData } = useBoardMemberDetailQuery(id ?? "");
+  const { data: editData } = useBoardMemberDetailQuery(boardMemberId ?? "");
   const { mutate: create, isPending: isCreating } = useCreateBoardMemberMutation();
   const { mutate: update, isPending: isUpdating } = useUpdateBoardMemberMutation();
   const isPending = isCreating || isUpdating;
-
-  const { data: companies, isLoading: companiesLoading } = usePersonsQuery({
-    page: 1,
-    pageSize: PAGE_SIZE,
-    search: companySearch || undefined,
-    personType: PersonType.Legal,
-  });
 
   const { data: members, isLoading: membersLoading } = usePersonsQuery({
     page: 1,
@@ -60,12 +58,6 @@ export function BoardMemberFormPage() {
 
   const noPositionId = positions?.items.find((p) => p.name === NO_POSITION_NAME)?.id ?? "";
 
-  const companyOptions: ComboboxOption[] = (companies?.items ?? []).map((p) => ({
-    id: p.id,
-    label: p.name,
-    sublabel: p.documentNumber,
-  }));
-
   const memberOptions: ComboboxOption[] = (members?.items ?? []).map((p) => ({
     id: p.id,
     label: p.name,
@@ -77,7 +69,6 @@ export function BoardMemberFormPage() {
     label: p.name,
   }));
 
-  const handleCompanySearch = useCallback((s: string) => setCompanySearch(s), []);
   const handleMemberSearch = useCallback((s: string) => setMemberSearch(s), []);
 
   useEffect(() => {
@@ -105,19 +96,21 @@ export function BoardMemberFormPage() {
       secondaryPositionId: form.secondaryPositionId || null,
     };
     if (isEdit) {
-      update({ id: id!, dto }, { onSuccess: () => void navigate(`/board/${id}`) });
+      update(
+        { id: boardMemberId!, dto },
+        { onSuccess: () => void navigate(`${basePath}/${boardMemberId}`) },
+      );
     } else {
-      create(dto, { onSuccess: (res) => void navigate(`/board/${res.id}`) });
+      create(dto, { onSuccess: (res) => void navigate(`${basePath}/${res.id}`) });
     }
   }
 
-  const canSubmit =
-    !isPending && !!form.companyId && !!form.memberId && !!form.primaryPositionId;
+  const canSubmit = !isPending && !!form.memberId && !!form.primaryPositionId;
 
   return (
     <div>
       <Link
-        to={isEdit ? `/board/${id}` : "/board"}
+        to={isEdit ? `${basePath}/${boardMemberId}` : basePath}
         className="mb-5 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
         ← {isEdit ? "Volver al detalle" : "Volver a junta directiva"}
@@ -125,17 +118,10 @@ export function BoardMemberFormPage() {
       <PageHeader title={isEdit ? "Editar miembro" : "Nuevo miembro"} />
       <form onSubmit={handleSubmit} className="mt-4 max-w-lg space-y-4">
         <div className="space-y-2">
-          <Label>
-            Empresa <span className="text-destructive">*</span>
-          </Label>
-          <SearchableCombobox
-            value={form.companyId || null}
-            onChange={(v) => setForm((f) => ({ ...f, companyId: v ?? "" }))}
-            options={companyOptions}
-            isLoading={companiesLoading}
-            onSearchChange={handleCompanySearch}
-            placeholder="Buscar empresa..."
-          />
+          <Label>Empresa</Label>
+          <p className="flex h-9 items-center rounded-md border bg-muted px-3 text-sm font-medium text-muted-foreground">
+            {lockedCompanyName}
+          </p>
         </div>
         <div className="space-y-2">
           <Label>

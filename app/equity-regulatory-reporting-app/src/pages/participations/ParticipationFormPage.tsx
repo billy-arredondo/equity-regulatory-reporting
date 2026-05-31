@@ -7,7 +7,6 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { ActionButton } from "@/elements/ActionButton";
 import { SearchableCombobox, type ComboboxOption } from "@/elements/SearchableCombobox";
-import { PersonType } from "@/lib/person-types";
 import { usePersonsQuery } from "@/hooks/usePersons";
 import {
   useParticipationDetailQuery,
@@ -16,11 +15,17 @@ import {
 } from "@/hooks/useParticipations";
 import type { CreateParticipationDto } from "@/types/participation";
 
+interface Props {
+  lockedCompanyId: string;
+  lockedCompanyName: string;
+  basePath: string;
+}
+
 const PAGE_SIZE = 25;
 
-function emptyForm(): CreateParticipationDto {
+function emptyForm(lockedCompanyId: string): CreateParticipationDto {
   return {
-    companyId: "",
+    companyId: lockedCompanyId,
     shareholderId: "",
     percentage: 0,
     effectiveFrom: "",
@@ -28,27 +33,19 @@ function emptyForm(): CreateParticipationDto {
   };
 }
 
-export function ParticipationFormPage() {
-  const { id } = useParams<{ id: string }>();
-  const isEdit = !!id;
+export function ParticipationFormPage({ lockedCompanyId, lockedCompanyName, basePath }: Props) {
+  const { participationId } = useParams<{ participationId: string }>();
+  const isEdit = !!participationId;
   const navigate = useNavigate();
   const [initialized, setInitialized] = useState(false);
-  const [form, setForm] = useState<CreateParticipationDto>(emptyForm());
+  const [form, setForm] = useState<CreateParticipationDto>(emptyForm(lockedCompanyId));
   const [isActive, setIsActive] = useState(true);
-  const [companySearch, setCompanySearch] = useState("");
   const [shareholderSearch, setShareholderSearch] = useState("");
 
-  const { data: editData } = useParticipationDetailQuery(id ?? "");
+  const { data: editData } = useParticipationDetailQuery(participationId ?? "");
   const { mutate: create, isPending: isCreating } = useCreateParticipationMutation();
   const { mutate: update, isPending: isUpdating } = useUpdateParticipationMutation();
   const isPending = isCreating || isUpdating;
-
-  const { data: companies, isLoading: companiesLoading } = usePersonsQuery({
-    page: 1,
-    pageSize: PAGE_SIZE,
-    search: companySearch || undefined,
-    personType: PersonType.Legal,
-  });
 
   const { data: shareholders, isLoading: shareholdersLoading } = usePersonsQuery({
     page: 1,
@@ -56,19 +53,12 @@ export function ParticipationFormPage() {
     search: shareholderSearch || undefined,
   });
 
-  const companyOptions: ComboboxOption[] = (companies?.items ?? []).map((p) => ({
-    id: p.id,
-    label: p.name,
-    sublabel: p.documentNumber,
-  }));
-
   const shareholderOptions: ComboboxOption[] = (shareholders?.items ?? []).map((p) => ({
     id: p.id,
     label: p.name,
     sublabel: p.documentNumber,
   }));
 
-  const handleCompanySearch = useCallback((s: string) => setCompanySearch(s), []);
   const handleShareholderSearch = useCallback((s: string) => setShareholderSearch(s), []);
 
   useEffect(() => {
@@ -92,15 +82,17 @@ export function ParticipationFormPage() {
       effectiveTo: isActive ? null : form.effectiveTo,
     };
     if (isEdit) {
-      update({ id: id!, dto }, { onSuccess: () => void navigate(`/participations/${id}`) });
+      update(
+        { id: participationId!, dto },
+        { onSuccess: () => void navigate(`${basePath}/${participationId}`) },
+      );
     } else {
-      create(dto, { onSuccess: (res) => void navigate(`/participations/${res.id}`) });
+      create(dto, { onSuccess: (res) => void navigate(`${basePath}/${res.id}`) });
     }
   }
 
   const canSubmit =
     !isPending &&
-    !!form.companyId &&
     !!form.shareholderId &&
     form.percentage >= 0 &&
     form.percentage <= 100 &&
@@ -110,7 +102,7 @@ export function ParticipationFormPage() {
   return (
     <div>
       <Link
-        to={isEdit ? `/participations/${id}` : "/participations"}
+        to={isEdit ? `${basePath}/${participationId}` : basePath}
         className="mb-5 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
         ← {isEdit ? "Volver al detalle" : "Volver a participaciones"}
@@ -118,22 +110,10 @@ export function ParticipationFormPage() {
       <PageHeader title={isEdit ? "Editar participación" : "Nueva participación"} />
       <form onSubmit={handleSubmit} className="mt-4 max-w-lg space-y-4">
         <div className="space-y-2">
-          <Label>
-            Empresa <span className="text-destructive">*</span>
-          </Label>
-          <SearchableCombobox
-            value={form.companyId || null}
-            onChange={(v) => setForm((f) => ({ ...f, companyId: v ?? "" }))}
-            options={companyOptions}
-            isLoading={companiesLoading}
-            onSearchChange={handleCompanySearch}
-            placeholder="Buscar empresa..."
-          />
-          {!form.companyId && (
-            <p className="text-xs text-muted-foreground">
-              Solo se muestran personas jurídicas.
-            </p>
-          )}
+          <Label>Empresa</Label>
+          <p className="flex h-9 items-center rounded-md border bg-muted px-3 text-sm font-medium text-muted-foreground">
+            {lockedCompanyName}
+          </p>
         </div>
         <div className="space-y-2">
           <Label>

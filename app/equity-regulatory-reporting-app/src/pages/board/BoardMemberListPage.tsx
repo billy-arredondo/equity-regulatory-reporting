@@ -1,23 +1,23 @@
-import { useCallback, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { DataTable, type Column } from "@/components/shared/DataTable";
-import { PageHeader } from "@/components/shared/PageHeader";
 import { BoardMemberSummaryPanel } from "@/components/shared/BoardMemberSummaryPanel";
 import { PermissionGuard } from "@/components/shared/PermissionGuard";
-import { SearchableCombobox, type ComboboxOption } from "@/elements/SearchableCombobox";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { useBoardMembersQuery } from "@/hooks/useBoardMembers";
-import { usePersonsQuery } from "@/hooks/usePersons";
 import { Permission } from "@/lib/permissions";
-import { PersonType } from "@/lib/person-types";
 import type { BoardMemberDto } from "@/types/board-member";
+
+interface Props {
+  companyId: string;
+  basePath: string;
+}
 
 const columns: Column<BoardMemberDto>[] = [
   { key: "memberName", header: "Miembro", render: (r) => r.memberName, priority: "high" },
-  { key: "companyName", header: "Empresa", render: (r) => r.companyName, priority: "high" },
   {
     key: "primaryPositionName",
     header: "Cargo principal",
@@ -34,35 +34,18 @@ const columns: Column<BoardMemberDto>[] = [
 
 const PAGE_SIZE = 25;
 
-export function BoardMemberListPage() {
+export function BoardMemberListPage({ companyId, basePath }: Props) {
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState("");
-  const [companyId, setCompanyId] = useState<string | null>(null);
-  const [companySearch, setCompanySearch] = useState("");
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [panelOpen, setPanelOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 1024px)");
-
-  const { data: companies, isLoading: companiesLoading } = usePersonsQuery({
-    page: 1,
-    pageSize: PAGE_SIZE,
-    search: companySearch || undefined,
-    personType: PersonType.Legal,
-  });
-
-  const companyOptions: ComboboxOption[] = (companies?.items ?? []).map((p) => ({
-    id: p.id,
-    label: p.name,
-    sublabel: p.documentNumber,
-  }));
-
-  const handleCompanySearch = useCallback((s: string) => setCompanySearch(s), []);
 
   const { data, isLoading } = useBoardMembersQuery({
     page,
     pageSize: PAGE_SIZE,
     search: search || undefined,
-    companyId: companyId ?? undefined,
+    companyId,
   });
 
   function handleRowClick(row: BoardMemberDto) {
@@ -72,18 +55,7 @@ export function BoardMemberListPage() {
 
   return (
     <div>
-      <PageHeader
-        title="Junta directiva"
-        actions={
-          <PermissionGuard perm={Permission.BoardWrite}>
-            <Button size="sm" render={<Link to="/board/new" />}>
-              <Plus className="mr-1 h-4 w-4" />
-              <span className="hidden sm:inline">Nuevo miembro</span>
-            </Button>
-          </PermissionGuard>
-        }
-      />
-      <div className="mb-4 flex flex-wrap gap-2">
+      <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
         <Input
           placeholder="Buscar miembros..."
           value={search}
@@ -93,19 +65,12 @@ export function BoardMemberListPage() {
           }}
           className="max-w-xs"
         />
-        <div className="w-64">
-          <SearchableCombobox
-            value={companyId}
-            onChange={(v) => {
-              setCompanyId(v);
-              setPage(1);
-            }}
-            options={companyOptions}
-            isLoading={companiesLoading}
-            onSearchChange={handleCompanySearch}
-            placeholder="Filtrar por empresa..."
-          />
-        </div>
+        <PermissionGuard perm={Permission.BoardWrite}>
+          <Button size="sm" render={<Link to={`${basePath}/new`} />}>
+            <Plus className="mr-1 h-4 w-4" />
+            <span className="hidden sm:inline">Nuevo miembro</span>
+          </Button>
+        </PermissionGuard>
       </div>
       <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1fr_288px] lg:items-start">
         <DataTable
@@ -123,7 +88,10 @@ export function BoardMemberListPage() {
         {isDesktop ? (
           selectedId ? (
             <div className="lg:sticky lg:top-4">
-              <BoardMemberSummaryPanel boardMemberId={selectedId} />
+              <BoardMemberSummaryPanel
+                boardMemberId={selectedId}
+                basePath={basePath}
+              />
             </div>
           ) : (
             <div className="lg:sticky lg:top-4 flex items-center justify-center rounded-md border border-dashed px-4 py-12 text-center text-sm text-muted-foreground">
@@ -134,6 +102,7 @@ export function BoardMemberListPage() {
           selectedId && (
             <BoardMemberSummaryPanel
               boardMemberId={selectedId}
+              basePath={basePath}
               open={panelOpen}
               onOpenChange={setPanelOpen}
             />
