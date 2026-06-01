@@ -1,6 +1,6 @@
 using equity_regulatory_reporting.Application.Common.Interfaces;
+using equity_regulatory_reporting.Application.Features.Participations.Import;
 using equity_regulatory_reporting.Domain.Entities;
-using equity_regulatory_reporting.Domain.Enums;
 using FluentValidation;
 using MediatR;
 
@@ -16,8 +16,9 @@ public class CreateParticipationCommandHandler(
         var company = await personRepository.GetByIdAsync(request.CompanyId, cancellationToken)
             ?? throw new ValidationException("Company (Person) not found.");
 
-        if (company.PersonType is not (PersonType.Legal or PersonType.LegalEntity))
-            throw new ValidationException("Company must be a Legal or LegalEntity person.");
+        var ruleErrors = ParticipationImportRules.Check(company);
+        if (ruleErrors.Count > 0)
+            throw new ValidationException(ruleErrors[0]);
 
         var participation = new Participation
         {

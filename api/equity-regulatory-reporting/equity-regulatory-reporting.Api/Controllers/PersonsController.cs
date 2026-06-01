@@ -1,6 +1,9 @@
+using equity_regulatory_reporting.Api.Common;
+using equity_regulatory_reporting.Api.Import;
 using equity_regulatory_reporting.Application.Common.Models;
 using equity_regulatory_reporting.Application.Features.Persons.Commands.CreatePerson;
 using equity_regulatory_reporting.Application.Features.Persons.Commands.DeletePerson;
+using equity_regulatory_reporting.Application.Features.Persons.Commands.ImportPersons;
 using equity_regulatory_reporting.Application.Features.Persons.Commands.UpdatePerson;
 using equity_regulatory_reporting.Application.Features.Persons.Queries.GetPersonById;
 using equity_regulatory_reporting.Application.Features.Persons.Queries.ListPersons;
@@ -53,5 +56,14 @@ public class PersonsController(ISender sender) : ControllerBase
     {
         await sender.Send(new DeletePersonCommand(id), ct);
         return NoContent();
+    }
+
+    [HttpPost("import")]
+    [HasPermission(Permission.PersonWrite)]
+    public async Task<IActionResult> Import(IFormFile file, [FromForm] ImportMode mode, CancellationToken ct)
+    {
+        var rows = PersonsImportParser.Parse(file);
+        var result = await sender.Send(new ImportPersonsCommand(rows, mode), ct);
+        return this.ToActionResult(result, mode);
     }
 }

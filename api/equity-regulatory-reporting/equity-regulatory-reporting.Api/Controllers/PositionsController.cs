@@ -1,6 +1,9 @@
+using equity_regulatory_reporting.Api.Common;
+using equity_regulatory_reporting.Api.Import;
 using equity_regulatory_reporting.Application.Common.Models;
 using equity_regulatory_reporting.Application.Features.Positions.Commands.CreatePosition;
 using equity_regulatory_reporting.Application.Features.Positions.Commands.DeletePosition;
+using equity_regulatory_reporting.Application.Features.Positions.Commands.ImportPositions;
 using equity_regulatory_reporting.Application.Features.Positions.Commands.UpdatePosition;
 using equity_regulatory_reporting.Application.Features.Positions.Queries.GetPositionById;
 using equity_regulatory_reporting.Application.Features.Positions.Queries.ListPositions;
@@ -53,5 +56,14 @@ public class PositionsController(ISender sender) : ControllerBase
     {
         await sender.Send(new DeletePositionCommand(id), ct);
         return NoContent();
+    }
+
+    [HttpPost("import")]
+    [HasPermission(Permission.PositionWrite)]
+    public async Task<IActionResult> Import(IFormFile file, [FromForm] ImportMode mode, CancellationToken ct)
+    {
+        var rows = PositionsImportParser.Parse(file);
+        var result = await sender.Send(new ImportPositionsCommand(rows, mode), ct);
+        return this.ToActionResult(result, mode);
     }
 }
