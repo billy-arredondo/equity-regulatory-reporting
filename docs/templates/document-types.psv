@@ -1,0 +1,4 @@
+Name|Abbreviation|ValidationRegex
+National Identity Document|NID|^\d{8}$
+Tax Registration Number|TRN|^\d{11}$
+Passport|PASS|

@@ -1,0 +1,4 @@
+Name|PersonType|Ciiu|Address|DocumentTypeAbbreviation|DocumentNumber|EntityCode|RepresentativeDocumentNumber|ReportFlag|CountryAbbreviation|InternalLocation
+John Doe|Natural|4711|123 Main St|NID|12345678|||false|US|New York
+Acme Corp S.A.|Legal|2511|456 Business Ave|TRN|20123456789|ENT001|12345678|true|CO|Bogota DC
+Global Holdings LLC|LegalEntity|6420|789 Corporate Blvd|TRN|20987654321||12345678|true|US|Delaware
