@@ -13,6 +13,7 @@ import {
   useCreateParticipationMutation,
   useUpdateParticipationMutation,
 } from "@/hooks/useParticipations";
+import { PAGE_SIZE } from "@/lib/constants";
 import type { CreateParticipationDto } from "@/types/participation";
 
 interface Props {
@@ -20,8 +21,6 @@ interface Props {
   lockedCompanyName: string;
   basePath: string;
 }
-
-const PAGE_SIZE = 25;
 
 function emptyForm(lockedCompanyId: string): CreateParticipationDto {
   return {

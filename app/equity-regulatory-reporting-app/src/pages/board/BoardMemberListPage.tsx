@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,6 +8,8 @@ import { BoardMemberSummaryPanel } from "@/components/shared/BoardMemberSummaryP
 import { PermissionGuard } from "@/components/shared/PermissionGuard";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { useBoardMembersQuery } from "@/hooks/useBoardMembers";
+import { useDebouncedSearch } from "@/hooks/useDebouncedSearch";
+import { PAGE_SIZE } from "@/lib/constants";
 import { Permission } from "@/lib/permissions";
 import type { BoardMemberDto } from "@/types/board-member";
 
@@ -32,19 +34,19 @@ const columns: Column<BoardMemberDto>[] = [
   },
 ];
 
-const PAGE_SIZE = 25;
-
 export function BoardMemberListPage({ companyId, basePath }: Props) {
   const [page, setPage] = useState(1);
-  const [search, setSearch] = useState("");
+  const { search, setSearch, debouncedSearch } = useDebouncedSearch();
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [panelOpen, setPanelOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 1024px)");
 
+  useEffect(() => { setPage(1); }, [debouncedSearch]);
+
   const { data, isLoading } = useBoardMembersQuery({
     page,
     pageSize: PAGE_SIZE,
-    search: search || undefined,
+    search: debouncedSearch || undefined,
     companyId,
   });
 
@@ -59,10 +61,7 @@ export function BoardMemberListPage({ companyId, basePath }: Props) {
         <Input
           placeholder="Buscar miembros..."
           value={search}
-          onChange={(e) => {
-            setSearch(e.target.value);
-            setPage(1);
-          }}
+          onChange={(e) => setSearch(e.target.value)}
           className="max-w-xs"
         />
         <PermissionGuard perm={Permission.BoardWrite}>

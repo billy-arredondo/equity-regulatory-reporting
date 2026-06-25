@@ -14,6 +14,7 @@ import {
   useUpdateBoardMemberMutation,
 } from "@/hooks/useBoardMembers";
 import { PersonType } from "@/lib/person-types";
+import { PAGE_SIZE } from "@/lib/constants";
 import type { CreateBoardMemberDto } from "@/types/board-member";
 
 interface Props {
@@ -22,7 +23,6 @@ interface Props {
   basePath: string;
 }
 
-const PAGE_SIZE = 25;
 const POSITIONS_PAGE_SIZE = 100;
 
 function emptyForm(lockedCompanyId: string): CreateBoardMemberDto {

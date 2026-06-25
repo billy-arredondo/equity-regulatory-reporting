@@ -25,9 +25,12 @@ public class ListBoardMembersQueryHandler(IRepository<BoardMember> repository, I
             filtered = filtered.Where(b => b.CompanyId == request.CompanyId.Value);
 
         if (!string.IsNullOrWhiteSpace(request.Page.Search))
+        {
+            var term = request.Page.Search.ToLower();
             filtered = filtered.Where(b =>
-                b.Company.Name.Contains(request.Page.Search) ||
-                b.Member.Name.Contains(request.Page.Search));
+                b.Company.Name.ToLower().Contains(term) ||
+                b.Member.Name.ToLower().Contains(term));
+        }
 
         var total = await filtered.CountAsync(cancellationToken);
 

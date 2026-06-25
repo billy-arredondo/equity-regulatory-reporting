@@ -79,7 +79,13 @@ public class IdentityService(
         var query = userManager.Users;
 
         if (!string.IsNullOrWhiteSpace(search))
-            query = query.Where(u => u.Email!.Contains(search) || u.FirstName.Contains(search) || u.LastName.Contains(search));
+        {
+            var term = search.ToLower();
+            query = query.Where(u =>
+                u.Email!.ToLower().Contains(term) ||
+                u.FirstName.ToLower().Contains(term) ||
+                u.LastName.ToLower().Contains(term));
+        }
 
         var total = await query.CountAsync(cancellationToken);
         var users = await query

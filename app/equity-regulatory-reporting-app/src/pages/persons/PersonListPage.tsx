@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,6 +9,8 @@ import { PersonSummaryPanel } from "@/components/shared/PersonSummaryPanel";
 import { PermissionGuard } from "@/components/shared/PermissionGuard";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { usePersonsQuery } from "@/hooks/usePersons";
+import { useDebouncedSearch } from "@/hooks/useDebouncedSearch";
+import { PAGE_SIZE } from "@/lib/constants";
 import { Permission } from "@/lib/permissions";
 import { type PersonTypeValue } from "@/lib/person-types";
 import type { PersonDto } from "@/types/person";
@@ -20,19 +22,19 @@ interface Props {
   newLabel: string;
 }
 
-const PAGE_SIZE = 25;
-
 export function PersonListPage({ personType, title, baseRoute, newLabel }: Props) {
   const [page, setPage] = useState(1);
-  const [search, setSearch] = useState("");
+  const { search, setSearch, debouncedSearch } = useDebouncedSearch();
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [panelOpen, setPanelOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 1024px)");
 
+  useEffect(() => { setPage(1); }, [debouncedSearch]);
+
   const { data, isLoading } = usePersonsQuery({
     page,
     pageSize: PAGE_SIZE,
-    search: search || undefined,
+    search: debouncedSearch || undefined,
     personType,
   });
 
@@ -63,7 +65,7 @@ export function PersonListPage({ personType, title, baseRoute, newLabel }: Props
         <Input
           placeholder={`Buscar ${title.toLowerCase()}...`}
           value={search}
-          onChange={(e) => { setSearch(e.target.value); setPage(1); }}
+          onChange={(e) => setSearch(e.target.value)}
           className="max-w-xs"
         />
       </div>

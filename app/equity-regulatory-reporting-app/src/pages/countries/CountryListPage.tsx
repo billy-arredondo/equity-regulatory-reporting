@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,6 +9,8 @@ import { CountrySummaryPanel } from "@/components/shared/CountrySummaryPanel";
 import { PermissionGuard } from "@/components/shared/PermissionGuard";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { useCountriesQuery } from "@/hooks/useCountries";
+import { useDebouncedSearch } from "@/hooks/useDebouncedSearch";
+import { PAGE_SIZE } from "@/lib/constants";
 import { Permission } from "@/lib/permissions";
 import type { CountryDto } from "@/types/country";
 
@@ -17,16 +19,16 @@ const columns: Column<CountryDto>[] = [
   { key: "abbreviation", header: "Abreviatura", render: (r) => r.abbreviation, priority: "medium" },
 ];
 
-const PAGE_SIZE = 25;
-
 export function CountryListPage() {
   const [page, setPage] = useState(1);
-  const [search, setSearch] = useState("");
+  const { search, setSearch, debouncedSearch } = useDebouncedSearch();
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [panelOpen, setPanelOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 1024px)");
 
-  const { data, isLoading } = useCountriesQuery({ page, pageSize: PAGE_SIZE, search: search || undefined });
+  useEffect(() => { setPage(1); }, [debouncedSearch]);
+
+  const { data, isLoading } = useCountriesQuery({ page, pageSize: PAGE_SIZE, search: debouncedSearch || undefined });
 
   function handleRowClick(row: CountryDto) {
     setSelectedId(row.id);
@@ -50,7 +52,7 @@ export function CountryListPage() {
         <Input
           placeholder="Buscar países..."
           value={search}
-          onChange={(e) => { setSearch(e.target.value); setPage(1); }}
+          onChange={(e) => setSearch(e.target.value)}
           className="max-w-xs"
         />
       </div>

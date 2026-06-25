@@ -23,9 +23,12 @@ public class ListParticipationsQueryHandler(IRepository<Participation> repositor
             filtered = filtered.Where(p => p.CompanyId == request.CompanyId.Value);
 
         if (!string.IsNullOrWhiteSpace(request.Page.Search))
+        {
+            var term = request.Page.Search.ToLower();
             filtered = filtered.Where(p =>
-                p.Company.Name.Contains(request.Page.Search) ||
-                p.Shareholder.Name.Contains(request.Page.Search));
+                p.Company.Name.ToLower().Contains(term) ||
+                p.Shareholder.Name.ToLower().Contains(term));
+        }
 
         var total = await filtered.CountAsync(cancellationToken);
 

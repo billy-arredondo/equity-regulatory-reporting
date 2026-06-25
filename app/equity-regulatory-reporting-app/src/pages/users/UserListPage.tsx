@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Input } from "@/components/ui/input";
 import { DataTable, type Column } from "@/components/shared/DataTable";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { RoleBadge } from "@/components/shared/RoleBadge";
 import { useUsersQuery } from "@/hooks/useUsers";
+import { useDebouncedSearch } from "@/hooks/useDebouncedSearch";
+import { PAGE_SIZE } from "@/lib/constants";
 import type { UserDto } from "@/types/user";
 
 const columns: Column<UserDto>[] = [
@@ -31,14 +33,14 @@ const columns: Column<UserDto>[] = [
   },
 ];
 
-const PAGE_SIZE = 25;
-
 export function UserListPage() {
   const [page, setPage] = useState(1);
-  const [search, setSearch] = useState("");
+  const { search, setSearch, debouncedSearch } = useDebouncedSearch();
   const navigate = useNavigate();
 
-  const { data, isLoading } = useUsersQuery({ page, pageSize: PAGE_SIZE, search: search || undefined });
+  useEffect(() => { setPage(1); }, [debouncedSearch]);
+
+  const { data, isLoading } = useUsersQuery({ page, pageSize: PAGE_SIZE, search: debouncedSearch || undefined });
 
   return (
     <div>
@@ -47,10 +49,7 @@ export function UserListPage() {
         <Input
           placeholder="Buscar usuarios..."
           value={search}
-          onChange={(e) => {
-            setSearch(e.target.value);
-            setPage(1);
-          }}
+          onChange={(e) => setSearch(e.target.value)}
           className="max-w-xs"
         />
       </div>

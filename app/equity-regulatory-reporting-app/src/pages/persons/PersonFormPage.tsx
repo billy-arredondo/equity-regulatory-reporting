@@ -12,6 +12,7 @@ import { SelectField } from "@/elements/SelectField";
 import { SearchableCombobox, type ComboboxOption } from "@/elements/SearchableCombobox";
 import { PersonType, type PersonTypeValue } from "@/lib/person-types";
 import { useDebounce } from "@/hooks/useDebounce";
+import { PAGE_SIZE } from "@/lib/constants";
 import { usePersonDetailQuery, useCreatePersonMutation, useUpdatePersonMutation } from "@/hooks/usePersons";
 import { usePersonsQuery } from "@/hooks/usePersons";
 import { useCountriesQuery } from "@/hooks/useCountries";
@@ -19,7 +20,6 @@ import { useDocumentTypesQuery } from "@/hooks/useDocumentTypes";
 import type { CreatePersonDto } from "@/types/person";
 
 const CIIU_REGEX = /^\d{4}$/;
-const PAGE_SIZE = 25;
 
 interface Props {
   personType: PersonTypeValue;

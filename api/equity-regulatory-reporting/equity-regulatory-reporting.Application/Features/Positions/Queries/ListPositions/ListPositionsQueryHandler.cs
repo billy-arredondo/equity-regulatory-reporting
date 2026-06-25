@@ -17,7 +17,10 @@ public class ListPositionsQueryHandler(IRepository<Position> repository, IMapper
         var query = repository.Query();
 
         if (!string.IsNullOrWhiteSpace(request.Page.Search))
-            query = query.Where(p => p.Name.Contains(request.Page.Search));
+        {
+            var term = request.Page.Search.ToLower();
+            query = query.Where(p => p.Name.ToLower().Contains(term));
+        }
 
         var total = await query.CountAsync(cancellationToken);
 
