@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { DataTable, type Column } from "@/components/shared/DataTable";
 import { PageHeader } from "@/components/shared/PageHeader";
@@ -13,26 +12,11 @@ import { useDocumentTypesQuery } from "@/hooks/useDocumentTypes";
 import { useDebouncedSearch } from "@/hooks/useDebouncedSearch";
 import { PAGE_SIZE } from "@/lib/constants";
 import { Permission } from "@/lib/permissions";
-import { personTypeLabel } from "@/lib/person-types";
 import type { DocumentTypeDto } from "@/types/document-type";
 
 const columns: Column<DocumentTypeDto>[] = [
   { key: "name", header: "Nombre", render: (r) => r.name, priority: "high" },
   { key: "abbreviation", header: "Abrev.", render: (r) => r.abbreviation, priority: "medium" },
-  {
-    key: "allowedPersonTypes",
-    header: "Tipos habilitados",
-    render: (r) => (
-      <div className="flex flex-wrap gap-1">
-        {r.allowedPersonTypes.map((t) => (
-          <Badge key={t} variant="secondary" className="text-xs">
-            {personTypeLabel(t)}
-          </Badge>
-        ))}
-      </div>
-    ),
-    priority: "low",
-  },
 ];
 
 export function DocumentTypeListPage() {
