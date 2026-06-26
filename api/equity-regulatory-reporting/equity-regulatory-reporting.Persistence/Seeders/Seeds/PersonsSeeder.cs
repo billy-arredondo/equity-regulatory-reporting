@@ -60,10 +60,16 @@ public partial class DatabaseSeeder
                 continue;
             }
 
+            if (!Enum.TryParse<PersonType>(row.PersonType, out var personType))
+            {
+                logger.LogWarning("Seed: unknown PersonType '{Type}', skipping '{Name}'", row.PersonType, row.Name);
+                continue;
+            }
+
             var person = new Person
             {
                 Name = row.Name,
-                PersonType = Enum.Parse<PersonType>(row.PersonType),
+                PersonType = personType,
                 Ciiu = row.Ciiu,
                 Address = row.Address,
                 DocumentTypeId = docTypeId,
