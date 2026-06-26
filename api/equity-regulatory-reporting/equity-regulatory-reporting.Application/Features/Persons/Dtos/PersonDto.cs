@@ -15,7 +15,7 @@ public record PersonDetailDto(
     Guid Id,
     string Name,
     PersonType PersonType,
-    string Ciiu,
+    string? Ciiu,
     string Address,
     Guid DocumentTypeId,
     string DocumentTypeName,

@@ -7,7 +7,7 @@ public class Person : AuditableEntity
 {
     public string Name { get; set; } = string.Empty;
     public PersonType PersonType { get; set; }
-    public string Ciiu { get; set; } = string.Empty;
+    public string? Ciiu { get; set; }
     public string Address { get; set; } = string.Empty;
 
     public Guid DocumentTypeId { get; set; }

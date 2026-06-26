@@ -12,7 +12,7 @@ public partial class DatabaseSeeder
     private sealed record PersonSeedRow(
         string Name,
         string PersonType,
-        string Ciiu,
+        string? Ciiu,
         string Address,
         string DocumentTypeAbbreviation,
         string DocumentNumber,

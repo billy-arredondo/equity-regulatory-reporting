@@ -31,7 +31,7 @@ function emptyForm(personType: PersonTypeValue): CreatePersonDto {
   return {
     name: "",
     personType,
-    ciiu: "",
+    ciiu: null,
     address: "",
     documentTypeId: "",
     documentNumber: "",
@@ -119,7 +119,7 @@ export function PersonFormPage({ personType, baseRoute, entityLabel }: Props) {
     setForm({
       name: editData.name,
       personType,
-      ciiu: editData.ciiu,
+      ciiu: editData.ciiu ?? null,
       address: editData.address,
       documentTypeId: editData.documentTypeId,
       documentNumber: editData.documentNumber,
@@ -136,7 +136,11 @@ export function PersonFormPage({ personType, baseRoute, entityLabel }: Props) {
     e.preventDefault();
     if (docNumError) return;
     if (requiresRepresentative && !form.representativeId) return;
-    const dto: CreatePersonDto = { ...form, entityCode: form.entityCode || null };
+    const dto: CreatePersonDto = {
+      ...form,
+      ciiu: personType === PersonType.Natural ? null : (form.ciiu || null),
+      entityCode: form.entityCode || null,
+    };
     if (isEdit) {
       update({ id: id!, dto }, { onSuccess: () => void navigate(`${baseRoute}/${id}`) });
     } else {
@@ -186,21 +190,22 @@ export function PersonFormPage({ personType, baseRoute, entityLabel }: Props) {
           </div>
           {docNumError && <p className="text-xs text-destructive">{docNumError}</p>}
         </div>
-        <div className="space-y-2">
-          <Label>CIIU</Label>
-          <Input
-            value={form.ciiu}
-            maxLength={4}
-            placeholder="0000"
-            onChange={(e) => setForm((f) => ({ ...f, ciiu: e.target.value }))}
-            pattern="\d{4}"
-            required
-          />
-          <FieldTip>Código de 4 dígitos numéricos.</FieldTip>
-          {form.ciiu && !CIIU_REGEX.test(form.ciiu) && (
-            <p className="text-xs text-destructive">Debe ser exactamente 4 dígitos.</p>
-          )}
-        </div>
+        {personType !== PersonType.Natural && (
+          <div className="space-y-2">
+            <Label>CIIU <span className="text-muted-foreground font-normal">(opcional)</span></Label>
+            <Input
+              value={form.ciiu ?? ""}
+              maxLength={4}
+              placeholder="0000"
+              onChange={(e) => setForm((f) => ({ ...f, ciiu: e.target.value || null }))}
+              pattern="\d{4}"
+            />
+            <FieldTip>Código de 4 dígitos numéricos.</FieldTip>
+            {form.ciiu && !CIIU_REGEX.test(form.ciiu) && (
+              <p className="text-xs text-destructive">Debe ser exactamente 4 dígitos.</p>
+            )}
+          </div>
+        )}
         <div className="space-y-2">
           <Label>País</Label>
           <SearchableCombobox
@@ -286,7 +291,7 @@ export function PersonFormPage({ personType, baseRoute, entityLabel }: Props) {
             disabled={
               isPending ||
               !!docNumError ||
-              !CIIU_REGEX.test(form.ciiu) ||
+              (personType !== PersonType.Natural && !!form.ciiu && !CIIU_REGEX.test(form.ciiu)) ||
               (requiresRepresentative && !form.representativeId)
             }
           >

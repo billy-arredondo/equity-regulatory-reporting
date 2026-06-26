@@ -2,7 +2,7 @@
   {
     "name": "Carlos Mendoza García",
     "personType": "Natural",
-    "ciiu": "0000",
+    "ciiu": null,
     "address": "Av. Primavera 123, Lima",
     "documentTypeAbbreviation": "DNI",
     "documentNumber": "12345678",
@@ -15,7 +15,7 @@
   {
     "name": "María Fernanda López",
     "personType": "Natural",
-    "ciiu": "0000",
+    "ciiu": null,
     "address": "Calle 50 N° 22-15, Bogotá",
     "documentTypeAbbreviation": "DNI",
     "documentNumber": "87654321",
@@ -28,7 +28,7 @@
   {
     "name": "John Smith",
     "personType": "Natural",
-    "ciiu": "0000",
+    "ciiu": null,
     "address": "123 Main St, New York",
     "documentTypeAbbreviation": "PA",
     "documentNumber": "A12345678",
@@ -41,7 +41,7 @@
   {
     "name": "Ana Sofía Ramírez",
     "personType": "Natural",
-    "ciiu": "0000",
+    "ciiu": null,
     "address": "Av. Amazonas 456, Quito",
     "documentTypeAbbreviation": "CI",
     "documentNumber": "170123456",

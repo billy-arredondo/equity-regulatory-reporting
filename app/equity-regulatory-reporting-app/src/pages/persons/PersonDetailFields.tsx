@@ -14,10 +14,12 @@ export function PersonDetailFields({ data }: Props) {
         <p className="text-xs text-muted-foreground">Tipo de persona</p>
         <p className="flex h-9 items-center text-sm font-medium">{personTypeLabel(data.personType)}</p>
       </div>
-      <div className="space-y-1.5">
-        <p className="text-xs text-muted-foreground">CIIU</p>
-        <p className="flex h-9 items-center font-mono text-sm font-medium">{data.ciiu}</p>
-      </div>
+      {data.ciiu && (
+        <div className="space-y-1.5">
+          <p className="text-xs text-muted-foreground">CIIU</p>
+          <p className="flex h-9 items-center font-mono text-sm font-medium">{data.ciiu}</p>
+        </div>
+      )}
       <div className="space-y-1.5">
         <p className="text-xs text-muted-foreground">Tipo de documento</p>
         <p className="flex h-9 items-center text-sm font-medium">{data.documentTypeName}</p>

@@ -6,7 +6,7 @@ namespace equity_regulatory_reporting.Application.Features.Persons.Commands.Crea
 public record CreatePersonCommand(
     string Name,
     PersonType PersonType,
-    string Ciiu,
+    string? Ciiu,
     string Address,
     Guid DocumentTypeId,
     string DocumentNumber,

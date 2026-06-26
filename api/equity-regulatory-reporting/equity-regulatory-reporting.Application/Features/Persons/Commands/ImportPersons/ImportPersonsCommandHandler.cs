@@ -71,11 +71,16 @@ public class ImportPersonsCommandHandler(
             else if (row.Name.Length > 300)
                 rowErrors.Add(new ImportError(row.LineNumber, "Name", "Name must not exceed 300 characters."));
 
-            // Ciiu
-            if (string.IsNullOrWhiteSpace(row.Ciiu))
-                rowErrors.Add(new ImportError(row.LineNumber, "Ciiu", "Ciiu is required."));
-            else if (row.Ciiu.Length > 10)
+            // Ciiu (forbidden for natural persons; optional for others)
+            if (personType == PersonType.Natural)
+            {
+                if (!string.IsNullOrWhiteSpace(row.Ciiu))
+                    rowErrors.Add(new ImportError(row.LineNumber, "Ciiu", "Natural persons cannot have a CIIU code."));
+            }
+            else if (!string.IsNullOrWhiteSpace(row.Ciiu) && row.Ciiu.Length > 10)
+            {
                 rowErrors.Add(new ImportError(row.LineNumber, "Ciiu", "Ciiu must not exceed 10 characters."));
+            }
 
             // Address
             if (string.IsNullOrWhiteSpace(row.Address))
@@ -156,7 +161,7 @@ public class ImportPersonsCommandHandler(
             {
                 Name = row.Name!,
                 PersonType = personType,
-                Ciiu = row.Ciiu!,
+                Ciiu = string.IsNullOrWhiteSpace(row.Ciiu) ? null : row.Ciiu,
                 Address = row.Address!,
                 DocumentTypeId = documentType!.Id,
                 DocumentNumber = row.DocumentNumber!,

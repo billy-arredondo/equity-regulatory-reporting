@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using equity_regulatory_reporting.Persistence;
@@ -11,9 +12,11 @@ using equity_regulatory_reporting.Persistence;
 namespace equity_regulatory_reporting.Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260625205418_MakeCiiuNullable")]
+    partial class MakeCiiuNullable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -394,9 +397,11 @@ namespace equity_regulatory_reporting.Persistence.Migrations
                         .HasColumnName("address");
 
                     b.Property<string>("Ciiu")
+                        .IsRequired()
                         .HasMaxLength(10)
-                        .HasColumnType("character varying(10)")
-                        .HasColumnName("ciiu");
+                        .HasColumnType("character(10)")
+                        .HasColumnName("ciiu")
+                        .IsFixedLength();
 
                     b.Property<Guid>("CountryId")
                         .HasColumnType("uuid")

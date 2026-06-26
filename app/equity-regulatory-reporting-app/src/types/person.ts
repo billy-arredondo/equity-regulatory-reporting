@@ -11,7 +11,7 @@ export interface PersonDto {
 }
 
 export interface PersonDetailDto extends PersonDto {
-  ciiu: string;
+  ciiu: string | null;
   address: string;
   documentTypeId: string;
   entityCode: string | null;
@@ -24,7 +24,7 @@ export interface PersonDetailDto extends PersonDto {
 export interface CreatePersonDto {
   name: string;
   personType: PersonTypeValue;
-  ciiu: string;
+  ciiu: string | null;
   address: string;
   documentTypeId: string;
   documentNumber: string;

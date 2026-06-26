@@ -10,7 +10,13 @@ public class UpdatePersonCommandValidator : AbstractValidator<UpdatePersonComman
         RuleFor(x => x.Id).NotEmpty();
         RuleFor(x => x.Name).NotEmpty().MaximumLength(300);
         RuleFor(x => x.PersonType).IsInEnum();
-        RuleFor(x => x.Ciiu).NotEmpty().MaximumLength(10);
+        RuleFor(x => x.Ciiu)
+            .Empty()
+            .When(x => x.PersonType == PersonType.Natural)
+            .WithMessage("Natural persons cannot have a CIIU code.");
+        RuleFor(x => x.Ciiu)
+            .MaximumLength(10)
+            .When(x => x.PersonType != PersonType.Natural && x.Ciiu is not null);
         RuleFor(x => x.Address).NotEmpty().MaximumLength(500);
         RuleFor(x => x.DocumentTypeId).NotEmpty();
         RuleFor(x => x.DocumentNumber).NotEmpty().MaximumLength(50);
