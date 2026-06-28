@@ -1,6 +1,6 @@
 [
   {
-    "CodEmpresa": 1,
+    "id": 1,
     "name": "INTERCORP PERÚ LTD.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -14,7 +14,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 2,
+    "id": 2,
     "name": "BANK OF NEW YORK MELLON DR",
     "personType": "Legal",
     "ciiu": null,
@@ -28,7 +28,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 3,
+    "id": 3,
     "name": "INTERNATIONAL FINANCIAL HOLDINGS GROUP INC.",
     "personType": "Legal",
     "ciiu": null,
@@ -42,7 +42,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 4,
+    "id": 4,
     "name": "SHETLAND SECURITES INC.",
     "personType": "Legal",
     "ciiu": null,
@@ -56,7 +56,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 5,
+    "id": 5,
     "name": "SOUTHERN HILL CORP.",
     "personType": "Legal",
     "ciiu": null,
@@ -70,7 +70,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 6,
+    "id": 6,
     "name": "RODRÍGUEZ PASTOR PERSIVALE, CARLOS",
     "personType": "Natural",
     "ciiu": null,
@@ -84,7 +84,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 7,
+    "id": 7,
     "name": "RODRÍGUEZ PASTOR PERSIVALE, JORGE",
     "personType": "Natural",
     "ciiu": null,
@@ -98,7 +98,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 8,
+    "id": 8,
     "name": "MORRIS GÜERINONI, FELIPE",
     "personType": "Natural",
     "ciiu": null,
@@ -112,7 +112,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 9,
+    "id": 9,
     "name": "BARÚA ALZAMORA, RAMÓN",
     "personType": "Natural",
     "ciiu": null,
@@ -126,7 +126,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 10,
+    "id": 10,
     "name": "ROSAS DULANTO, JOSÉ ANTONIO",
     "personType": "Natural",
     "ciiu": null,
@@ -140,7 +140,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 12,
+    "id": 12,
     "name": "VERA VILLACORTA, LILIANA ELCIRA",
     "personType": "Natural",
     "ciiu": null,
@@ -154,7 +154,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 13,
+    "id": 13,
     "name": "CASTRO MOLINA, JUAN ANTONIO",
     "personType": "Natural",
     "ciiu": null,
@@ -168,7 +168,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 15,
+    "id": 15,
     "name": "URBI PROPIEDADES S.A.C.",
     "personType": "Legal",
     "ciiu": "4100",
@@ -182,7 +182,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 16,
+    "id": 16,
     "name": "CASABONNE STOESSEL, CARLOS ALFREDO",
     "personType": "Natural",
     "ciiu": null,
@@ -196,7 +196,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 17,
+    "id": 17,
     "name": "VALLEJO BLANCO, JUAN CARLOS",
     "personType": "Natural",
     "ciiu": null,
@@ -210,7 +210,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 18,
+    "id": 18,
     "name": "VIEIRA-GOMES MACHADO, RICARDO",
     "personType": "Natural",
     "ciiu": null,
@@ -224,7 +224,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 19,
+    "id": 19,
     "name": "INTERCORP RETAIL INC.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -238,7 +238,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 20,
+    "id": 20,
     "name": "LUQUE BADENES, JULIO CESAR",
     "personType": "Natural",
     "ciiu": null,
@@ -252,7 +252,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 21,
+    "id": 21,
     "name": "TURNER GONZALES, PABLO",
     "personType": "Natural",
     "ciiu": null,
@@ -266,7 +266,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 22,
+    "id": 22,
     "name": "SUPERMERCADOS PERUANOS S.A.",
     "personType": "Legal",
     "ciiu": "4711",
@@ -280,7 +280,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 23,
+    "id": 23,
     "name": "FISCHMAN KALINCAUSKY, DAVID",
     "personType": "Natural",
     "ciiu": null,
@@ -294,7 +294,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 24,
+    "id": 24,
     "name": "REY VALLARINO, AUGUSTO JOSÉ",
     "personType": "Natural",
     "ciiu": null,
@@ -308,7 +308,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 26,
+    "id": 26,
     "name": "MAYOR ALANYA DE ÁLVAREZ, VICTORIA JACKELINE",
     "personType": "Natural",
     "ciiu": null,
@@ -322,7 +322,7 @@
     "codUbigeo": "150101"
   },
   {
-    "CodEmpresa": 27,
+    "id": 27,
     "name": "DEL VALLE, ROCÍO",
     "personType": "Natural",
     "ciiu": null,
@@ -336,7 +336,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 30,
+    "id": 30,
     "name": "ALVARADO HOLGUÍN, ANDRÉS",
     "personType": "Natural",
     "ciiu": null,
@@ -350,7 +350,7 @@
     "codUbigeo": "230100"
   },
   {
-    "CodEmpresa": 31,
+    "id": 31,
     "name": "DESARROLLADORA DE STRIP CENTERS S.A.C.",
     "personType": "Legal",
     "ciiu": "6810",
@@ -364,7 +364,7 @@
     "codUbigeo": "160101"
   },
   {
-    "CodEmpresa": 32,
+    "id": 32,
     "name": "BUSTAMANTE LAYNES, DELIA",
     "personType": "Natural",
     "ciiu": null,
@@ -378,7 +378,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 33,
+    "id": 33,
     "name": "SHIMIZU MITSUMASU, MISAEL",
     "personType": "Natural",
     "ciiu": null,
@@ -392,7 +392,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 34,
+    "id": 34,
     "name": "DASSO MONTERO, RAFAEL",
     "personType": "Natural",
     "ciiu": null,
@@ -406,7 +406,7 @@
     "codUbigeo": "150108"
   },
   {
-    "CodEmpresa": 35,
+    "id": 35,
     "name": "ESPEJO GOMI, ALDO",
     "personType": "Natural",
     "ciiu": null,
@@ -420,7 +420,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 36,
+    "id": 36,
     "name": "FERNÁNDEZ FLORES, PATRICIA",
     "personType": "Natural",
     "ciiu": null,
@@ -434,7 +434,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 37,
+    "id": 37,
     "name": "IFH RETAIL CORP.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -448,7 +448,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 38,
+    "id": 38,
     "name": "NG RETAIL CREDIT CORP.",
     "personType": "Legal",
     "ciiu": null,
@@ -462,7 +462,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 39,
+    "id": 39,
     "name": "NG DEPARTMENT STORES CORP.",
     "personType": "Legal",
     "ciiu": null,
@@ -476,7 +476,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 40,
+    "id": 40,
     "name": "TIENDAS PERUANAS S.A.",
     "personType": "Legal",
     "ciiu": "4773",
@@ -490,7 +490,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 41,
+    "id": 41,
     "name": "ASESORIA E INVERSIONES CONSULT LTDA.",
     "personType": "Legal",
     "ciiu": null,
@@ -504,7 +504,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 42,
+    "id": 42,
     "name": "ZIMMERMANN MUJICA, PABLO JOSÉ",
     "personType": "Natural",
     "ciiu": null,
@@ -518,7 +518,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 43,
+    "id": 43,
     "name": "FINANCIERA OH S.A.",
     "personType": "Legal",
     "ciiu": "6419",
@@ -532,7 +532,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 44,
+    "id": 44,
     "name": "UCCELLI LABARTHE, MIGUEL",
     "personType": "Natural",
     "ciiu": null,
@@ -546,7 +546,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 45,
+    "id": 45,
     "name": "MARTINEZ BARROS, GUILLERMO",
     "personType": "Natural",
     "ciiu": null,
@@ -560,7 +560,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 46,
+    "id": 46,
     "name": "D’ANGELO DAGNINO, ALBERTO",
     "personType": "Natural",
     "ciiu": null,
@@ -574,7 +574,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 47,
+    "id": 47,
     "name": "ACOSTA BARRIOS, CARLA",
     "personType": "Natural",
     "ciiu": null,
@@ -588,7 +588,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 48,
+    "id": 48,
     "name": "VASQUEZ MEJIA, PAUL FIEDLER",
     "personType": "Natural",
     "ciiu": null,
@@ -602,7 +602,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 49,
+    "id": 49,
     "name": "SALAS COLONA, CLAUDIA SOFÍA",
     "personType": "Natural",
     "ciiu": null,
@@ -616,7 +616,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 50,
+    "id": 50,
     "name": "OLIVOS RODRIGUEZ, ALFREDO",
     "personType": "Natural",
     "ciiu": null,
@@ -630,7 +630,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 51,
+    "id": 51,
     "name": "SPADA MORONI, ROBERTO",
     "personType": "Natural",
     "ciiu": null,
@@ -644,7 +644,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 52,
+    "id": 52,
     "name": "HPSA CORP.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -658,7 +658,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 53,
+    "id": 53,
     "name": "NG HPSA CORP.",
     "personType": "Legal",
     "ciiu": null,
@@ -672,7 +672,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 54,
+    "id": 54,
     "name": "PONCE PINTO, ALEJANDRO",
     "personType": "Natural",
     "ciiu": null,
@@ -686,7 +686,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 55,
+    "id": 55,
     "name": "HOMECENTERS PERUANOS S.A.",
     "personType": "Legal",
     "ciiu": "4752",
@@ -700,7 +700,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 56,
+    "id": 56,
     "name": "DE LA ROZA ARANCIBIA, FRANCISCO JAVIER",
     "personType": "Natural",
     "ciiu": null,
@@ -714,7 +714,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 58,
+    "id": 58,
     "name": "LINCE GLOBAL OPPORTUNITIES CORP.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -728,7 +728,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 59,
+    "id": 59,
     "name": "INMOBILIARIA MILENIA S.A.",
     "personType": "Legal",
     "ciiu": "6810",
@@ -742,7 +742,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 60,
+    "id": 60,
     "name": "BASADRE BRAZZINI, GONZALO JOSÉ",
     "personType": "Natural",
     "ciiu": null,
@@ -756,7 +756,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 61,
+    "id": 61,
     "name": "INRETAIL PERU CORP.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -770,7 +770,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 62,
+    "id": 62,
     "name": "NG PHARMA CORP.",
     "personType": "Legal",
     "ciiu": null,
@@ -784,7 +784,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 63,
+    "id": 63,
     "name": "INTELIGO BANK LTD.",
     "personType": "Legal",
     "ciiu": "6499",
@@ -798,7 +798,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 64,
+    "id": 64,
     "name": "INTERCORP FINANCIAL SERVICES INC.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -812,7 +812,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 65,
+    "id": 65,
     "name": "CARRANZA UGARTE, LUIS",
     "personType": "Natural",
     "ciiu": null,
@@ -826,7 +826,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 66,
+    "id": 66,
     "name": "ROSELL RAMÍREZ GASTÓN, GONZALO",
     "personType": "Natural",
     "ciiu": null,
@@ -840,7 +840,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 69,
+    "id": 69,
     "name": "ARCE GAMARRA, CARLOS FERNANDO MINGYAR",
     "personType": "Natural",
     "ciiu": null,
@@ -854,7 +854,7 @@
     "codUbigeo": "150108"
   },
   {
-    "CodEmpresa": 72,
+    "id": 72,
     "name": "GOMEZ GONZALEZ, MARTIN",
     "personType": "Natural",
     "ciiu": null,
@@ -868,7 +868,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 73,
+    "id": 73,
     "name": "GIL HERRERA, PRIMITIVO",
     "personType": "Natural",
     "ciiu": null,
@@ -882,7 +882,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 74,
+    "id": 74,
     "name": "PAREDES, ROBERTO",
     "personType": "Natural",
     "ciiu": null,
@@ -896,7 +896,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 77,
+    "id": 77,
     "name": "INRETAIL REAL ESTATE CORP.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -910,7 +910,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 78,
+    "id": 78,
     "name": "INTERCORP MANAGEMENT S.A.C.",
     "personType": "Legal",
     "ciiu": "7020",
@@ -924,7 +924,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 80,
+    "id": 80,
     "name": "HERNÁNDEZ, RODRIGO",
     "personType": "Natural",
     "ciiu": null,
@@ -938,7 +938,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 81,
+    "id": 81,
     "name": "APARICIO, ARMANDO",
     "personType": "Natural",
     "ciiu": null,
@@ -952,7 +952,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 82,
+    "id": 82,
     "name": "INTELIGO SOCIEDAD AGENTE DE BOLSA S.A.",
     "personType": "Legal",
     "ciiu": "6612",
@@ -966,7 +966,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 83,
+    "id": 83,
     "name": "HOYLE MC CALLUM, ROBERTO",
     "personType": "Natural",
     "ciiu": null,
@@ -980,7 +980,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 84,
+    "id": 84,
     "name": "IÑIGO TIZÓN, FERNANDO RAÚL",
     "personType": "Natural",
     "ciiu": null,
@@ -994,7 +994,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 85,
+    "id": 85,
     "name": "ROISENVIT GRANCELLI, REYNALDO",
     "personType": "Natural",
     "ciiu": null,
@@ -1008,7 +1008,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 86,
+    "id": 86,
     "name": "SUÁREZ HERRERA, CARLOS EDGARDO",
     "personType": "Natural",
     "ciiu": null,
@@ -1022,7 +1022,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 87,
+    "id": 87,
     "name": "RI - FONDO 3 (PRIMA AFP S.A.)",
     "personType": "Legal",
     "ciiu": null,
@@ -1036,7 +1036,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 88,
+    "id": 88,
     "name": "DE LOS HEROS PÉREZ ALBELA, ALFONSO",
     "personType": "Natural",
     "ciiu": null,
@@ -1050,7 +1050,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 89,
+    "id": 89,
     "name": "BUSTAMANTE Y BUSTAMANTE, JOSÉ ALFONSO ERNESTO",
     "personType": "Natural",
     "ciiu": null,
@@ -1064,7 +1064,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 90,
+    "id": 90,
     "name": "NG EDUCATION HOLDINGS CORP.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -1078,7 +1078,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 91,
+    "id": 91,
     "name": "NG CAPITAL PARTNERS I, LP",
     "personType": "Legal",
     "ciiu": "9199",
@@ -1092,7 +1092,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 92,
+    "id": 92,
     "name": "NG CAPITAL I GP, LP",
     "personType": "Legal",
     "ciiu": null,
@@ -1106,7 +1106,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 93,
+    "id": 93,
     "name": "INTERSEGURO COMPAÑÍA DE SEGUROS S.A.",
     "personType": "Legal",
     "ciiu": "6511",
@@ -1120,7 +1120,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 95,
+    "id": 95,
     "name": "MUSSO VENTO, RAÚL",
     "personType": "Natural",
     "ciiu": null,
@@ -1134,7 +1134,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 96,
+    "id": 96,
     "name": "SACO VÉRTIZ TUDELA, CARLOS",
     "personType": "Natural",
     "ciiu": null,
@@ -1148,7 +1148,7 @@
     "codUbigeo": "150122"
   },
   {
-    "CodEmpresa": 97,
+    "id": 97,
     "name": "MOTTA FLORES, JUAN CARLOS",
     "personType": "Natural",
     "ciiu": null,
@@ -1162,7 +1162,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 98,
+    "id": 98,
     "name": "CHAMOCHUMBI MAQUIAVELLO, CARLOS",
     "personType": "Natural",
     "ciiu": null,
@@ -1176,7 +1176,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 99,
+    "id": 99,
     "name": "ESPINOZA AGUAYO, RONALD ENRIQUE",
     "personType": "Natural",
     "ciiu": null,
@@ -1190,7 +1190,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 100,
+    "id": 100,
     "name": "MONTERO MARCOS, WALTER",
     "personType": "Natural",
     "ciiu": null,
@@ -1204,7 +1204,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 101,
+    "id": 101,
     "name": "VALDIVIA VALLADARES, CLAUDIA",
     "personType": "Natural",
     "ciiu": null,
@@ -1218,7 +1218,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 102,
+    "id": 102,
     "name": "REAL PLAZA S.R.L.",
     "personType": "Legal",
     "ciiu": "6810",
@@ -1232,7 +1232,7 @@
     "codUbigeo": "150113"
   },
   {
-    "CodEmpresa": 105,
+    "id": 105,
     "name": "IR MANAGEMENT S.R.L.",
     "personType": "Legal",
     "ciiu": "6810",
@@ -1246,7 +1246,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 106,
+    "id": 106,
     "name": "SARRIA ARBOCCÓ, RODRIGO",
     "personType": "Natural",
     "ciiu": null,
@@ -1260,7 +1260,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 108,
+    "id": 108,
     "name": "BANCO INTERNACIONAL DEL PERU S.A.A. - INTERBANK",
     "personType": "Legal",
     "ciiu": "6419",
@@ -1274,7 +1274,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 109,
+    "id": 109,
     "name": "BAERTL MONTORI, FRANCISCO AUGUSTO",
     "personType": "Natural",
     "ciiu": null,
@@ -1288,7 +1288,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 111,
+    "id": 111,
     "name": "GASTAÑETA ALAYZA, ALFREDO",
     "personType": "Natural",
     "ciiu": null,
@@ -1302,7 +1302,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 112,
+    "id": 112,
     "name": "GRAHAM AYLLÓN, CARMEN ROSA",
     "personType": "Natural",
     "ciiu": null,
@@ -1316,7 +1316,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 113,
+    "id": 113,
     "name": "ZAVALA LOMBARDI, FERNANDO MARTÍN",
     "personType": "Natural",
     "ciiu": null,
@@ -1330,7 +1330,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 114,
+    "id": 114,
     "name": "CASTELLANOS LÓPEZ TORRES, LUIS FELIPE",
     "personType": "Natural",
     "ciiu": null,
@@ -1344,7 +1344,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 115,
+    "id": 115,
     "name": "PRADO BUSTAMANTE, GABRIELA",
     "personType": "Natural",
     "ciiu": null,
@@ -1358,7 +1358,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 116,
+    "id": 116,
     "name": "CANO NUÑEZ, CARLOS",
     "personType": "Natural",
     "ciiu": null,
@@ -1372,7 +1372,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 117,
+    "id": 117,
     "name": "GRADOS CARRARO, ALFONSO FERNANDO",
     "personType": "Natural",
     "ciiu": null,
@@ -1386,7 +1386,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 118,
+    "id": 118,
     "name": "ROEKAERT EMBRECHTS, PETER ALBERT",
     "personType": "Natural",
     "ciiu": null,
@@ -1400,7 +1400,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 119,
+    "id": 119,
     "name": "ACOSTA-RUBIO RODRÍGUEZ, ZELMA FRANCISCA",
     "personType": "Natural",
     "ciiu": null,
@@ -1414,7 +1414,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 120,
+    "id": 120,
     "name": "CASASSA RAMAT, MICHELA",
     "personType": "Natural",
     "ciiu": null,
@@ -1428,7 +1428,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 121,
+    "id": 121,
     "name": "BERNASCONI CAROZZI, GIORGIO ETTORE MIGUEL",
     "personType": "Natural",
     "ciiu": null,
@@ -1442,7 +1442,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 122,
+    "id": 122,
     "name": "LLOSA DE CARDENAS DE SAN MARTÍN, LUZ MARIA SUSANA",
     "personType": "Natural",
     "ciiu": null,
@@ -1456,7 +1456,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 123,
+    "id": 123,
     "name": "LUNG WON, KATIA MERCEDES",
     "personType": "Natural",
     "ciiu": null,
@@ -1470,7 +1470,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 124,
+    "id": 124,
     "name": "INTERFONDOS S.A. SAF",
     "personType": "Legal",
     "ciiu": "6630",
@@ -1484,7 +1484,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 126,
+    "id": 126,
     "name": "INTERBANK – PERU REPRESENTAÇÕES E PARTICIPAÇÕES BRASIL LTDA.",
     "personType": "Legal",
     "ciiu": "7010",
@@ -1498,7 +1498,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 127,
+    "id": 127,
     "name": "SÁNCHEZ, MARCELO",
     "personType": "Natural",
     "ciiu": null,
@@ -1512,7 +1512,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 128,
+    "id": 128,
     "name": "INTERNACIONAL DE TITULOS SOCIEDAD TITULIZADORA S.A. - INTERTITULOS ST",
     "personType": "Legal",
     "ciiu": "6499",
@@ -1526,7 +1526,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 129,
+    "id": 129,
     "name": "AYÍN TEMOCHE, PEDRO GABRIEL",
     "personType": "Natural",
     "ciiu": null,
@@ -1540,7 +1540,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 130,
+    "id": 130,
     "name": "TRIGO COHELLO, WILFREDO SEGUNDO",
     "personType": "Natural",
     "ciiu": null,
@@ -1554,7 +1554,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 133,
+    "id": 133,
     "name": "CINEPLEX S.A.",
     "personType": "Legal",
     "ciiu": "9212",
@@ -1568,7 +1568,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 134,
+    "id": 134,
     "name": "NEXUS FILMS CORPORATION",
     "personType": "Legal",
     "ciiu": "9199",
@@ -1582,7 +1582,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 135,
+    "id": 135,
     "name": "REHDER CASTRO, BERNARDO JAVIER",
     "personType": "Natural",
     "ciiu": null,
@@ -1596,7 +1596,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 136,
+    "id": 136,
     "name": "CEBRECOS REVILLA, FELIPE",
     "personType": "Natural",
     "ciiu": null,
@@ -1610,7 +1610,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 137,
+    "id": 137,
     "name": "SORIANO BARRANTES, JOSÉ FERNANDO",
     "personType": "Natural",
     "ciiu": null,
@@ -1624,7 +1624,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 138,
+    "id": 138,
     "name": "NEXUS CAPITAL PARTNERS I",
     "personType": "Legal",
     "ciiu": "9199",
@@ -1638,7 +1638,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 139,
+    "id": 139,
     "name": "PIZAC INVERSIONISTA S.A.",
     "personType": "Legal",
     "ciiu": null,
@@ -1652,7 +1652,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 140,
+    "id": 140,
     "name": "ARTAX INVERSIONISTA S.A.",
     "personType": "Legal",
     "ciiu": null,
@@ -1666,7 +1666,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 141,
+    "id": 141,
     "name": "ELSKY",
     "personType": "Legal",
     "ciiu": null,
@@ -1680,7 +1680,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 142,
+    "id": 142,
     "name": "NESSUS PERÚ S.A.",
     "personType": "Legal",
     "ciiu": null,
@@ -1694,7 +1694,7 @@
     "codUbigeo": "150100"
   },
   {
-    "CodEmpresa": 143,
+    "id": 143,
     "name": "DOLEIBURG INTERNATIONAL INC.",
     "personType": "Legal",
     "ciiu": null,
@@ -1708,7 +1708,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 144,
+    "id": 144,
     "name": "EVALYN INVESTMENTS S.A.",
     "personType": "Legal",
     "ciiu": null,
@@ -1722,7 +1722,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 145,
+    "id": 145,
     "name": "ALAMEDA COLONIAL S.A.C.",
     "personType": "Legal",
     "ciiu": "4100",
@@ -1736,7 +1736,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 146,
+    "id": 146,
     "name": "MUÑOZ RAMÍREZ, ANDRÉS",
     "personType": "Natural",
     "ciiu": null,
@@ -1750,7 +1750,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 147,
+    "id": 147,
     "name": "INTELIGO GROUP CORP.",
     "personType": "Legal",
     "ciiu": "6619",
@@ -1764,7 +1764,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 148,
+    "id": 148,
     "name": "INTERCORP INVESTMENTS PERÚ INC.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -1778,7 +1778,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 150,
+    "id": 150,
     "name": "GRUPO ALBAMAR S.A.C.",
     "personType": "Legal",
     "ciiu": null,
@@ -1792,7 +1792,7 @@
     "codUbigeo": "150122"
   },
   {
-    "CodEmpresa": 151,
+    "id": 151,
     "name": "FINHOUSE PROPOERTIES INC",
     "personType": "Legal",
     "ciiu": null,
@@ -1806,7 +1806,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 152,
+    "id": 152,
     "name": "ESPANTOSO SALOM, JOSÉ RICARDO",
     "personType": "Natural",
     "ciiu": null,
@@ -1820,7 +1820,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 153,
+    "id": 153,
     "name": "STALLI, ROLANDO JAVIER",
     "personType": "Natural",
     "ciiu": null,
@@ -1834,7 +1834,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 154,
+    "id": 154,
     "name": "ALCOCER, MARCOS",
     "personType": "Natural",
     "ciiu": null,
@@ -1848,7 +1848,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 157,
+    "id": 157,
     "name": "SANTOS GUTIERREZ, MIGUEL",
     "personType": "Natural",
     "ciiu": null,
@@ -1862,7 +1862,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 158,
+    "id": 158,
     "name": "BARRIOS GUERRERO, ASCENSIÓN",
     "personType": "Natural",
     "ciiu": null,
@@ -1876,7 +1876,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 160,
+    "id": 160,
     "name": "ÑATO ZEVALLOS, RAÚL ANTONIO",
     "personType": "Natural",
     "ciiu": null,
@@ -1890,7 +1890,7 @@
     "codUbigeo": "150122"
   },
   {
-    "CodEmpresa": 161,
+    "id": 161,
     "name": "SAN MIGUEL GLOBAL OPPORTUNITIES S.A.C.",
     "personType": "Legal",
     "ciiu": "6810",
@@ -1904,7 +1904,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 162,
+    "id": 162,
     "name": "INTERCORP PERU TRADING COMPANY LIMITED HONG KONG",
     "personType": "Legal",
     "ciiu": "7010",
@@ -1918,7 +1918,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 163,
+    "id": 163,
     "name": "RÍOS COBOS, JUAN CARLOS",
     "personType": "Natural",
     "ciiu": null,
@@ -1932,7 +1932,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 164,
+    "id": 164,
     "name": "INTERCORP PERU TRADING SHANGHAI COMPANY LIMITED",
     "personType": "Legal",
     "ciiu": "7010",
@@ -1946,7 +1946,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 165,
+    "id": 165,
     "name": "DOMUS HOGARES DEL NORTE S.A.C.",
     "personType": "Legal",
     "ciiu": "4100",
@@ -1960,7 +1960,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 166,
+    "id": 166,
     "name": "MELENDEZ ALDUENA, ALVARO",
     "personType": "Natural",
     "ciiu": null,
@@ -1974,7 +1974,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 167,
+    "id": 167,
     "name": "RODRÍGUEZ GONZALES, SABAS",
     "personType": "Natural",
     "ciiu": null,
@@ -1988,7 +1988,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 168,
+    "id": 168,
     "name": "ICOCHEA RUIZ DE SOMOCURCIO, IVAN",
     "personType": "Natural",
     "ciiu": null,
@@ -2002,7 +2002,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 169,
+    "id": 169,
     "name": "COLEGIOS PERUANOS S.A.",
     "personType": "Legal",
     "ciiu": "8510",
@@ -2016,7 +2016,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 170,
+    "id": 170,
     "name": "YZUSQUI CHESSMAN, JORGE LUIS ELEUTERIO",
     "personType": "Natural",
     "ciiu": null,
@@ -2030,7 +2030,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 171,
+    "id": 171,
     "name": "GOLERGANT NIEGO, JONATHAN",
     "personType": "Natural",
     "ciiu": null,
@@ -2044,7 +2044,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 172,
+    "id": 172,
     "name": "TRAHTEMBERG SIEDERER, LEÓN",
     "personType": "Natural",
     "ciiu": null,
@@ -2058,7 +2058,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 174,
+    "id": 174,
     "name": "INRETAIL PHARMA S.A.",
     "personType": "Legal",
     "ciiu": "4772",
@@ -2072,7 +2072,7 @@
     "codUbigeo": "150108"
   },
   {
-    "CodEmpresa": 176,
+    "id": 176,
     "name": "BARDALES TORRES, JASSY ANTHONY",
     "personType": "Natural",
     "ciiu": null,
@@ -2086,7 +2086,7 @@
     "codUbigeo": "160101"
   },
   {
-    "CodEmpresa": 178,
+    "id": 178,
     "name": "NG EDUCATION S.A.C.",
     "personType": "Legal",
     "ciiu": "8299",
@@ -2100,7 +2100,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 179,
+    "id": 179,
     "name": "COMPAÑÍA DE SERVICIOS CONEXOS EXPRESSNET S.A.C.",
     "personType": "Legal",
     "ciiu": "6619",
@@ -2114,7 +2114,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 180,
+    "id": 180,
     "name": "CASABONNE GUTIÉRREZ, CÉSAR AUGUSTO",
     "personType": "Natural",
     "ciiu": null,
@@ -2128,7 +2128,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 181,
+    "id": 181,
     "name": "VEGA CANTUARIAS, EDUARDO ALBERTO",
     "personType": "Natural",
     "ciiu": null,
@@ -2142,7 +2142,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 182,
+    "id": 182,
     "name": "REY VIENRICH, ESTHER IVETTE",
     "personType": "Natural",
     "ciiu": null,
@@ -2156,7 +2156,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 183,
+    "id": 183,
     "name": "LÓPEZ GUIDINO, SILVANA MARÍA",
     "personType": "Natural",
     "ciiu": null,
@@ -2170,7 +2170,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 184,
+    "id": 184,
     "name": "BORBONET SÁNCHEZ, FERNANDO ENRIQUE",
     "personType": "Natural",
     "ciiu": null,
@@ -2184,7 +2184,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 186,
+    "id": 186,
     "name": "UNIVERSIDAD TECNOLÓGICA DEL PERÚ S.A.C.",
     "personType": "Legal",
     "ciiu": "8530",
@@ -2198,7 +2198,7 @@
     "codUbigeo": "150101"
   },
   {
-    "CodEmpresa": 187,
+    "id": 187,
     "name": "AMURUZ GALLEGOS, ROGER",
     "personType": "Natural",
     "ciiu": null,
@@ -2212,7 +2212,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 188,
+    "id": 188,
     "name": "BABA NAKAO, LUIS",
     "personType": "Natural",
     "ciiu": null,
@@ -2226,7 +2226,7 @@
     "codUbigeo": "150101"
   },
   {
-    "CodEmpresa": 189,
+    "id": 189,
     "name": "PROMOTORA DE LA UNIVERSIDAD TECNOLÓGICA DE CHICLAYO S.A.C.",
     "personType": "Legal",
     "ciiu": "8530",
@@ -2240,7 +2240,7 @@
     "codUbigeo": "150101"
   },
   {
-    "CodEmpresa": 190,
+    "id": 190,
     "name": "KNOWLESS, RICHARD",
     "personType": "Natural",
     "ciiu": null,
@@ -2254,7 +2254,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 191,
+    "id": 191,
     "name": "ALVARADO DÍAZ, OMAR ALBERTO",
     "personType": "Natural",
     "ciiu": null,
@@ -2268,7 +2268,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 192,
+    "id": 192,
     "name": "IFH INTERNATIONAL CORP.",
     "personType": "Legal",
     "ciiu": null,
@@ -2282,7 +2282,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 193,
+    "id": 193,
     "name": "FONDO DE INVERSIÓN CONCEPCIÓN",
     "personType": "Legal",
     "ciiu": null,
@@ -2296,7 +2296,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 194,
+    "id": 194,
     "name": "ZALDÍVAR CHAUCA, ALLISSON",
     "personType": "Natural",
     "ciiu": null,
@@ -2310,7 +2310,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 195,
+    "id": 195,
     "name": "CASTRO AYCA, JAVIER ALFREDO",
     "personType": "Natural",
     "ciiu": null,
@@ -2324,7 +2324,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 196,
+    "id": 196,
     "name": "ALDAVE GARCÍA DEL BARRIO, MANUEL ALEJANDRO",
     "personType": "Natural",
     "ciiu": null,
@@ -2338,7 +2338,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 197,
+    "id": 197,
     "name": "QUEZADA BARRIOS, FRANCISCO JAVIER",
     "personType": "Natural",
     "ciiu": null,
@@ -2352,7 +2352,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 198,
+    "id": 198,
     "name": "MÁLAGA DE LA CRUZ, ROLANDO",
     "personType": "Natural",
     "ciiu": null,
@@ -2366,7 +2366,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 199,
+    "id": 199,
     "name": "ARÉVALO FLORES, JORGE",
     "personType": "Natural",
     "ciiu": null,
@@ -2380,7 +2380,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 200,
+    "id": 200,
     "name": "GOTUZZO OLIVA, GIANINA",
     "personType": "Natural",
     "ciiu": null,
@@ -2394,7 +2394,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 201,
+    "id": 201,
     "name": "ORTIZ ALIZIERI, HÉCTOR GABRIEL",
     "personType": "Natural",
     "ciiu": null,
@@ -2408,7 +2408,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 202,
+    "id": 202,
     "name": "GONZÁLES CASTAÑEDA, JORGE",
     "personType": "Natural",
     "ciiu": null,
@@ -2422,7 +2422,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 203,
+    "id": 203,
     "name": "CECCOVILLI GUZMÁN, CARLOS BRUNO",
     "personType": "Natural",
     "ciiu": null,
@@ -2436,7 +2436,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 204,
+    "id": 204,
     "name": "ÁLVAREZ MACEDO, DIANA CAROLINA",
     "personType": "Natural",
     "ciiu": null,
@@ -2450,7 +2450,7 @@
     "codUbigeo": "160101"
   },
   {
-    "CodEmpresa": 205,
+    "id": 205,
     "name": "ARANA GONZÁLES, BORIS MANUEL",
     "personType": "Natural",
     "ciiu": null,
@@ -2464,7 +2464,7 @@
     "codUbigeo": "160101"
   },
   {
-    "CodEmpresa": 206,
+    "id": 206,
     "name": "RÍOS SARMIENTO, FERNANDO",
     "personType": "Natural",
     "ciiu": null,
@@ -2478,7 +2478,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 207,
+    "id": 207,
     "name": "VILCA MUENTE, FRANCISCO JOSÉ",
     "personType": "Natural",
     "ciiu": null,
@@ -2492,7 +2492,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 209,
+    "id": 209,
     "name": "LADRÓN DE GUEVARA, HÉCTOR",
     "personType": "Natural",
     "ciiu": null,
@@ -2506,7 +2506,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 210,
+    "id": 210,
     "name": "SÁNCHEZ GAMARRA, ÚRSULA CONSUELO",
     "personType": "Natural",
     "ciiu": null,
@@ -2520,7 +2520,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 211,
+    "id": 211,
     "name": "CALDERÓN RÍOS, JUAN CARLOS",
     "personType": "Natural",
     "ciiu": null,
@@ -2534,7 +2534,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 212,
+    "id": 212,
     "name": "PÉREZ - EGAÑA PARODI, ROCÍO",
     "personType": "Natural",
     "ciiu": null,
@@ -2548,7 +2548,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 214,
+    "id": 214,
     "name": "ROCHA BEDOYA, MARÍA DEL CARMEN",
     "personType": "Natural",
     "ciiu": null,
@@ -2562,7 +2562,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 215,
+    "id": 215,
     "name": "VALENCIA BRENIS, MAURICIO",
     "personType": "Natural",
     "ciiu": null,
@@ -2576,7 +2576,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 216,
+    "id": 216,
     "name": "ROJAS CHIANG, RICARDO",
     "personType": "Natural",
     "ciiu": null,
@@ -2590,7 +2590,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 217,
+    "id": 217,
     "name": "LA PUNTA GLOBAL OPPORTUNITIES CORP.",
     "personType": "Legal",
     "ciiu": "6611",
@@ -2604,7 +2604,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 218,
+    "id": 218,
     "name": "TERUKINA YAMASHIRO, RICARDO",
     "personType": "Natural",
     "ciiu": null,
@@ -2618,7 +2618,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 219,
+    "id": 219,
     "name": "DE LA FUENTE VILLA-GARCÍA, RENÉ AUGUSTO",
     "personType": "Natural",
     "ciiu": null,
@@ -2632,7 +2632,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 220,
+    "id": 220,
     "name": "DÍAZ MIRANDA, DAVID",
     "personType": "Natural",
     "ciiu": null,
@@ -2646,7 +2646,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 222,
+    "id": 222,
     "name": "IFH CAPITAL CORP.",
     "personType": "Legal",
     "ciiu": "6619",
@@ -2660,7 +2660,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 223,
+    "id": 223,
     "name": "INTERCORP CAPITAL INVESTMENTS INC.",
     "personType": "Legal",
     "ciiu": "6619",
@@ -2674,7 +2674,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 224,
+    "id": 224,
     "name": "GONZALES DE BOADO HALCON, EDUARDO",
     "personType": "Natural",
     "ciiu": null,
@@ -2688,7 +2688,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 225,
+    "id": 225,
     "name": "NG EDUCATION HOLDINGS II CORP.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -2702,7 +2702,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 227,
+    "id": 227,
     "name": "SERVICIO EDUCATIVO EMPRESARIAL S.A.C.",
     "personType": "Legal",
     "ciiu": "8530",
@@ -2716,7 +2716,7 @@
     "codUbigeo": "150121"
   },
   {
-    "CodEmpresa": 228,
+    "id": 228,
     "name": "INSTITUTO PERUANO DE ACCIÓN EMPRESARIAL",
     "personType": "Legal",
     "ciiu": "8030",
@@ -2730,7 +2730,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 229,
+    "id": 229,
     "name": "NG CAPITAL PARTNERS II, LP",
     "personType": "Legal",
     "ciiu": "9199",
@@ -2744,7 +2744,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 230,
+    "id": 230,
     "name": "FRANCO REGJO, JUAN ALBERTO",
     "personType": "Natural",
     "ciiu": null,
@@ -2758,7 +2758,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 231,
+    "id": 231,
     "name": "MONTALVÁN MOSQUERA, CARLOS EDUARDO",
     "personType": "Natural",
     "ciiu": null,
@@ -2772,7 +2772,7 @@
     "codUbigeo": "150121"
   },
   {
-    "CodEmpresa": 232,
+    "id": 232,
     "name": "AGUIRRE ARRIZ, GONZALO GERMÁN",
     "personType": "Natural",
     "ciiu": null,
@@ -2786,7 +2786,7 @@
     "codUbigeo": "150121"
   },
   {
-    "CodEmpresa": 236,
+    "id": 236,
     "name": "MANRIQUE LEWIS, ÁLVARO SANTIAGO",
     "personType": "Natural",
     "ciiu": null,
@@ -2800,7 +2800,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 238,
+    "id": 238,
     "name": "TORI GRANDE, CARLOS JOSÉ",
     "personType": "Natural",
     "ciiu": null,
@@ -2814,7 +2814,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 239,
+    "id": 239,
     "name": "GOICOCHEA DE BENITO, FELIPE",
     "personType": "Natural",
     "ciiu": null,
@@ -2828,7 +2828,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 240,
+    "id": 240,
     "name": "ÁLVAREZ MACEDO, DIANA CAROLINA",
     "personType": "Natural",
     "ciiu": null,
@@ -2842,7 +2842,7 @@
     "codUbigeo": "160101"
   },
   {
-    "CodEmpresa": 241,
+    "id": 241,
     "name": "MORANTE ORMEÑO, CARLOS AMÉRICO",
     "personType": "Natural",
     "ciiu": null,
@@ -2856,7 +2856,7 @@
     "codUbigeo": "150101"
   },
   {
-    "CodEmpresa": 242,
+    "id": 242,
     "name": "BENAVIDES TORRES, EDUARDO ARMANDO",
     "personType": "Natural",
     "ciiu": null,
@@ -2870,7 +2870,7 @@
     "codUbigeo": "150101"
   },
   {
-    "CodEmpresa": 243,
+    "id": 243,
     "name": "SPIHLMANN DENEGRI, ENRIQUE RAÚL",
     "personType": "Natural",
     "ciiu": null,
@@ -2884,7 +2884,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 244,
+    "id": 244,
     "name": "VELARDE BENAVIDES, JORGE",
     "personType": "Natural",
     "ciiu": null,
@@ -2898,7 +2898,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 245,
+    "id": 245,
     "name": "FERRECCIO DEL RÍO, BRUNO",
     "personType": "Natural",
     "ciiu": null,
@@ -2912,7 +2912,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 247,
+    "id": 247,
     "name": "LUNA GROSCHEL, MANUEL RAINER",
     "personType": "Natural",
     "ciiu": null,
@@ -2926,7 +2926,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 248,
+    "id": 248,
     "name": "DAY SPRINCKMOLLER, HENRY",
     "personType": "Natural",
     "ciiu": null,
@@ -2940,7 +2940,7 @@
     "codUbigeo": "150121"
   },
   {
-    "CodEmpresa": 249,
+    "id": 249,
     "name": "CHLIMPER ACKERMAN, JOSÉ",
     "personType": "Natural",
     "ciiu": null,
@@ -2954,7 +2954,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 250,
+    "id": 250,
     "name": "HEEREN RAMOS, CARLOS MIGUEL",
     "personType": "Natural",
     "ciiu": null,
@@ -2968,7 +2968,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 251,
+    "id": 251,
     "name": "HOMECENTERS PERUANOS ORIENTE S.A.C.",
     "personType": "Legal",
     "ciiu": "4752",
@@ -2982,7 +2982,7 @@
     "codUbigeo": "250105"
   },
   {
-    "CodEmpresa": 252,
+    "id": 252,
     "name": "ANDRADE NICOLI, CESAR AUGUSTO",
     "personType": "Natural",
     "ciiu": null,
@@ -2996,7 +2996,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 253,
+    "id": 253,
     "name": "MARSANO ALVARADO, SANDRA ROSA",
     "personType": "Natural",
     "ciiu": null,
@@ -3010,7 +3010,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 254,
+    "id": 254,
     "name": "CALLAO GLOBAL OPPORTUNTIES CORP.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -3024,7 +3024,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 255,
+    "id": 255,
     "name": "PENNY BIDEGARAY, CARLOS PEDRO",
     "personType": "Natural",
     "ciiu": null,
@@ -3038,7 +3038,7 @@
     "codUbigeo": "150113"
   },
   {
-    "CodEmpresa": 256,
+    "id": 256,
     "name": "TRIVELLI AVILA, CAROLINA",
     "personType": "Natural",
     "ciiu": null,
@@ -3052,7 +3052,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 257,
+    "id": 257,
     "name": "PUENTE ARNAO FOSCA, ADOLFO MARTIN",
     "personType": "Natural",
     "ciiu": null,
@@ -3066,7 +3066,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 258,
+    "id": 258,
     "name": "VINATEA CAMERE, VICTOR MANUEL",
     "personType": "Natural",
     "ciiu": null,
@@ -3080,7 +3080,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 259,
+    "id": 259,
     "name": "NG EDUCATION HOLDINGS III CORP.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -3094,7 +3094,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 260,
+    "id": 260,
     "name": "TIENDAS PERUANAS ORIENTE S.A.C.",
     "personType": "Legal",
     "ciiu": "4773",
@@ -3108,7 +3108,7 @@
     "codUbigeo": "250105"
   },
   {
-    "CodEmpresa": 261,
+    "id": 261,
     "name": "POLO LÓPEZ, RICARDO JOSÉ",
     "personType": "Natural",
     "ciiu": null,
@@ -3122,7 +3122,7 @@
     "codUbigeo": "250105"
   },
   {
-    "CodEmpresa": 262,
+    "id": 262,
     "name": "MEJÍA JULCA, NANCY",
     "personType": "Natural",
     "ciiu": null,
@@ -3136,7 +3136,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 263,
+    "id": 263,
     "name": "BARRIOS FERNANDEZ CONCHA, RAUL",
     "personType": "Natural",
     "ciiu": null,
@@ -3150,7 +3150,7 @@
     "codUbigeo": "150101"
   },
   {
-    "CodEmpresa": 264,
+    "id": 264,
     "name": "ABRAM YONG, GINO RENATO",
     "personType": "Natural",
     "ciiu": null,
@@ -3164,7 +3164,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 265,
+    "id": 265,
     "name": "MARTINEZ CHICOMA, JUAN DAVID",
     "personType": "Natural",
     "ciiu": null,
@@ -3178,7 +3178,7 @@
     "codUbigeo": "250105"
   },
   {
-    "CodEmpresa": 266,
+    "id": 266,
     "name": "MC NAUGHTON, JOHN FERENCZ",
     "personType": "Natural",
     "ciiu": null,
@@ -3192,7 +3192,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 267,
+    "id": 267,
     "name": "NG RETAIL CREDIT II CORP.",
     "personType": "Legal",
     "ciiu": null,
@@ -3206,7 +3206,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 268,
+    "id": 268,
     "name": "LAZARTE MOLINA, JORGE EDUARDO",
     "personType": "Natural",
     "ciiu": null,
@@ -3220,7 +3220,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 269,
+    "id": 269,
     "name": "INRETAIL CONSUMER (PF D.LEG. 861)",
     "personType": "Legal",
     "ciiu": "8299",
@@ -3234,7 +3234,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 270,
+    "id": 270,
     "name": "DIAZ MIRANDA, DAVID ALI",
     "personType": "Natural",
     "ciiu": null,
@@ -3248,7 +3248,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 271,
+    "id": 271,
     "name": "DAÑINO ROCA, VANESSA",
     "personType": "Natural",
     "ciiu": null,
@@ -3262,7 +3262,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 272,
+    "id": 272,
     "name": "HOOPER, IVAN GEOFFREY DOUGLAS",
     "personType": "Natural",
     "ciiu": null,
@@ -3276,7 +3276,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 273,
+    "id": 273,
     "name": "INRETAIL SHOPPING MALLS (PF D.LEG. 861)",
     "personType": "Legal",
     "ciiu": "8299",
@@ -3290,7 +3290,7 @@
     "codUbigeo": "150113"
   },
   {
-    "CodEmpresa": 274,
+    "id": 274,
     "name": "DUHARTE MUHVIC-PINTAR, DANIEL",
     "personType": "Natural",
     "ciiu": null,
@@ -3304,7 +3304,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 276,
+    "id": 276,
     "name": "URBI PROYECTOS S.A.C.",
     "personType": "Legal",
     "ciiu": "7020",
@@ -3318,7 +3318,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 277,
+    "id": 277,
     "name": "PINTO AHUMADA, ALDO AUGUSTO",
     "personType": "Natural",
     "ciiu": null,
@@ -3332,7 +3332,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 278,
+    "id": 278,
     "name": "SEGURA VEGAS, JUAN PABLO",
     "personType": "Natural",
     "ciiu": null,
@@ -3346,7 +3346,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 279,
+    "id": 279,
     "name": "CARCAMO PALACIOS, VICTOR EDWIN MARTIN",
     "personType": "Natural",
     "ciiu": null,
@@ -3360,7 +3360,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 280,
+    "id": 280,
     "name": "CHINCHAY TINOCO, LUZ ANGÉLICA",
     "personType": "Natural",
     "ciiu": null,
@@ -3374,7 +3374,7 @@
     "codUbigeo": "250105"
   },
   {
-    "CodEmpresa": 282,
+    "id": 282,
     "name": "ALTAMAR, KECIA KERUBE",
     "personType": "Natural",
     "ciiu": null,
@@ -3388,7 +3388,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 283,
+    "id": 283,
     "name": "CAMARGO VARGAS, ILKA IBETH",
     "personType": "Natural",
     "ciiu": null,
@@ -3402,7 +3402,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 284,
+    "id": 284,
     "name": "NG EDUCATION HOLDINGS IV CORP.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -3416,7 +3416,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 285,
+    "id": 285,
     "name": "WOODMAN NAVARRETE, ALEXANDER",
     "personType": "Natural",
     "ciiu": null,
@@ -3430,7 +3430,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 286,
+    "id": 286,
     "name": "PRADO MOGROVEJO, MARIELA",
     "personType": "Natural",
     "ciiu": null,
@@ -3444,7 +3444,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 287,
+    "id": 287,
     "name": "MULLER CARO, ADELBERTO DOMINIK",
     "personType": "Natural",
     "ciiu": null,
@@ -3458,7 +3458,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 288,
+    "id": 288,
     "name": "OLIVA VASQUEZ, ALFREDO WILDER",
     "personType": "Natural",
     "ciiu": null,
@@ -3472,7 +3472,7 @@
     "codUbigeo": "150113"
   },
   {
-    "CodEmpresa": 289,
+    "id": 289,
     "name": "ASALDE WONG, CARLOS ENRIQUE",
     "personType": "Natural",
     "ciiu": null,
@@ -3486,7 +3486,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 290,
+    "id": 290,
     "name": "REYES ROSPIGLIOSI, DIEGO ENRIQUE",
     "personType": "Natural",
     "ciiu": null,
@@ -3500,7 +3500,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 291,
+    "id": 291,
     "name": "ORMAECHE SOSA, LUIS ALFREDO",
     "personType": "Natural",
     "ciiu": null,
@@ -3514,7 +3514,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 292,
+    "id": 292,
     "name": "CABELLO SOLIS, CLAUDIA",
     "personType": "Natural",
     "ciiu": null,
@@ -3528,7 +3528,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 293,
+    "id": 293,
     "name": "BERCKHOLTZ LIRA, CARLOS",
     "personType": "Natural",
     "ciiu": null,
@@ -3542,7 +3542,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 294,
+    "id": 294,
     "name": "ANGULO DEL ALAMO, ANA TERESA",
     "personType": "Natural",
     "ciiu": null,
@@ -3556,7 +3556,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 295,
+    "id": 295,
     "name": "SAMPE PALOMINO, JESSYCA MARÍA",
     "personType": "Natural",
     "ciiu": null,
@@ -3570,7 +3570,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 296,
+    "id": 296,
     "name": "COSTA PASTORI, GIANNI",
     "personType": "Natural",
     "ciiu": null,
@@ -3584,7 +3584,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 297,
+    "id": 297,
     "name": "CONTI PEROCHENA, GONZALO SAMUEL",
     "personType": "Natural",
     "ciiu": null,
@@ -3598,7 +3598,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 298,
+    "id": 298,
     "name": "HERRERA CHACÓN, RAFAEL ENRIQUE",
     "personType": "Natural",
     "ciiu": null,
@@ -3612,7 +3612,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 299,
+    "id": 299,
     "name": "LA TORRE COSTA, LUIS AUGUSTO",
     "personType": "Natural",
     "ciiu": null,
@@ -3626,7 +3626,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 300,
+    "id": 300,
     "name": "MUÑIZ OTERO, DANIA PAMELA",
     "personType": "Natural",
     "ciiu": null,
@@ -3640,7 +3640,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 301,
+    "id": 301,
     "name": "PALOMINO DE LA CRUZ, JUAN",
     "personType": "Natural",
     "ciiu": null,
@@ -3654,7 +3654,7 @@
     "codUbigeo": "150121"
   },
   {
-    "CodEmpresa": 302,
+    "id": 302,
     "name": "MARRUFFO SANCHEZ, GUSTAVO ISAAC",
     "personType": "Natural",
     "ciiu": null,
@@ -3668,7 +3668,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 303,
+    "id": 303,
     "name": "MARISCA GARCÍA ROSSELL, ROSA MARIA",
     "personType": "Natural",
     "ciiu": null,
@@ -3682,7 +3682,7 @@
     "codUbigeo": "150121"
   },
   {
-    "CodEmpresa": 304,
+    "id": 304,
     "name": "RIOS GAJATE, EDUARDO",
     "personType": "Natural",
     "ciiu": null,
@@ -3696,7 +3696,7 @@
     "codUbigeo": "150121"
   },
   {
-    "CodEmpresa": 305,
+    "id": 305,
     "name": "BENAVIDES MONTERO, LUCIA",
     "personType": "Natural",
     "ciiu": null,
@@ -3710,7 +3710,7 @@
     "codUbigeo": "150121"
   },
   {
-    "CodEmpresa": 306,
+    "id": 306,
     "name": "CAYO FAJARDO, DORIS HERMELINDA",
     "personType": "Natural",
     "ciiu": null,
@@ -3724,7 +3724,7 @@
     "codUbigeo": "150121"
   },
   {
-    "CodEmpresa": 307,
+    "id": 307,
     "name": "INURRITEGUI BURGA CISNEROS DE BELEVAN, BEGOÑA MARIA",
     "personType": "Natural",
     "ciiu": null,
@@ -3738,7 +3738,7 @@
     "codUbigeo": "150121"
   },
   {
-    "CodEmpresa": 309,
+    "id": 309,
     "name": "SEJAS, JOSÉ ESTEBAN",
     "personType": "Natural",
     "ciiu": null,
@@ -3752,7 +3752,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 310,
+    "id": 310,
     "name": "ESCABINI SEPÚLVEDA, MATÍAS",
     "personType": "Natural",
     "ciiu": null,
@@ -3766,7 +3766,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 311,
+    "id": 311,
     "name": "HURTADO CASTILLO, ELÍAS MARTÍN",
     "personType": "Natural",
     "ciiu": null,
@@ -3780,7 +3780,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 312,
+    "id": 312,
     "name": "SANTA MARÍA GUZMÁN, HUGO ANTONIO",
     "personType": "Natural",
     "ciiu": null,
@@ -3794,7 +3794,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 313,
+    "id": 313,
     "name": "VÁSQUEZ LEÓN, FRANCISCO JOSÉ",
     "personType": "Natural",
     "ciiu": null,
@@ -3808,7 +3808,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 314,
+    "id": 314,
     "name": "PARDO DELGADO, JUAN IGNACIO",
     "personType": "Natural",
     "ciiu": null,
@@ -3822,7 +3822,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 315,
+    "id": 315,
     "name": "DÍAZ TORDOYA, ALFONSO ALEJANDRO",
     "personType": "Natural",
     "ciiu": null,
@@ -3836,7 +3836,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 316,
+    "id": 316,
     "name": "MUÑOZ PÉREZ, JORGE ALBERTO ISACC",
     "personType": "Natural",
     "ciiu": null,
@@ -3850,7 +3850,7 @@
     "codUbigeo": "150121"
   },
   {
-    "CodEmpresa": 317,
+    "id": 317,
     "name": "VERA GUZMÁN, HUGO",
     "personType": "Natural",
     "ciiu": null,
@@ -3864,7 +3864,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 318,
+    "id": 318,
     "name": "DEL CASTILLO ZEVALLOS, IDA GRACIELA",
     "personType": "Natural",
     "ciiu": null,
@@ -3878,7 +3878,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 319,
+    "id": 319,
     "name": "GUERRERO SALAZAR, JUAN CARLOS",
     "personType": "Natural",
     "ciiu": null,
@@ -3892,7 +3892,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 320,
+    "id": 320,
     "name": "SANTIS MOYA, DANIELA",
     "personType": "Natural",
     "ciiu": null,
@@ -3906,7 +3906,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 321,
+    "id": 321,
     "name": "FLORES JÁUREGUI, RICARDO GIOVANNI",
     "personType": "Natural",
     "ciiu": null,
@@ -3920,7 +3920,7 @@
     "codUbigeo": "250105"
   },
   {
-    "CodEmpresa": 322,
+    "id": 322,
     "name": "TEMOCHE NÚÑEZ DEL PRADO, CARLA",
     "personType": "Natural",
     "ciiu": null,
@@ -3934,7 +3934,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 323,
+    "id": 323,
     "name": "DIBOS CARDOZA, LORENA MARÍA",
     "personType": "Natural",
     "ciiu": null,
@@ -3948,7 +3948,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 324,
+    "id": 324,
     "name": "ESPINOZA CHECA, ROBERTO RICARDO",
     "personType": "Natural",
     "ciiu": null,
@@ -3962,7 +3962,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 325,
+    "id": 325,
     "name": "BARCIA ESTRELLA, RAÚL",
     "personType": "Natural",
     "ciiu": null,
@@ -3976,7 +3976,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 326,
+    "id": 326,
     "name": "GUZMÁN ROJAS, EVA ALICIA",
     "personType": "Natural",
     "ciiu": null,
@@ -3990,7 +3990,7 @@
     "codUbigeo": "250105"
   },
   {
-    "CodEmpresa": 327,
+    "id": 327,
     "name": "CABALLERO ROSAZZA, MARIO",
     "personType": "Natural",
     "ciiu": null,
@@ -4004,7 +4004,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 328,
+    "id": 328,
     "name": "BEACON HEALTHCARE S.A.C.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -4018,7 +4018,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 329,
+    "id": 329,
     "name": "JORGE EDUARDO O´HARA ORDOÑEZ",
     "personType": "Natural",
     "ciiu": null,
@@ -4032,7 +4032,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 330,
+    "id": 330,
     "name": "CENTROS DE SALUD PERUANOS S.A.C.",
     "personType": "Legal",
     "ciiu": "8610",
@@ -4046,7 +4046,7 @@
     "codUbigeo": "150120"
   },
   {
-    "CodEmpresa": 331,
+    "id": 331,
     "name": "YAYA SILVA, MAURICIO",
     "personType": "Natural",
     "ciiu": null,
@@ -4060,7 +4060,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 334,
+    "id": 334,
     "name": "LA FIDUCIARIA S.A.",
     "personType": "Legal",
     "ciiu": null,
@@ -4074,7 +4074,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 335,
+    "id": 335,
     "name": "ORLANDINI SALAVERRY, PAOLO CÉSAR",
     "personType": "Natural",
     "ciiu": null,
@@ -4088,7 +4088,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 336,
+    "id": 336,
     "name": "PARRA MORENO, ANA CECILIA",
     "personType": "Natural",
     "ciiu": null,
@@ -4102,7 +4102,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 337,
+    "id": 337,
     "name": "VEREAU MONTENEGRO, CARLOS",
     "personType": "Natural",
     "ciiu": null,
@@ -4116,7 +4116,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 338,
+    "id": 338,
     "name": "RESTREPO VERNAZA, CAROLINA",
     "personType": "Natural",
     "ciiu": null,
@@ -4130,7 +4130,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 339,
+    "id": 339,
     "name": "NEGOCIOS E INMUEBLES S.A.",
     "personType": "Legal",
     "ciiu": "6820",
@@ -4144,7 +4144,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 341,
+    "id": 341,
     "name": "ROCA VOTO BERNALES, JOSE ANTONIO",
     "personType": "Natural",
     "ciiu": null,
@@ -4158,7 +4158,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 342,
+    "id": 342,
     "name": "WIESE MOREYRA, AUGUSTO FERNANDO",
     "personType": "Natural",
     "ciiu": null,
@@ -4172,7 +4172,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 343,
+    "id": 343,
     "name": "DE LA PUENTE WIESE, GONZALO ANTONIO",
     "personType": "Natural",
     "ciiu": null,
@@ -4186,7 +4186,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 344,
+    "id": 344,
     "name": "DUCASSI WIESE, LUIS AUGUSTO",
     "personType": "Natural",
     "ciiu": null,
@@ -4200,7 +4200,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 345,
+    "id": 345,
     "name": "DE OSMA BERCKEMEYER, JUAN PEDRO",
     "personType": "Natural",
     "ciiu": null,
@@ -4214,7 +4214,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 346,
+    "id": 346,
     "name": "HARMSEN ANDRESS, ALEJANDRO",
     "personType": "Natural",
     "ciiu": null,
@@ -4228,7 +4228,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 347,
+    "id": 347,
     "name": "STOCKHOLM BARRIOS, CHRISTIAN",
     "personType": "Natural",
     "ciiu": null,
@@ -4242,7 +4242,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 348,
+    "id": 348,
     "name": "KOBAYASHI YAGI, DANIEL ARTURO",
     "personType": "Natural",
     "ciiu": null,
@@ -4256,7 +4256,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 349,
+    "id": 349,
     "name": "NG HIGHER EDUCATION S.A.C.",
     "personType": "Legal",
     "ciiu": "0000",
@@ -4270,7 +4270,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 351,
+    "id": 351,
     "name": "MENDOZA MONTALVO, EDICSON ADOLFO",
     "personType": "Natural",
     "ciiu": null,
@@ -4284,7 +4284,7 @@
     "codUbigeo": "230101"
   },
   {
-    "CodEmpresa": 352,
+    "id": 352,
     "name": "VALDEZ LADRÓN DE GUEVARA, VERÓNICA",
     "personType": "Natural",
     "ciiu": null,
@@ -4298,7 +4298,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 353,
+    "id": 353,
     "name": "ZARATE BAQUERIZO, MILAGROS",
     "personType": "Natural",
     "ciiu": null,
@@ -4312,7 +4312,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 354,
+    "id": 354,
     "name": "DE LOS HEROS ECHECOPAR, MARÍA DEL PILAR",
     "personType": "Natural",
     "ciiu": null,
@@ -4326,7 +4326,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 355,
+    "id": 355,
     "name": "GAMARRA NOVOA, JORGE HERNÁN",
     "personType": "Natural",
     "ciiu": null,
@@ -4340,7 +4340,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 359,
+    "id": 359,
     "name": "QS CONSUMO S.A.C.",
     "personType": "Legal",
     "ciiu": "4690",
@@ -4354,7 +4354,7 @@
     "codUbigeo": "150108"
   },
   {
-    "CodEmpresa": 361,
+    "id": 361,
     "name": "BALANSKY DRASSINOWER, ADOLFO",
     "personType": "Natural",
     "ciiu": null,
@@ -4368,7 +4368,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 362,
+    "id": 362,
     "name": "KANASHIRO UECHI, GUSTAVO ENRIQUE",
     "personType": "Natural",
     "ciiu": null,
@@ -4382,7 +4382,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 363,
+    "id": 363,
     "name": "MONTALVÁN MOSQUERA, GEORGETTE ELENA",
     "personType": "Natural",
     "ciiu": null,
@@ -4396,7 +4396,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 364,
+    "id": 364,
     "name": "VELASCO BOADA, JAIME ANÍBAL",
     "personType": "Natural",
     "ciiu": null,
@@ -4410,7 +4410,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 365,
+    "id": 365,
     "name": "VÁSQUEZ LLERENA, DELIA CECILIA",
     "personType": "Natural",
     "ciiu": null,
@@ -4424,7 +4424,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 366,
+    "id": 366,
     "name": "GÓMEZ SÁNCHEZ, CLAUDIA",
     "personType": "LegalEntity",
     "ciiu": null,
@@ -4438,7 +4438,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 367,
+    "id": 367,
     "name": "GÓMEZ TORRES, CLAUDIA",
     "personType": "Natural",
     "ciiu": null,
@@ -4452,7 +4452,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 368,
+    "id": 368,
     "name": "MENDOZA LÓPEZ, ANGEL ANTONIO",
     "personType": "Natural",
     "ciiu": null,
@@ -4466,7 +4466,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 370,
+    "id": 370,
     "name": "YAÑEZ OLARTE, EDMUNDO",
     "personType": "Natural",
     "ciiu": null,
@@ -4480,7 +4480,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 371,
+    "id": 371,
     "name": "JORSA DE LA SELVA S.A.C.",
     "personType": "Legal",
     "ciiu": "4772",
@@ -4494,7 +4494,7 @@
     "codUbigeo": "160112"
   },
   {
-    "CodEmpresa": 372,
+    "id": 372,
     "name": "LAZARTE PALAO, PATRICIO",
     "personType": "Natural",
     "ciiu": null,
@@ -4508,7 +4508,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 373,
+    "id": 373,
     "name": "ALFARO GARRATH, LUIS FELIPE",
     "personType": "Natural",
     "ciiu": null,
@@ -4522,7 +4522,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 375,
+    "id": 375,
     "name": "KING CHIONG DE JORDÁN, ELIA VICTORIA",
     "personType": "Natural",
     "ciiu": null,
@@ -4536,7 +4536,7 @@
     "codUbigeo": "150122"
   },
   {
-    "CodEmpresa": 376,
+    "id": 376,
     "name": "MARIÁTEGUI EZETA, JOSÉ CARLOS",
     "personType": "Natural",
     "ciiu": null,
@@ -4550,7 +4550,7 @@
     "codUbigeo": "150120"
   },
   {
-    "CodEmpresa": 377,
+    "id": 377,
     "name": "CASTAGNOLA ZÚÑIGA, GIANFRANCO MÁXIMO DANTE",
     "personType": "Natural",
     "ciiu": null,
@@ -4564,7 +4564,7 @@
     "codUbigeo": "150122"
   },
   {
-    "CodEmpresa": 378,
+    "id": 378,
     "name": "GAVIRIA RAYMOND, RICARDO",
     "personType": "Natural",
     "ciiu": null,
@@ -4578,7 +4578,7 @@
     "codUbigeo": "150137"
   },
   {
-    "CodEmpresa": 379,
+    "id": 379,
     "name": "CASTILLO CALLE, ANTONIO ROBERTO",
     "personType": "Natural",
     "ciiu": null,
@@ -4592,7 +4592,7 @@
     "codUbigeo": "150137"
   },
   {
-    "CodEmpresa": 382,
+    "id": 382,
     "name": "IGLESIAS GUERRA, ELADIO",
     "personType": "Natural",
     "ciiu": null,
@@ -4606,7 +4606,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 383,
+    "id": 383,
     "name": "CAILLAUX ZAZZALI, GUSTAVO ERNESTO",
     "personType": "Natural",
     "ciiu": null,
@@ -4620,7 +4620,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 384,
+    "id": 384,
     "name": "FORNO ALVISTUR, CARLOS ERIC",
     "personType": "Natural",
     "ciiu": null,
@@ -4634,7 +4634,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 385,
+    "id": 385,
     "name": "GRUENBERG SCHNEIDER, JORGE",
     "personType": "Natural",
     "ciiu": null,
@@ -4648,7 +4648,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 387,
+    "id": 387,
     "name": "AZEÑAS CUELLAR, RODRIGO EDGAR",
     "personType": "Natural",
     "ciiu": null,
@@ -4662,7 +4662,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 388,
+    "id": 388,
     "name": "SORUCO URSIC, ESTEBAN RODRIGO",
     "personType": "Natural",
     "ciiu": null,
@@ -4676,7 +4676,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 389,
+    "id": 389,
     "name": "JALDÍN QUINTANILLA, MARCELO ROBERTO",
     "personType": "Natural",
     "ciiu": null,
@@ -4690,7 +4690,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 390,
+    "id": 390,
     "name": "QUICORP S.A.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -4704,7 +4704,7 @@
     "codUbigeo": "150108"
   },
   {
-    "CodEmpresa": 391,
+    "id": 391,
     "name": "REY BUSTAMANTE, ALONSO JOSÉ",
     "personType": "Natural",
     "ciiu": null,
@@ -4718,7 +4718,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 392,
+    "id": 392,
     "name": "UCOVICH DORSNER, IVO",
     "personType": "Natural",
     "ciiu": null,
@@ -4732,7 +4732,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 393,
+    "id": 393,
     "name": "MIFARMA S.A.C.",
     "personType": "Legal",
     "ciiu": "4772",
@@ -4746,7 +4746,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 394,
+    "id": 394,
     "name": "CASTRO MORÁN, ROLANDO PABLO",
     "personType": "Natural",
     "ciiu": null,
@@ -4760,7 +4760,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 395,
+    "id": 395,
     "name": "GILARDI ARBULÚ, RENZO ALBERTO",
     "personType": "Natural",
     "ciiu": null,
@@ -4774,7 +4774,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 396,
+    "id": 396,
     "name": "ROSSI, NORBERTO",
     "personType": "Natural",
     "ciiu": null,
@@ -4788,7 +4788,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 397,
+    "id": 397,
     "name": "ENGEL CHRISTEN, MARTIN",
     "personType": "Natural",
     "ciiu": null,
@@ -4802,7 +4802,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 398,
+    "id": 398,
     "name": "GARCÍA RAGGIO, LEANDRO LUIS MARTÍN",
     "personType": "Natural",
     "ciiu": null,
@@ -4816,7 +4816,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 400,
+    "id": 400,
     "name": "NG INFRA II S.A.C.",
     "personType": "Legal",
     "ciiu": "8620",
@@ -4830,7 +4830,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 401,
+    "id": 401,
     "name": "CAYCHO REVOLLEDO, AUGUSTO ANTONIO",
     "personType": "Natural",
     "ciiu": null,
@@ -4844,7 +4844,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 404,
+    "id": 404,
     "name": "VANTTIVE CIA. LTDA.",
     "personType": "Legal",
     "ciiu": "4690",
@@ -4858,7 +4858,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 405,
+    "id": 405,
     "name": "CORONEL AGUIRRE, LUIS FABIÁN",
     "personType": "Natural",
     "ciiu": null,
@@ -4872,7 +4872,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 406,
+    "id": 406,
     "name": "QUIFATEX S.A.",
     "personType": "Legal",
     "ciiu": "4690",
@@ -4886,7 +4886,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 408,
+    "id": 408,
     "name": "MULDER PANAS, JAN WILLEM",
     "personType": "Natural",
     "ciiu": null,
@@ -4900,7 +4900,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 409,
+    "id": 409,
     "name": "INTERPROPERTIES HOLDING II (PF D.LEG. 861)",
     "personType": "Legal",
     "ciiu": "8299",
@@ -4914,7 +4914,7 @@
     "codUbigeo": "150113"
   },
   {
-    "CodEmpresa": 411,
+    "id": 411,
     "name": "INMOBILIARIA PUERTA DEL SOL S.A.C.",
     "personType": "Legal",
     "ciiu": "6810",
@@ -4928,7 +4928,7 @@
     "codUbigeo": "150113"
   },
   {
-    "CodEmpresa": 412,
+    "id": 412,
     "name": "INTERPROPERTIES HOLDING (PF DS 093-2002-EF)",
     "personType": "Legal",
     "ciiu": "8299",
@@ -4942,7 +4942,7 @@
     "codUbigeo": "150113"
   },
   {
-    "CodEmpresa": 413,
+    "id": 413,
     "name": "ALJOVÍN GAZZANI, LUCÍA CAYETANA",
     "personType": "Natural",
     "ciiu": null,
@@ -4956,7 +4956,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 414,
+    "id": 414,
     "name": "SAN BORJA GLOBAL OPPORTUNITIES S.A.C.",
     "personType": "Legal",
     "ciiu": "8299",
@@ -4970,7 +4970,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 415,
+    "id": 415,
     "name": "FLOREZ DUNCAN, JUAN PABLO",
     "personType": "Natural",
     "ciiu": null,
@@ -4984,7 +4984,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 416,
+    "id": 416,
     "name": "INTERCORP EDUCATION SERVICES S.L.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -4998,7 +4998,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 417,
+    "id": 417,
     "name": "VISTRA ADMINISTRATION SERVICES S.L.U.",
     "personType": "Legal",
     "ciiu": null,
@@ -5012,7 +5012,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 418,
+    "id": 418,
     "name": "TRANSFORMANDO LA EDUCACIÓN DE MÉXICO S.A. DE C.V.",
     "personType": "Legal",
     "ciiu": "8510",
@@ -5026,7 +5026,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 419,
+    "id": 419,
     "name": "DEL VALLE PEROCHENA, FRANCISCO JAVIER",
     "personType": "Natural",
     "ciiu": null,
@@ -5040,7 +5040,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 420,
+    "id": 420,
     "name": "AMAYA MARTINEZ DEL CAMPO, FRANCISCO JAVIER",
     "personType": "Natural",
     "ciiu": null,
@@ -5054,7 +5054,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 421,
+    "id": 421,
     "name": "CONTROLADORA ELEMKA, S.A. DE C.V.",
     "personType": "Legal",
     "ciiu": null,
@@ -5068,7 +5068,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 423,
+    "id": 423,
     "name": "PLAZA VEA ORIENTE S.A.C.",
     "personType": "Legal",
     "ciiu": "4711",
@@ -5082,7 +5082,7 @@
     "codUbigeo": "250105"
   },
   {
-    "CodEmpresa": 424,
+    "id": 424,
     "name": "DHAGA DEL CASTILLO COTOS, PEDRO EDMUNDO",
     "personType": "Natural",
     "ciiu": null,
@@ -5096,7 +5096,7 @@
     "codUbigeo": "250105"
   },
   {
-    "CodEmpresa": 425,
+    "id": 425,
     "name": "INTELIGO PERÚ HOLDINGS S.A.C.",
     "personType": "Legal",
     "ciiu": "6499",
@@ -5110,7 +5110,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 426,
+    "id": 426,
     "name": "INVERSIONES REAL STATE S.A.",
     "personType": "Legal",
     "ciiu": "6810",
@@ -5124,7 +5124,7 @@
     "codUbigeo": "150113"
   },
   {
-    "CodEmpresa": 427,
+    "id": 427,
     "name": "HERNÁNDEZ LÓPEZ, RAÚL",
     "personType": "Natural",
     "ciiu": null,
@@ -5138,7 +5138,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 428,
+    "id": 428,
     "name": "MORA SOLIS, JAIME",
     "personType": "Natural",
     "ciiu": null,
@@ -5152,7 +5152,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 429,
+    "id": 429,
     "name": "CONTERNO MARTINELLI, PATRICIA MARÍA",
     "personType": "Natural",
     "ciiu": null,
@@ -5166,7 +5166,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 430,
+    "id": 430,
     "name": "CULATTA, RICHARD",
     "personType": "Natural",
     "ciiu": null,
@@ -5180,7 +5180,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 431,
+    "id": 431,
     "name": "RODRÍGUEZ ARNAIZ, XIMENA GARCÍA",
     "personType": "Natural",
     "ciiu": null,
@@ -5194,7 +5194,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 432,
+    "id": 432,
     "name": "RUEDA OLIVA, PERCY JAVIER",
     "personType": "Natural",
     "ciiu": null,
@@ -5208,7 +5208,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 433,
+    "id": 433,
     "name": "CARRIÓN SAAVEDRA, JORGE LUIS",
     "personType": "Natural",
     "ciiu": null,
@@ -5222,7 +5222,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 434,
+    "id": 434,
     "name": "HERRERA VALZ, MARÍA EUGENIA",
     "personType": "Natural",
     "ciiu": null,
@@ -5236,7 +5236,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 435,
+    "id": 435,
     "name": "ALVARADO GUTIERREZ, AURELIA",
     "personType": "Natural",
     "ciiu": null,
@@ -5250,7 +5250,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 436,
+    "id": 436,
     "name": "RAICOVI NAZAL, KARINA",
     "personType": "Natural",
     "ciiu": null,
@@ -5264,7 +5264,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 437,
+    "id": 437,
     "name": "MONTES CHÁVEZ, JOSÉ ARMANDO",
     "personType": "Natural",
     "ciiu": null,
@@ -5278,7 +5278,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 438,
+    "id": 438,
     "name": "RIVERA GAMARRA, DANIELA MARGARITA",
     "personType": "Natural",
     "ciiu": null,
@@ -5292,7 +5292,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 439,
+    "id": 439,
     "name": "LARREA NARVAEZ, SANDY",
     "personType": "Natural",
     "ciiu": null,
@@ -5306,7 +5306,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 440,
+    "id": 440,
     "name": "MUÑOZ GANOZA, FARIA KOREY",
     "personType": "Natural",
     "ciiu": null,
@@ -5320,7 +5320,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 441,
+    "id": 441,
     "name": "DEL VALLE MONTERO, JULIO ANTONIO",
     "personType": "Natural",
     "ciiu": null,
@@ -5334,7 +5334,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 442,
+    "id": 442,
     "name": "CAIRO CALDERÓN, YURI",
     "personType": "Natural",
     "ciiu": null,
@@ -5348,7 +5348,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 443,
+    "id": 443,
     "name": "FARJE GORDON, ANTONIO ALEJANDRO",
     "personType": "Natural",
     "ciiu": null,
@@ -5362,7 +5362,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 444,
+    "id": 444,
     "name": "SERVICIOS ADMINISTRATIVOS TRANSFORMANDO LA EDUCACIÓN DE MÉXICO, S.C.",
     "personType": "Legal",
     "ciiu": "8510",
@@ -5376,7 +5376,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 445,
+    "id": 445,
     "name": "APARICIO RAMOS, JORGE CHRISTIAN",
     "personType": "Natural",
     "ciiu": null,
@@ -5390,7 +5390,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 446,
+    "id": 446,
     "name": "INTELIGO USA INC.",
     "personType": "Legal",
     "ciiu": "6619",
@@ -5404,7 +5404,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 447,
+    "id": 447,
     "name": "VELARDE MONSALVE, DIEGO ARMANDO",
     "personType": "Natural",
     "ciiu": null,
@@ -5418,7 +5418,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 448,
+    "id": 448,
     "name": "OSORES BALESTRA, IVANNA",
     "personType": "Natural",
     "ciiu": null,
@@ -5432,7 +5432,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 449,
+    "id": 449,
     "name": "NG PHARMA II S.A.",
     "personType": "Legal",
     "ciiu": "0000",
@@ -5446,7 +5446,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 450,
+    "id": 450,
     "name": "GARCÍA FIGARI DE FABBRI, MARIELA",
     "personType": "Natural",
     "ciiu": null,
@@ -5460,7 +5460,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 451,
+    "id": 451,
     "name": "BENITO MARCHESE, IGNACIO",
     "personType": "Natural",
     "ciiu": null,
@@ -5474,7 +5474,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 453,
+    "id": 453,
     "name": "GFELL HEIN, DIRK RENE",
     "personType": "Natural",
     "ciiu": null,
@@ -5488,7 +5488,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 455,
+    "id": 455,
     "name": "PORTUGAL DESMARCHELIER, ANDREA",
     "personType": "Natural",
     "ciiu": null,
@@ -5502,7 +5502,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 456,
+    "id": 456,
     "name": "CHELSEA NATIONAL CORP.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -5516,7 +5516,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 457,
+    "id": 457,
     "name": "AGORA SERVICIOS DIGITALES S.A.C.",
     "personType": "Legal",
     "ciiu": "8299",
@@ -5530,7 +5530,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 460,
+    "id": 460,
     "name": "CORPORACIÓN EDUCATIVA HISPANOAMERICANA SOCIEDAD CIVIL",
     "personType": "Legal",
     "ciiu": "8510",
@@ -5544,7 +5544,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 461,
+    "id": 461,
     "name": "ZAMARIM VARIZ, GLAUCO",
     "personType": "Natural",
     "ciiu": null,
@@ -5558,7 +5558,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 463,
+    "id": 463,
     "name": "MAZZUCCHELLI CRIPPA, VIVIANA",
     "personType": "Natural",
     "ciiu": null,
@@ -5572,7 +5572,7 @@
     "codUbigeo": "150108"
   },
   {
-    "CodEmpresa": 464,
+    "id": 464,
     "name": "DE LA PEÑA TSCHUDI, JOSÉ MARIANO",
     "personType": "Natural",
     "ciiu": null,
@@ -5586,7 +5586,7 @@
     "codUbigeo": "150108"
   },
   {
-    "CodEmpresa": 465,
+    "id": 465,
     "name": "BECERRA GARCIA, SUSAN JENNIFER",
     "personType": "Natural",
     "ciiu": null,
@@ -5600,7 +5600,7 @@
     "codUbigeo": "150108"
   },
   {
-    "CodEmpresa": 466,
+    "id": 466,
     "name": "LA TORRE BARRIGA, HELDY LORENA",
     "personType": "Natural",
     "ciiu": null,
@@ -5614,7 +5614,7 @@
     "codUbigeo": "150108"
   },
   {
-    "CodEmpresa": 467,
+    "id": 467,
     "name": "RODRÍGUEZ GÓMEZ, TOMÁS ALBERTO",
     "personType": "Natural",
     "ciiu": null,
@@ -5628,7 +5628,7 @@
     "codUbigeo": "150108"
   },
   {
-    "CodEmpresa": 468,
+    "id": 468,
     "name": "VARGAS GALVÁN, LÁZARO",
     "personType": "Natural",
     "ciiu": null,
@@ -5642,7 +5642,7 @@
     "codUbigeo": "150108"
   },
   {
-    "CodEmpresa": 469,
+    "id": 469,
     "name": "BARRIONUEVO ALBA, GONZALO",
     "personType": "Natural",
     "ciiu": null,
@@ -5656,7 +5656,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 470,
+    "id": 470,
     "name": "ANDRADE, DIEGO",
     "personType": "Natural",
     "ciiu": null,
@@ -5670,7 +5670,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 471,
+    "id": 471,
     "name": "SANDOVAL TORRES, JONATHAN ALEXANDER",
     "personType": "Natural",
     "ciiu": null,
@@ -5684,7 +5684,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 472,
+    "id": 472,
     "name": "PONCE DE LEON COLOMA, AURORA MERCEDES",
     "personType": "Natural",
     "ciiu": null,
@@ -5698,7 +5698,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 473,
+    "id": 473,
     "name": "OTERO KRUGER, RICARDO LUIS",
     "personType": "Natural",
     "ciiu": null,
@@ -5712,7 +5712,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 474,
+    "id": 474,
     "name": "SAMANIEGO VALDIVIEZO, VANESSA",
     "personType": "Natural",
     "ciiu": null,
@@ -5726,7 +5726,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 475,
+    "id": 475,
     "name": "DOMINGO VELASCO, DAVID",
     "personType": "Natural",
     "ciiu": null,
@@ -5740,7 +5740,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 476,
+    "id": 476,
     "name": "LABARTHE ZLATAR, CESAR ANTONIO",
     "personType": "Natural",
     "ciiu": null,
@@ -5754,7 +5754,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 477,
+    "id": 477,
     "name": "DELGADO PINO, ERNESTO",
     "personType": "Natural",
     "ciiu": null,
@@ -5768,7 +5768,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 478,
+    "id": 478,
     "name": "RODRÍGUEZ ALCOCER, AUGUSTO FERNANDO",
     "personType": "Natural",
     "ciiu": null,
@@ -5782,7 +5782,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 479,
+    "id": 479,
     "name": "JUGO SOMA, PATTY",
     "personType": "Natural",
     "ciiu": null,
@@ -5796,7 +5796,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 480,
+    "id": 480,
     "name": "VIGIL VEGA, KHRISTIAN",
     "personType": "Natural",
     "ciiu": null,
@@ -5810,7 +5810,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 481,
+    "id": 481,
     "name": "ARGOMEDO ODAR, LIZBETH JHAHAIRA",
     "personType": "Natural",
     "ciiu": null,
@@ -5824,7 +5824,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 482,
+    "id": 482,
     "name": "SOTELO CARRÉ, AUGUSTO",
     "personType": "Natural",
     "ciiu": null,
@@ -5838,7 +5838,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 483,
+    "id": 483,
     "name": "CASTELLANO BRUNELLO, RENZO",
     "personType": "Natural",
     "ciiu": null,
@@ -5852,7 +5852,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 484,
+    "id": 484,
     "name": "CAMPAÑA DURAND, ELIANA YAHAYRA",
     "personType": "Natural",
     "ciiu": null,
@@ -5866,7 +5866,7 @@
     "codUbigeo": "250105"
   },
   {
-    "CodEmpresa": 485,
+    "id": 485,
     "name": "PAJUELO BUSTAMANTE, FELIPE ARTURO",
     "personType": "Natural",
     "ciiu": null,
@@ -5880,7 +5880,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 486,
+    "id": 486,
     "name": "FERRERO MERINO, ERNESTO GIANCARLO",
     "personType": "Natural",
     "ciiu": null,
@@ -5894,7 +5894,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 487,
+    "id": 487,
     "name": "REHDER REMY, BERNARDO OTTO",
     "personType": "Natural",
     "ciiu": null,
@@ -5908,7 +5908,7 @@
     "codUbigeo": "150114"
   },
   {
-    "CodEmpresa": 488,
+    "id": 488,
     "name": "SEE, ANNE MARIE",
     "personType": "Natural",
     "ciiu": null,
@@ -5922,7 +5922,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 489,
+    "id": 489,
     "name": "PINDER, LEON RYAN",
     "personType": "Natural",
     "ciiu": null,
@@ -5936,7 +5936,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 490,
+    "id": 490,
     "name": "IDAT S.A.C.",
     "personType": "Legal",
     "ciiu": "8530",
@@ -5950,7 +5950,7 @@
     "codUbigeo": "150101"
   },
   {
-    "CodEmpresa": 491,
+    "id": 491,
     "name": "INTERCORP CONNECTIVITY INC.",
     "personType": "Legal",
     "ciiu": "6611",
@@ -5964,7 +5964,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 492,
+    "id": 492,
     "name": "INTERPROPERTIES PERU (PF D.LEG. 861)",
     "personType": "Legal",
     "ciiu": "8299",
@@ -5978,7 +5978,7 @@
     "codUbigeo": "150113"
   },
   {
-    "CodEmpresa": 493,
+    "id": 493,
     "name": "KRUG, STEPHEN",
     "personType": "Natural",
     "ciiu": null,
@@ -5992,7 +5992,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 494,
+    "id": 494,
     "name": "OLAECHEA CADENILLAS, LUCIANA CAMILA",
     "personType": "Natural",
     "ciiu": null,
@@ -6006,7 +6006,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 495,
+    "id": 495,
     "name": "MANTILLA CALISTO, SEBASTIAN GONZALO",
     "personType": "Natural",
     "ciiu": null,
@@ -6020,7 +6020,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 496,
+    "id": 496,
     "name": "COLEGIOS COLOMBIANOS HOLDING S.A.S.",
     "personType": "Legal",
     "ciiu": "6499",
@@ -6034,7 +6034,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 497,
+    "id": 497,
     "name": "ABRIL BARÓN, MILTON ALONSO",
     "personType": "Natural",
     "ciiu": null,
@@ -6048,7 +6048,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 499,
+    "id": 499,
     "name": "RIOCASTOR, S.L.",
     "personType": "Legal",
     "ciiu": null,
@@ -6062,7 +6062,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 500,
+    "id": 500,
     "name": "COLEGIOS COLOMBIANOS S.A.S.",
     "personType": "Legal",
     "ciiu": "8510",
@@ -6076,7 +6076,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 501,
+    "id": 501,
     "name": "CONSTAIN RUEDA, PABLO",
     "personType": "Natural",
     "ciiu": null,
@@ -6090,7 +6090,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 503,
+    "id": 503,
     "name": "VERA GUZMÁN, HUGO",
     "personType": "Natural",
     "ciiu": null,
@@ -6104,7 +6104,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 505,
+    "id": 505,
     "name": "SERNA VENEGAS, HERNANDO MIGUEL",
     "personType": "Natural",
     "ciiu": null,
@@ -6118,7 +6118,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 506,
+    "id": 506,
     "name": "HERAS VEGA, WILLIAMS JOSE",
     "personType": "Natural",
     "ciiu": null,
@@ -6132,7 +6132,7 @@
     "codUbigeo": "250105"
   },
   {
-    "CodEmpresa": 507,
+    "id": 507,
     "name": "CASO PÉREZ MARÍA ALMUDENA",
     "personType": "Natural",
     "ciiu": null,
@@ -6146,7 +6146,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 508,
+    "id": 508,
     "name": "RPH S.C.C.",
     "personType": "Legal",
     "ciiu": "0000",
@@ -6160,7 +6160,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 509,
+    "id": 509,
     "name": "FARMACIAS PERUANAS S.A.C.",
     "personType": "Legal",
     "ciiu": "8299",
@@ -6174,7 +6174,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 510,
+    "id": 510,
     "name": "INDIGITAL XP S.A.C.",
     "personType": "Legal",
     "ciiu": "6209",
@@ -6188,7 +6188,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 512,
+    "id": 512,
     "name": "GTP INVERSIONISTAS S.A.C.",
     "personType": "Legal",
     "ciiu": "0000",
@@ -6202,7 +6202,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 514,
+    "id": 514,
     "name": "MINETTI VEGA, MARIELLA OROCIA",
     "personType": "Natural",
     "ciiu": null,
@@ -6216,7 +6216,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 515,
+    "id": 515,
     "name": "BRIGARD HOLGUÍN, ROBERTO DE SANTA ANA",
     "personType": "Natural",
     "ciiu": null,
@@ -6230,7 +6230,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 516,
+    "id": 516,
     "name": "NAVAS SANZ DE SANTAMARIA, PABLO DEL CARMEN",
     "personType": "Natural",
     "ciiu": null,
@@ -6244,7 +6244,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 517,
+    "id": 517,
     "name": "GARCÉS NEGRI, MARÍA PÍA",
     "personType": "Natural",
     "ciiu": null,
@@ -6258,7 +6258,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 518,
+    "id": 518,
     "name": "YAGUI YOSHIMOTO, DANIEL",
     "personType": "Natural",
     "ciiu": null,
@@ -6272,7 +6272,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 519,
+    "id": 519,
     "name": "ELIAS POLASTRI, CRISTINA CARLA",
     "personType": "Natural",
     "ciiu": null,
@@ -6286,7 +6286,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 520,
+    "id": 520,
     "name": "VELARDE MONSALVE, CLAUDIO MIGUEL",
     "personType": "Natural",
     "ciiu": null,
@@ -6300,7 +6300,7 @@
     "codUbigeo": "150108"
   },
   {
-    "CodEmpresa": 521,
+    "id": 521,
     "name": "YANEZ GARCIA, SANTIAGO MAURICIO",
     "personType": "Natural",
     "ciiu": null,
@@ -6314,7 +6314,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 522,
+    "id": 522,
     "name": "ROMERO ALBAN, ALVARO ROBERTO",
     "personType": "Natural",
     "ciiu": null,
@@ -6328,7 +6328,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 523,
+    "id": 523,
     "name": "BOHUSLAV VOTRUBA SYLVA, PEDRO",
     "personType": "Natural",
     "ciiu": null,
@@ -6342,7 +6342,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 524,
+    "id": 524,
     "name": "IFS MANAGEMENT S.A.C.",
     "personType": "Legal",
     "ciiu": "6430",
@@ -6356,7 +6356,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 525,
+    "id": 525,
     "name": "VALLENAS REQUENA, CÉSAR",
     "personType": "Natural",
     "ciiu": null,
@@ -6370,7 +6370,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 526,
+    "id": 526,
     "name": "GUERRERO ARIAS SCHREIBER, ALBERTO GERARDO",
     "personType": "Natural",
     "ciiu": null,
@@ -6384,7 +6384,7 @@
     "codUbigeo": "150101"
   },
   {
-    "CodEmpresa": 527,
+    "id": 527,
     "name": "GOMEZ DE LA TORRE PEROCHENA, CARLOS MANUEL",
     "personType": "Natural",
     "ciiu": null,
@@ -6398,7 +6398,7 @@
     "codUbigeo": "150101"
   },
   {
-    "CodEmpresa": 528,
+    "id": 528,
     "name": "PUNTO DE ACCESO GUATEMALA S.A.",
     "personType": "Legal",
     "ciiu": "6190",
@@ -6412,7 +6412,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 529,
+    "id": 529,
     "name": "MELGAR PINEDA, ERICK ANTONIO",
     "personType": "Natural",
     "ciiu": null,
@@ -6426,7 +6426,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 531,
+    "id": 531,
     "name": "BARRALAGA FAJARDO, MARCELA MERCEDES",
     "personType": "Natural",
     "ciiu": null,
@@ -6440,7 +6440,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 532,
+    "id": 532,
     "name": "CHÁVEZ CASTILLO, PERCY ROLANDO",
     "personType": "Natural",
     "ciiu": null,
@@ -6454,7 +6454,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 534,
+    "id": 534,
     "name": "CBC BOTTLING HOLDCO, S.L.",
     "personType": "Legal",
     "ciiu": null,
@@ -6468,7 +6468,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 535,
+    "id": 535,
     "name": "CASTILLO LAVAGNINO, LUIS MIGUEL",
     "personType": "Natural",
     "ciiu": null,
@@ -6482,7 +6482,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 536,
+    "id": 536,
     "name": "MATA SARAVIA, JUAN PABLO",
     "personType": "Natural",
     "ciiu": null,
@@ -6496,7 +6496,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 537,
+    "id": 537,
     "name": "INRETAIL FOODS S.A.C.",
     "personType": "Legal",
     "ciiu": "4711",
@@ -6510,7 +6510,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 538,
+    "id": 538,
     "name": "MAKRO SUPERMAYORISTA S.A.",
     "personType": "Legal",
     "ciiu": "4690",
@@ -6524,7 +6524,7 @@
     "codUbigeo": "150140"
   },
   {
-    "CodEmpresa": 539,
+    "id": 539,
     "name": "PASSANO GUILLÉN, JOSÉ LUIS",
     "personType": "Natural",
     "ciiu": null,
@@ -6538,7 +6538,7 @@
     "codUbigeo": "150140"
   },
   {
-    "CodEmpresa": 540,
+    "id": 540,
     "name": "ROEKAERT EMBRECHTS, PETER ALBERT",
     "personType": "Natural",
     "ciiu": null,
@@ -6552,7 +6552,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 541,
+    "id": 541,
     "name": "NG HOLDINGS II S.A.",
     "personType": "Legal",
     "ciiu": null,
@@ -6566,7 +6566,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 542,
+    "id": 542,
     "name": "FRONTADO GAMARRA, JOSÉ ANTONIO",
     "personType": "Natural",
     "ciiu": null,
@@ -6580,7 +6580,7 @@
     "codUbigeo": "250105"
   },
   {
-    "CodEmpresa": 543,
+    "id": 543,
     "name": "BREÑA SOLSOL, VANESSA MERCEDES",
     "personType": "Natural",
     "ciiu": null,
@@ -6594,7 +6594,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 544,
+    "id": 544,
     "name": "MORENO PÉREZ, LUCIANNA",
     "personType": "Natural",
     "ciiu": null,
@@ -6608,7 +6608,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 545,
+    "id": 545,
     "name": "PASARA PONCE, CÉSAR GUSTAVO",
     "personType": "Natural",
     "ciiu": null,
@@ -6622,7 +6622,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 546,
+    "id": 546,
     "name": "PEÑA MONTENEGRO, ALFREDO GUSTAVO",
     "personType": "Natural",
     "ciiu": null,
@@ -6636,7 +6636,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 547,
+    "id": 547,
     "name": "BENAVIDES REVERDITTO, XIMENA SOL",
     "personType": "Natural",
     "ciiu": null,
@@ -6650,7 +6650,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 548,
+    "id": 548,
     "name": "CECCOVILLI GUZMÁN, CARLOS BRUNO",
     "personType": "Natural",
     "ciiu": null,
@@ -6664,7 +6664,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 549,
+    "id": 549,
     "name": "PUNTO DE ACCESO ESPAÑA, S.L.U.",
     "personType": "Legal",
     "ciiu": "6499",
@@ -6678,7 +6678,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 550,
+    "id": 550,
     "name": "FERNÁNDEZ ABASCAL, CRISTÓBAL",
     "personType": "Natural",
     "ciiu": null,
@@ -6692,7 +6692,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 551,
+    "id": 551,
     "name": "ARROYO ARZÚ, ÓSCAR ROLANDO RAFAEL",
     "personType": "Natural",
     "ciiu": null,
@@ -6706,7 +6706,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 552,
+    "id": 552,
     "name": "LONGARAY CASTRO, OTILIA",
     "personType": "Natural",
     "ciiu": null,
@@ -6720,7 +6720,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 553,
+    "id": 553,
     "name": "ADMINISTRACION FOOD REGIONAL S.A.C.",
     "personType": "Legal",
     "ciiu": "7020",
@@ -6734,7 +6734,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 556,
+    "id": 556,
     "name": "COMPAÑÍA FOOD RETAIL S.A.C.",
     "personType": "Legal",
     "ciiu": "4690",
@@ -6748,7 +6748,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 557,
+    "id": 557,
     "name": "AGNELLO, SERGIO JOSÉ",
     "personType": "Natural",
     "ciiu": null,
@@ -6762,7 +6762,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 558,
+    "id": 558,
     "name": "COMPAÑÍA HARD DISCOUNT S.A.C",
     "personType": "Legal",
     "ciiu": "4711",
@@ -6776,7 +6776,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 559,
+    "id": 559,
     "name": "BENITEZ, JUAN",
     "personType": "Natural",
     "ciiu": null,
@@ -6790,7 +6790,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 560,
+    "id": 560,
     "name": "CALMELL DEL SOLAR MONASI, JAVIER MANUEL",
     "personType": "Natural",
     "ciiu": null,
@@ -6804,7 +6804,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 561,
+    "id": 561,
     "name": "OPERADORA DE SERVICIOS LOGISTICOS S.A.C.",
     "personType": "Legal",
     "ciiu": "5229",
@@ -6818,7 +6818,7 @@
     "codUbigeo": "150127"
   },
   {
-    "CodEmpresa": 562,
+    "id": 562,
     "name": "BOTICAS IP S.A.C.",
     "personType": "Legal",
     "ciiu": "4772",
@@ -6832,7 +6832,7 @@
     "codUbigeo": "150108"
   },
   {
-    "CodEmpresa": 563,
+    "id": 563,
     "name": "FP MAYORISTA S.A.C.",
     "personType": "Legal",
     "ciiu": "8299",
@@ -6846,7 +6846,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 564,
+    "id": 564,
     "name": "VÁSQUEZ MELGAREJO, LUIS MIGUEL",
     "personType": "Natural",
     "ciiu": null,
@@ -6860,7 +6860,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 565,
+    "id": 565,
     "name": "BACIGALUPO CASTILLO, CLAUDIA CECILIA",
     "personType": "Natural",
     "ciiu": null,
@@ -6874,7 +6874,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 566,
+    "id": 566,
     "name": "TATAJE VILLALOBOS, LUCIANA",
     "personType": "Natural",
     "ciiu": null,
@@ -6888,7 +6888,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 567,
+    "id": 567,
     "name": "CANSECO GALLEGOS, LUCIANA TALIA",
     "personType": "Natural",
     "ciiu": null,
@@ -6902,7 +6902,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 568,
+    "id": 568,
     "name": "CHEVASCO QUIROZ, ANDREA DE LAS MERCEDES",
     "personType": "Natural",
     "ciiu": null,
@@ -6916,7 +6916,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 569,
+    "id": 569,
     "name": "PUNTO DE ACCESO JAMAICA LIMITED",
     "personType": "Legal",
     "ciiu": "6190",
@@ -6930,7 +6930,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 570,
+    "id": 570,
     "name": "SACASA ARGÜELLO, ALEJANDRO JOSÉ",
     "personType": "Natural",
     "ciiu": null,
@@ -6944,7 +6944,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 571,
+    "id": 571,
     "name": "DOS REIS LIMA, GABRIEL FERNANDO",
     "personType": "Natural",
     "ciiu": null,
@@ -6958,7 +6958,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 572,
+    "id": 572,
     "name": "EMPRESA PRODUCTORA DE ALIMENTOS S.A.C.",
     "personType": "Legal",
     "ciiu": "4719",
@@ -6972,7 +6972,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 573,
+    "id": 573,
     "name": "D’ANGELO DAÑINO, JOSE ALBERTO",
     "personType": "Natural",
     "ciiu": null,
@@ -6986,7 +6986,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 574,
+    "id": 574,
     "name": "RAMOS RIZO PATRÓN, MARCELO",
     "personType": "Natural",
     "ciiu": null,
@@ -7000,7 +7000,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 575,
+    "id": 575,
     "name": "VELARDE ARNAEZ, PAOLA MARÍA",
     "personType": "Natural",
     "ciiu": null,
@@ -7014,7 +7014,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 576,
+    "id": 576,
     "name": "ROMÁN MACHUCA, LUIS ALEJANDRO",
     "personType": "Natural",
     "ciiu": null,
@@ -7028,7 +7028,7 @@
     "codUbigeo": "150108"
   },
   {
-    "CodEmpresa": 577,
+    "id": 577,
     "name": "GONZÁLEZ CASTAÑEDA, CRISTIAN FERNANDO",
     "personType": "Natural",
     "ciiu": null,
@@ -7042,7 +7042,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 578,
+    "id": 578,
     "name": "CORROCHANO FATULE, ALESSANDRA",
     "personType": "Natural",
     "ciiu": null,
@@ -7056,7 +7056,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 579,
+    "id": 579,
     "name": "REGGIARDO BIONDI, ANTONIO PIERO",
     "personType": "Natural",
     "ciiu": null,
@@ -7070,7 +7070,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 580,
+    "id": 580,
     "name": "APEX CAPITAL ASSETS, S.A.",
     "personType": "Legal",
     "ciiu": null,
@@ -7084,7 +7084,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 581,
+    "id": 581,
     "name": "SALAZAR PONCE, DIEGO MARTÍN",
     "personType": "Natural",
     "ciiu": null,
@@ -7098,7 +7098,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 582,
+    "id": 582,
     "name": "PROCESOS DE MEDIOS DE PAGO S.A.",
     "personType": "Legal",
     "ciiu": "6619",
@@ -7112,7 +7112,7 @@
     "codUbigeo": "150122"
   },
   {
-    "CodEmpresa": 583,
+    "id": 583,
     "name": "VENTURO DENEGRI, LUIS FELIPE",
     "personType": "Natural",
     "ciiu": null,
@@ -7126,7 +7126,7 @@
     "codUbigeo": "150122"
   },
   {
-    "CodEmpresa": 585,
+    "id": 585,
     "name": "RUBIO RODRÍGUEZ, MANUEL JAVIER",
     "personType": "Natural",
     "ciiu": null,
@@ -7140,7 +7140,7 @@
     "codUbigeo": "150122"
   },
   {
-    "CodEmpresa": 586,
+    "id": 586,
     "name": "ESPINAL GRIMALDOS, URSULA MARIANA",
     "personType": "Natural",
     "ciiu": null,
@@ -7154,7 +7154,7 @@
     "codUbigeo": "150122"
   },
   {
-    "CodEmpresa": 587,
+    "id": 587,
     "name": "FUNCKE CIPRIANI, BRUNO ALBERTO",
     "personType": "Natural",
     "ciiu": null,
@@ -7168,7 +7168,7 @@
     "codUbigeo": "150122"
   },
   {
-    "CodEmpresa": 588,
+    "id": 588,
     "name": "LEGUIZAMÓN, MARIANA",
     "personType": "Natural",
     "ciiu": null,
@@ -7182,7 +7182,7 @@
     "codUbigeo": "150122"
   },
   {
-    "CodEmpresa": 589,
+    "id": 589,
     "name": "VALDIVIA CHÁVEZ, JORGE",
     "personType": "Natural",
     "ciiu": null,
@@ -7196,7 +7196,7 @@
     "codUbigeo": "150122"
   },
   {
-    "CodEmpresa": 590,
+    "id": 590,
     "name": "RIVERA VÉLEZ, ARNALDO",
     "personType": "Natural",
     "ciiu": null,
@@ -7210,7 +7210,7 @@
     "codUbigeo": "150122"
   },
   {
-    "CodEmpresa": 591,
+    "id": 591,
     "name": "RODRIGUEZ RODRÍGUEZ, PAOLA",
     "personType": "Natural",
     "ciiu": null,
@@ -7224,7 +7224,7 @@
     "codUbigeo": "150122"
   },
   {
-    "CodEmpresa": 592,
+    "id": 592,
     "name": "ALVARADO PÉREZ, CHRISTIAN RAMÓN",
     "personType": "Natural",
     "ciiu": null,
@@ -7238,7 +7238,7 @@
     "codUbigeo": "150122"
   },
   {
-    "CodEmpresa": 593,
+    "id": 593,
     "name": "MÁLAGA BEKICH, JORGE LUIS",
     "personType": "Natural",
     "ciiu": null,
@@ -7252,7 +7252,7 @@
     "codUbigeo": "150122"
   },
   {
-    "CodEmpresa": 594,
+    "id": 594,
     "name": "TRAHTEMBERG SIEDERER, LEON",
     "personType": "Natural",
     "ciiu": null,
@@ -7266,7 +7266,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 595,
+    "id": 595,
     "name": "VELEZ OSORNO, MARIA DEL MAR",
     "personType": "Natural",
     "ciiu": null,
@@ -7280,7 +7280,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 596,
+    "id": 596,
     "name": "IZIPAY S.A.C.",
     "personType": "Legal",
     "ciiu": "6209",
@@ -7294,7 +7294,7 @@
     "codUbigeo": "150122"
   },
   {
-    "CodEmpresa": 598,
+    "id": 598,
     "name": "BROGGI CANNOCK, GIAN NICOLA",
     "personType": "Natural",
     "ciiu": null,
@@ -7308,7 +7308,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 599,
+    "id": 599,
     "name": "PUNTO DE ACCESO HONDURAS II S.A. DE C.V.",
     "personType": "Legal",
     "ciiu": "6190",
@@ -7322,7 +7322,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 600,
+    "id": 600,
     "name": "BOCANEGRA CHÁVEZ, SHEYLA",
     "personType": "Natural",
     "ciiu": null,
@@ -7336,7 +7336,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 601,
+    "id": 601,
     "name": "RODRÍGUEZ CHÁVEZ, KEVIN",
     "personType": "Natural",
     "ciiu": null,
@@ -7350,7 +7350,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 602,
+    "id": 602,
     "name": "TEULLET PIPOLI, PATRICIA LISETTA",
     "personType": "Natural",
     "ciiu": null,
@@ -7364,7 +7364,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 603,
+    "id": 603,
     "name": "RI - FONDO 2 (PRIMA AFP S.A.)",
     "personType": "Legal",
     "ciiu": null,
@@ -7378,7 +7378,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 604,
+    "id": 604,
     "name": "RI - FONDO 2 (AFP INTEGRA S.A.)",
     "personType": "Legal",
     "ciiu": null,
@@ -7392,7 +7392,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 605,
+    "id": 605,
     "name": "VIDAL GASTAÑAGA, ARMANDO",
     "personType": "Natural",
     "ciiu": null,
@@ -7406,7 +7406,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 606,
+    "id": 606,
     "name": "CHÁVEZ-CABELLO CAMPBELL, PEDRO",
     "personType": "Natural",
     "ciiu": null,
@@ -7420,7 +7420,7 @@
     "codUbigeo": "150117"
   },
   {
-    "CodEmpresa": 607,
+    "id": 607,
     "name": "APEX CAPITAL ASSETS, S.A.",
     "personType": "Legal",
     "ciiu": null,
@@ -7434,7 +7434,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 608,
+    "id": 608,
     "name": "SCOFIELD RODRIGUEZ-ARNAIZ, IAN",
     "personType": "Natural",
     "ciiu": null,
@@ -7448,7 +7448,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 609,
+    "id": 609,
     "name": "SOLIZ BILBAO, SERGIO JHASMANY",
     "personType": "Natural",
     "ciiu": null,
@@ -7462,7 +7462,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 610,
+    "id": 610,
     "name": "NAGAMINE MOLINA, JORGE CHRISTIAN",
     "personType": "Natural",
     "ciiu": null,
@@ -7476,7 +7476,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 611,
+    "id": 611,
     "name": "COLEGIOS DE ECUADOR COLDEC S.A.S.",
     "personType": "Legal",
     "ciiu": "8510",
@@ -7490,7 +7490,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 612,
+    "id": 612,
     "name": "BUCHELI FIGUEROA, DANIEL TOMAS",
     "personType": "Natural",
     "ciiu": null,
@@ -7504,7 +7504,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 613,
+    "id": 613,
     "name": "PINAPP USA LLC",
     "personType": "Legal",
     "ciiu": "6209",
@@ -7518,7 +7518,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 614,
+    "id": 614,
     "name": "OLMOS, LUCAS",
     "personType": "Natural",
     "ciiu": null,
@@ -7532,7 +7532,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 615,
+    "id": 615,
     "name": "HOMECENTERS ECUATORIANOS S.A.S.",
     "personType": "Legal",
     "ciiu": "4752",
@@ -7546,7 +7546,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 616,
+    "id": 616,
     "name": "SANS, JORGE MARCOS",
     "personType": "Natural",
     "ciiu": null,
@@ -7560,7 +7560,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 617,
+    "id": 617,
     "name": "ACERIA DEL ECUADOR C.A. - ADELCA",
     "personType": "Legal",
     "ciiu": "2710",
@@ -7574,7 +7574,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 618,
+    "id": 618,
     "name": "NOGUEIRA DE MELLO, MARCIA",
     "personType": "Natural",
     "ciiu": null,
@@ -7588,7 +7588,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 619,
+    "id": 619,
     "name": "INTERCORP RETAIL SPAIN CORP S.L.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -7602,7 +7602,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 621,
+    "id": 621,
     "name": "CARRERA & CIA S. CIVIL R.L. (LIQUIDADOR)",
     "personType": "Legal",
     "ciiu": "7411",
@@ -7616,7 +7616,7 @@
     "codUbigeo": "150140"
   },
   {
-    "CodEmpresa": 622,
+    "id": 622,
     "name": "VILLÁN ORTEGA, ELÍAS",
     "personType": "Natural",
     "ciiu": null,
@@ -7630,7 +7630,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 623,
+    "id": 623,
     "name": "EDUCACIÓN 23 S.A.C.",
     "personType": "Legal",
     "ciiu": "8530",
@@ -7644,7 +7644,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 624,
+    "id": 624,
     "name": "DIGITAL FOODS S.A.C.",
     "personType": "Legal",
     "ciiu": "6201",
@@ -7658,7 +7658,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 625,
+    "id": 625,
     "name": "PATOW SALAZAR, ERIK",
     "personType": "Natural",
     "ciiu": null,
@@ -7672,7 +7672,7 @@
     "codUbigeo": "150108"
   },
   {
-    "CodEmpresa": 626,
+    "id": 626,
     "name": "SÁNCHEZ PATIÑO, MARIO RAPHAEL",
     "personType": "Natural",
     "ciiu": null,
@@ -7686,7 +7686,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 627,
+    "id": 627,
     "name": "ÁGUILA PARDO SOSA, ANDREA",
     "personType": "Natural",
     "ciiu": null,
@@ -7700,7 +7700,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 628,
+    "id": 628,
     "name": "CELY TOVAR, HERNÁN DARÍO",
     "personType": "Natural",
     "ciiu": null,
@@ -7714,7 +7714,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 629,
+    "id": 629,
     "name": "SALDARRIAGA LONDOÑO, JUAN DIEGO",
     "personType": "Natural",
     "ciiu": null,
@@ -7728,7 +7728,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 630,
+    "id": 630,
     "name": "ABARCA GNECCO, AUGUSTO LUDOVICO",
     "personType": "Natural",
     "ciiu": null,
@@ -7742,7 +7742,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 631,
+    "id": 631,
     "name": "PUNTO DE ACCESO PERÚ S.A.C.",
     "personType": "Legal",
     "ciiu": "6190",
@@ -7756,7 +7756,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 632,
+    "id": 632,
     "name": "BROWN PEREZ, ANDRÉS",
     "personType": "Natural",
     "ciiu": null,
@@ -7770,7 +7770,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 633,
+    "id": 633,
     "name": "HOLDING SEH S.A.S.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -7784,7 +7784,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 635,
+    "id": 635,
     "name": "INMOBILIARIA NEPTUNO INMONEP S.A.S.",
     "personType": "Legal",
     "ciiu": "6810",
@@ -7798,7 +7798,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 636,
+    "id": 636,
     "name": "ALMACÉN GURÚ PERÚ S.A.C.",
     "personType": "Legal",
     "ciiu": "7020",
@@ -7812,7 +7812,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 637,
+    "id": 637,
     "name": "DELGADO EHNI, CLAUDIA MARIA",
     "personType": "Natural",
     "ciiu": null,
@@ -7826,7 +7826,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 638,
+    "id": 638,
     "name": "IPARRAGUIRRE BERNALES, FRANCO ARTURO",
     "personType": "Natural",
     "ciiu": null,
@@ -7840,7 +7840,7 @@
     "codUbigeo": "150101"
   },
   {
-    "CodEmpresa": 639,
+    "id": 639,
     "name": "RÍOS MONTEVERDE, JORGE ANDRES",
     "personType": "Natural",
     "ciiu": null,
@@ -7854,7 +7854,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 640,
+    "id": 640,
     "name": "INTERCORP EDUCATION HOLDINGS S.A.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -7868,7 +7868,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 641,
+    "id": 641,
     "name": "CASH-&-CARRY ECUADOR S.A.S.",
     "personType": "Legal",
     "ciiu": "4711",
@@ -7882,7 +7882,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 642,
+    "id": 642,
     "name": "FIDSER S.A.",
     "personType": "Legal",
     "ciiu": "7020",
@@ -7896,7 +7896,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 643,
+    "id": 643,
     "name": "INGA VIZARRAGA, LUIS EDUARDO",
     "personType": "Natural",
     "ciiu": null,
@@ -7910,7 +7910,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 644,
+    "id": 644,
     "name": "MIYASATO ASATO, RICARDO JAVIER",
     "personType": "Natural",
     "ciiu": null,
@@ -7924,7 +7924,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 645,
+    "id": 645,
     "name": "MONTES YASUOKA, AKEMI SUSANA",
     "personType": "Natural",
     "ciiu": null,
@@ -7938,7 +7938,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 646,
+    "id": 646,
     "name": "ALFARO RAFOLS, SYLVIA MARÍA",
     "personType": "Natural",
     "ciiu": null,
@@ -7952,7 +7952,7 @@
     "codUbigeo": "250101"
   },
   {
-    "CodEmpresa": 647,
+    "id": 647,
     "name": "BEDOYA SANTOS, CARLA MARÍA",
     "personType": "Natural",
     "ciiu": null,
@@ -7966,7 +7966,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 648,
+    "id": 648,
     "name": "O’HIGGINS SÁNCHEZ, ALAN HARRY",
     "personType": "Natural",
     "ciiu": null,
@@ -7980,7 +7980,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 649,
+    "id": 649,
     "name": "TOLUJU SERVICES S.A.S.",
     "personType": "Legal",
     "ciiu": null,
@@ -7994,7 +7994,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 650,
+    "id": 650,
     "name": "TMF MANAGEMENT (SPAIN) S.R.L.",
     "personType": "Legal",
     "ciiu": "6599",
@@ -8008,7 +8008,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 651,
+    "id": 651,
     "name": "PACHÓN SOLANILLA, ANGELICA PATRICIA",
     "personType": "Natural",
     "ciiu": null,
@@ -8022,7 +8022,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 652,
+    "id": 652,
     "name": "MURGUÍA ALVARADO, CARLA FABIOLA",
     "personType": "Natural",
     "ciiu": null,
@@ -8036,7 +8036,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 653,
+    "id": 653,
     "name": "RUÍZ DIAZ, FIDEL ENRIQUE",
     "personType": "Natural",
     "ciiu": null,
@@ -8050,7 +8050,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 654,
+    "id": 654,
     "name": "VARGAS CUELLAR, DIANA PATRICIA",
     "personType": "Natural",
     "ciiu": null,
@@ -8064,7 +8064,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 655,
+    "id": 655,
     "name": "PEÑA TALERO, CAMILO ALEXANDRY",
     "personType": "Natural",
     "ciiu": null,
@@ -8078,7 +8078,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 656,
+    "id": 656,
     "name": "MACAYA DÁVILA, TATIANA",
     "personType": "Natural",
     "ciiu": null,
@@ -8092,7 +8092,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 657,
+    "id": 657,
     "name": "GARCÍA BRAVO, ALBERTO JOSÉ",
     "personType": "Natural",
     "ciiu": null,
@@ -8106,7 +8106,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 659,
+    "id": 659,
     "name": "HPSA ECUADOR S.A.S.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -8120,7 +8120,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 660,
+    "id": 660,
     "name": "CARTOLIN HURTADO, GIACOMO ISMAEL",
     "personType": "Natural",
     "ciiu": null,
@@ -8134,7 +8134,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 661,
+    "id": 661,
     "name": "AVELLÁN ARTETA, CARLOS ALBERTO",
     "personType": "Natural",
     "ciiu": null,
@@ -8148,7 +8148,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 662,
+    "id": 662,
     "name": "FALCONÍ AVELLÁN, JUAN XAVIER",
     "personType": "Natural",
     "ciiu": null,
@@ -8162,7 +8162,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 663,
+    "id": 663,
     "name": "AVELLÁN PINTO, CARLA",
     "personType": "Natural",
     "ciiu": null,
@@ -8176,7 +8176,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 664,
+    "id": 664,
     "name": "BALLÓN ESPINOZA, DEMIAN ARTURO",
     "personType": "Natural",
     "ciiu": null,
@@ -8190,7 +8190,7 @@
     "codUbigeo": "150108"
   },
   {
-    "CodEmpresa": 665,
+    "id": 665,
     "name": "APONTE RAMÍREZ, DENNYS OSWALDO",
     "personType": "Natural",
     "ciiu": null,
@@ -8204,7 +8204,7 @@
     "codUbigeo": "250105"
   },
   {
-    "CodEmpresa": 666,
+    "id": 666,
     "name": "SARMIENTO PARRA, DIANA MARINA",
     "personType": "Natural",
     "ciiu": null,
@@ -8218,7 +8218,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 667,
+    "id": 667,
     "name": "GUTIÉRREZ BUSTOS, PABLO",
     "personType": "Natural",
     "ciiu": null,
@@ -8232,7 +8232,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 668,
+    "id": 668,
     "name": "RAMÍREZ PEÑUELA, MÓNICA",
     "personType": "Natural",
     "ciiu": null,
@@ -8246,7 +8246,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 669,
+    "id": 669,
     "name": "JUNGUITO POMBO, ANDREA",
     "personType": "Natural",
     "ciiu": null,
@@ -8260,7 +8260,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 670,
+    "id": 670,
     "name": "CALLIRGOS CARRANZA, DIEGO ANDRÉS",
     "personType": "Natural",
     "ciiu": null,
@@ -8274,7 +8274,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 671,
+    "id": 671,
     "name": "MORIANA RIVAS, ALBERTO EDUARDO",
     "personType": "Natural",
     "ciiu": null,
@@ -8288,7 +8288,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 672,
+    "id": 672,
     "name": "BLUME SANTACROCE, VIRGINIA",
     "personType": "Natural",
     "ciiu": null,
@@ -8302,7 +8302,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 673,
+    "id": 673,
     "name": "JARAMILLO QUINTERO, PABLO",
     "personType": "Natural",
     "ciiu": null,
@@ -8316,7 +8316,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 674,
+    "id": 674,
     "name": "REY GOITIA, ALEJANDRO",
     "personType": "Natural",
     "ciiu": null,
@@ -8330,7 +8330,7 @@
     "codUbigeo": "150122"
   },
   {
-    "CodEmpresa": 675,
+    "id": 675,
     "name": "IFS GLOBAL STRATEGY S.L.U.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -8344,7 +8344,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 676,
+    "id": 676,
     "name": "IN - FONDO 2 (AFP INTEGRA S.A.)",
     "personType": "Legal",
     "ciiu": null,
@@ -8358,7 +8358,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 677,
+    "id": 677,
     "name": "GUEVARA FADUL, EMANUELA",
     "personType": "Natural",
     "ciiu": null,
@@ -8372,7 +8372,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 678,
+    "id": 678,
     "name": "JIMÉNEZ DEL VALLE, MARÍA PATRICIA",
     "personType": "Natural",
     "ciiu": null,
@@ -8386,7 +8386,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 679,
+    "id": 679,
     "name": "IZQUIERDO AYMERICH, JOSÉ MARÍA",
     "personType": "Natural",
     "ciiu": null,
@@ -8400,7 +8400,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 680,
+    "id": 680,
     "name": "IR INTERNATIONAL CORP. S.L.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -8414,7 +8414,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 681,
+    "id": 681,
     "name": "FOOD RETAIL CHILE SPA",
     "personType": "Legal",
     "ciiu": "6420",
@@ -8428,7 +8428,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 682,
+    "id": 682,
     "name": "SOCIEDAD COMERCIALIZADORA DE PRODUCTOS AL DETALLE S.A.",
     "personType": "Legal",
     "ciiu": "4711",
@@ -8442,7 +8442,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 683,
+    "id": 683,
     "name": "BELLATIN VINGERHOETS, MARISOL",
     "personType": "Natural",
     "ciiu": null,
@@ -8456,7 +8456,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 684,
+    "id": 684,
     "name": "GÓMEZ SOTOMAYOR AGUAYO, JAIME",
     "personType": "Natural",
     "ciiu": null,
@@ -8470,7 +8470,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 685,
+    "id": 685,
     "name": "CLEMENTE ACOSTA, MAGALI",
     "personType": "Natural",
     "ciiu": null,
@@ -8484,7 +8484,7 @@
     "codUbigeo": "250101"
   },
   {
-    "CodEmpresa": 686,
+    "id": 686,
     "name": "RUIZ AEDO, JUAN CARLOS",
     "personType": "Natural",
     "ciiu": null,
@@ -8498,7 +8498,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 687,
+    "id": 687,
     "name": "SUPERMERCADOS CHILENOS SPA",
     "personType": "Legal",
     "ciiu": "4711",
@@ -8512,7 +8512,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 688,
+    "id": 688,
     "name": "FERRARO MURDOCH, MARTIN",
     "personType": "Natural",
     "ciiu": null,
@@ -8526,7 +8526,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 689,
+    "id": 689,
     "name": "VIDAL SAAVEDRA, CYNTHIA",
     "personType": "Natural",
     "ciiu": null,
@@ -8540,7 +8540,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 690,
+    "id": 690,
     "name": "RAMÍREZ RIESCO, CECILIA",
     "personType": "Natural",
     "ciiu": null,
@@ -8554,7 +8554,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 691,
+    "id": 691,
     "name": "AKAMINE SERPA, CLAUDIA MARITZA",
     "personType": "Natural",
     "ciiu": null,
@@ -8568,7 +8568,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 692,
+    "id": 692,
     "name": "TOCE REBORA, PIERINA",
     "personType": "Natural",
     "ciiu": null,
@@ -8582,7 +8582,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 693,
+    "id": 693,
     "name": "ARIAS MONAR, JOSÉ ANTONIO",
     "personType": "Natural",
     "ciiu": null,
@@ -8596,7 +8596,7 @@
     "codUbigeo": "150130"
   },
   {
-    "CodEmpresa": 694,
+    "id": 694,
     "name": "SIERRA MONTES, CLAUDIA MARCELA",
     "personType": "Natural",
     "ciiu": null,
@@ -8610,7 +8610,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 695,
+    "id": 695,
     "name": "SANDOVAL ZAVALA, ALEJANDRO CHRISTIAN",
     "personType": "Natural",
     "ciiu": null,
@@ -8624,7 +8624,7 @@
     "codUbigeo": "150115"
   },
   {
-    "CodEmpresa": 696,
+    "id": 696,
     "name": "VELTRIA ADVISORS CORP.",
     "personType": "Legal",
     "ciiu": "6619",
@@ -8638,7 +8638,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 697,
+    "id": 697,
     "name": "SILBERWASSER BACAL, ALEX ABRAHAM",
     "personType": "Natural",
     "ciiu": null,
@@ -8652,7 +8652,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 698,
+    "id": 698,
     "name": "GUERRA VELARDE, GARY GINO",
     "personType": "Natural",
     "ciiu": null,
@@ -8666,7 +8666,7 @@
     "codUbigeo": "250101"
   },
   {
-    "CodEmpresa": 699,
+    "id": 699,
     "name": "PRATO GALLEGOS, JOSÉ PIERO",
     "personType": "Natural",
     "ciiu": null,
@@ -8680,7 +8680,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 700,
+    "id": 700,
     "name": "CAMARGO GÓMEZ, GERMAN ALFONSO",
     "personType": "Natural",
     "ciiu": null,
@@ -8694,7 +8694,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 701,
+    "id": 701,
     "name": "OCAMPO VARGAS, DIANA CAROLINA",
     "personType": "Natural",
     "ciiu": null,
@@ -8708,7 +8708,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 702,
+    "id": 702,
     "name": "FALLA CEPEDA, LINA MARIA",
     "personType": "Natural",
     "ciiu": null,
@@ -8722,7 +8722,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 703,
+    "id": 703,
     "name": "IZIPAY ECUADOR S.A.",
     "personType": "Legal",
     "ciiu": "6619",
@@ -8736,7 +8736,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 704,
+    "id": 704,
     "name": "LEÓN DOMPER, CARLOS ALBERTO",
     "personType": "Natural",
     "ciiu": null,
@@ -8750,7 +8750,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 705,
+    "id": 705,
     "name": "PÉREZ REYES, RICARDO FLORES",
     "personType": "Natural",
     "ciiu": null,
@@ -8764,7 +8764,7 @@
     "codUbigeo": "150131"
   },
   {
-    "CodEmpresa": 706,
+    "id": 706,
     "name": "GARCIA, RAFAEL",
     "personType": "Natural",
     "ciiu": null,
@@ -8778,7 +8778,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 707,
+    "id": 707,
     "name": "IXP HOLDING CORP.",
     "personType": "Legal",
     "ciiu": "6420",
@@ -8792,7 +8792,7 @@
     "codUbigeo": "999999"
   },
   {
-    "CodEmpresa": 708,
+    "id": 708,
     "name": "ALVAREZ RAYGADA, MARIANELLA",
     "personType": "Natural",
     "ciiu": null,
