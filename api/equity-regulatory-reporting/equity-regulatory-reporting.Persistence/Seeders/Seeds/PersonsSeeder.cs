@@ -10,6 +10,7 @@ namespace equity_regulatory_reporting.Persistence.Seeders;
 public partial class DatabaseSeeder
 {
     private sealed record PersonSeedRow(
+        int Id,
         string Name,
         string PersonType,
         string? Ciiu,
@@ -17,7 +18,7 @@ public partial class DatabaseSeeder
         string DocumentTypeAbbreviation,
         string? DocumentNumber,
         string? EntityCode,
-        string? RepresentativeDocumentNumber,
+        string? Representative,
         bool ReportFlag,
         string CountryAbbreviation,
         string LocationCode
@@ -29,13 +30,13 @@ public partial class DatabaseSeeder
         if (rows.Length == 0)
             return;
 
-        var existingDocNumbers = await context.Persons
-            .Where(p => p.DocumentNumber != null)
-            .Select(p => p.DocumentNumber!)
+        var existingLegacyIds = await context.Persons
+            .Where(p => p.LegacyId != null)
+            .Select(p => p.LegacyId!.Value)
             .ToHashSetAsync();
 
         var pending = rows
-            .Where(r => r.DocumentNumber == null || !existingDocNumbers.Contains(r.DocumentNumber))
+            .Where(r => !existingLegacyIds.Contains(r.Id))
             .ToArray();
         if (pending.Length == 0)
             return;
@@ -50,7 +51,8 @@ public partial class DatabaseSeeder
             .ToDictionaryAsync(l => l.Code, l => l.Id);
 
         // First pass: insert all persons without resolving representatives
-        var personByDocNumber = new Dictionary<string, Person>(StringComparer.OrdinalIgnoreCase);
+        var personByLegacyId = new Dictionary<int, Person>();
+        var personByName = new Dictionary<string, Person>(StringComparer.OrdinalIgnoreCase);
 
         foreach (var row in pending)
         {
@@ -80,10 +82,11 @@ public partial class DatabaseSeeder
 
             var person = new Person
             {
+                LegacyId = row.Id,
                 Name = row.Name,
                 PersonType = personType,
                 Ciiu = row.Ciiu,
-                Address = row.Address,
+                Address = string.IsNullOrEmpty(row.Address) ? null : row.Address,
                 DocumentTypeId = docTypeId,
                 DocumentNumber = row.DocumentNumber,
                 EntityCode = row.EntityCode,
@@ -93,35 +96,36 @@ public partial class DatabaseSeeder
             };
 
             context.Persons.Add(person);
-            if (row.DocumentNumber is not null)
-                personByDocNumber[row.DocumentNumber] = person;
+            personByLegacyId[row.Id] = person;
+            personByName.TryAdd(row.Name.Trim(), person);
         }
 
         await context.SaveChangesAsync();
 
-        // Second pass: resolve representatives now that all persons have IDs
-        var repDocNumbers = pending
-            .Select(r => r.RepresentativeDocumentNumber)
-            .Where(d => d != null)
-            .ToHashSet()!;
-
-        var allPersonIds = await context.Persons
-            .Where(p => p.DocumentNumber != null && repDocNumbers.Contains(p.DocumentNumber))
-            .ToDictionaryAsync(p => p.DocumentNumber!, p => p.Id);
-
+        // Second pass: resolve representatives by name (Natural persons never have representatives)
         bool anyUpdated = false;
-        foreach (var row in pending.Where(r => r.RepresentativeDocumentNumber is not null))
+        foreach (var row in pending)
         {
-            if (row.DocumentNumber is null || !personByDocNumber.TryGetValue(row.DocumentNumber, out var person))
+            if (row.Representative is null)
                 continue;
 
-            if (!allPersonIds.TryGetValue(row.RepresentativeDocumentNumber!, out var repId))
-            {
-                logger.LogWarning("Seed: representative '{RepDoc}' not found for '{Name}'", row.RepresentativeDocumentNumber, row.Name);
+            if (!personByLegacyId.TryGetValue(row.Id, out var person))
                 continue;
+
+            if (person.PersonType == PersonType.Natural)
+                continue;
+
+            var repName = row.Representative.Trim();
+            if (personByName.TryGetValue(repName, out var repPerson))
+            {
+                person.RepresentativeId = repPerson.Id;
+            }
+            else
+            {
+                person.RepresentativeDescription = row.Representative;
+                logger.LogWarning("Seed: representative '{RepName}' not found for '{Name}', stored as description", repName, row.Name);
             }
 
-            person.RepresentativeId = repId;
             anyUpdated = true;
         }
 

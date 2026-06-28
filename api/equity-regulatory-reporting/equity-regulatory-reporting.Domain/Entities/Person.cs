@@ -16,8 +16,11 @@ public class Person : AuditableEntity
     public string? DocumentNumber { get; set; }
     public string? EntityCode { get; set; }
 
+    public int? LegacyId { get; set; }
+
     public Guid? RepresentativeId { get; set; }
     public Person? Representative { get; set; }
+    public string? RepresentativeDescription { get; set; }
 
     public bool ReportFlag { get; set; }
 

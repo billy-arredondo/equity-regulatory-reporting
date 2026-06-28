@@ -15,6 +15,9 @@ public class PersonConfiguration : IEntityTypeConfiguration<Person>
         builder.Property(p => p.Address).HasMaxLength(500);
         builder.Property(p => p.DocumentNumber).HasMaxLength(50);
         builder.Property(p => p.EntityCode).HasMaxLength(50);
+        builder.Property(p => p.LegacyId);
+        builder.Property(p => p.RepresentativeDescription).HasMaxLength(300);
+        builder.HasIndex(p => p.LegacyId).IsUnique().HasFilter("legacy_id IS NOT NULL");
 
         builder.HasOne(p => p.DocumentType)
             .WithMany(d => d.Persons)
