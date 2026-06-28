@@ -42,7 +42,7 @@ export function PersonDetailFields({ data }: Props) {
       </div>
       {data.entityCode && (
         <div className="space-y-1.5">
-          <p className="text-xs text-muted-foreground">Código entidad</p>
+          <p className="text-xs text-muted-foreground">Código SBS</p>
           <p className="flex h-9 items-center text-sm font-medium">{data.entityCode}</p>
         </div>
       )}

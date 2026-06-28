@@ -8,11 +8,11 @@ public record UpdatePersonCommand(
     string Name,
     PersonType PersonType,
     string? Ciiu,
-    string Address,
+    string? Address,
     Guid DocumentTypeId,
-    string DocumentNumber,
+    string? DocumentNumber,
     string? EntityCode,
     Guid? RepresentativeId,
     bool ReportFlag,
     Guid CountryId,
-    string InternalLocation) : IRequest;
+    Guid LocationId) : IRequest;

@@ -18,6 +18,7 @@ public partial class DatabaseSeeder(
         await SeedPositionsAsync();
         await SeedCountriesAsync();
         await SeedDocumentTypesAsync();
+        await SeedLocationsAsync();
         await SeedPersonsAsync();
         await SeedDefaultAdminAsync();
     }

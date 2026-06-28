@@ -56,7 +56,7 @@ public partial class DatabaseSeeder
             new()
             {
                 Name = "Pasaporte",
-                Abbreviation = "PA",
+                Abbreviation = "PAS",
                 ValidationRegex = @"^[A-Za-z0-9]{1,15}$",
                 AllowedPersonTypes =
                 [

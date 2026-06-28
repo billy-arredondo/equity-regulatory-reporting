@@ -11,7 +11,8 @@ namespace equity_regulatory_reporting.Application.Features.Persons.Commands.Impo
 public class ImportPersonsCommandHandler(
     IRepository<Person> personRepository,
     IRepository<DocumentType> documentTypeRepository,
-    IRepository<Country> countryRepository)
+    IRepository<Country> countryRepository,
+    IRepository<Location> locationRepository)
     : IRequestHandler<ImportPersonsCommand, ImportResult>
 {
     public async Task<ImportResult> Handle(ImportPersonsCommand request, CancellationToken cancellationToken)
@@ -28,11 +29,17 @@ public class ImportPersonsCommandHandler(
                 c => c.Abbreviation, c => c.Id,
                 StringComparer.OrdinalIgnoreCase, cancellationToken);
 
-        // In-batch resolution map: DocumentNumber → (Id, PersonType)
-        // Includes existing DB persons; updated as valid rows are staged
-        var personMap = await personRepository.Query()
+        var locationIdByCode = await locationRepository.Query()
             .ToDictionaryAsync(
-                p => p.DocumentNumber,
+                l => l.Code, l => l.Id,
+                StringComparer.OrdinalIgnoreCase, cancellationToken);
+
+        // In-batch resolution map: DocumentNumber → (Id, PersonType)
+        // Includes existing DB persons with non-null document numbers
+        var personMap = await personRepository.Query()
+            .Where(p => p.DocumentNumber != null)
+            .ToDictionaryAsync(
+                p => p.DocumentNumber!,
                 p => new PersonLookup(p.Id, p.PersonType),
                 StringComparer.OrdinalIgnoreCase,
                 cancellationToken);
@@ -40,7 +47,6 @@ public class ImportPersonsCommandHandler(
         var errors = new List<ImportError>();
         var staged = new List<Person>();
 
-        // Seed seen set from DB so duplicates against existing records are caught
         var seenDocumentNumbers = new HashSet<string>(personMap.Keys, StringComparer.OrdinalIgnoreCase);
 
         foreach (var row in request.Rows)
@@ -48,6 +54,7 @@ public class ImportPersonsCommandHandler(
             var rowErrors = new List<ImportError>();
             DocumentType? documentType = null;
             Guid? countryId = null;
+            Guid? locationId = null;
             Guid? representativeId = null;
             PersonType personType = default;
             bool reportFlag = false;
@@ -82,30 +89,23 @@ public class ImportPersonsCommandHandler(
                 rowErrors.Add(new ImportError(row.LineNumber, "Ciiu", "Ciiu must not exceed 10 characters."));
             }
 
-            // Address
-            if (string.IsNullOrWhiteSpace(row.Address))
-                rowErrors.Add(new ImportError(row.LineNumber, "Address", "Address is required."));
-            else if (row.Address.Length > 500)
+            // Address (optional)
+            if (row.Address is not null && row.Address.Length > 500)
                 rowErrors.Add(new ImportError(row.LineNumber, "Address", "Address must not exceed 500 characters."));
 
-            // DocumentNumber (dedup check)
-            if (string.IsNullOrWhiteSpace(row.DocumentNumber))
-                rowErrors.Add(new ImportError(row.LineNumber, "DocumentNumber", "DocumentNumber is required."));
-            else if (row.DocumentNumber.Length > 50)
-                rowErrors.Add(new ImportError(row.LineNumber, "DocumentNumber", "DocumentNumber must not exceed 50 characters."));
-            else if (!seenDocumentNumbers.Add(row.DocumentNumber))
-                rowErrors.Add(new ImportError(row.LineNumber, "DocumentNumber",
-                    $"Duplicate DocumentNumber '{row.DocumentNumber}'."));
+            // DocumentNumber (optional; dedup only when non-null)
+            if (row.DocumentNumber is not null)
+            {
+                if (row.DocumentNumber.Length > 50)
+                    rowErrors.Add(new ImportError(row.LineNumber, "DocumentNumber", "DocumentNumber must not exceed 50 characters."));
+                else if (!seenDocumentNumbers.Add(row.DocumentNumber))
+                    rowErrors.Add(new ImportError(row.LineNumber, "DocumentNumber",
+                        $"Duplicate DocumentNumber '{row.DocumentNumber}'."));
+            }
 
             // EntityCode (optional)
             if (row.EntityCode is not null && row.EntityCode.Length > 50)
                 rowErrors.Add(new ImportError(row.LineNumber, "EntityCode", "EntityCode must not exceed 50 characters."));
-
-            // InternalLocation
-            if (string.IsNullOrWhiteSpace(row.InternalLocation))
-                rowErrors.Add(new ImportError(row.LineNumber, "InternalLocation", "InternalLocation is required."));
-            else if (row.InternalLocation.Length > 500)
-                rowErrors.Add(new ImportError(row.LineNumber, "InternalLocation", "InternalLocation must not exceed 500 characters."));
 
             // DocumentType FK
             if (string.IsNullOrWhiteSpace(row.DocumentTypeAbbreviation))
@@ -122,6 +122,15 @@ public class ImportPersonsCommandHandler(
                     $"Country '{row.CountryAbbreviation}' not found."));
             else
                 countryId = cId;
+
+            // Location FK
+            if (string.IsNullOrWhiteSpace(row.LocationCode))
+                rowErrors.Add(new ImportError(row.LineNumber, "LocationCode", "LocationCode is required."));
+            else if (!locationIdByCode.TryGetValue(row.LocationCode, out var lId))
+                rowErrors.Add(new ImportError(row.LineNumber, "LocationCode",
+                    $"Location '{row.LocationCode}' not found."));
+            else
+                locationId = lId;
 
             // Representative FK (optional; resolved from DB + in-batch map)
             if (!string.IsNullOrWhiteSpace(row.RepresentativeDocumentNumber))
@@ -140,7 +149,7 @@ public class ImportPersonsCommandHandler(
                 var ruleErrors = PersonImportRules.Check(
                     documentType,
                     personType,
-                    row.DocumentNumber!,
+                    row.DocumentNumber,
                     representativeId.HasValue);
 
                 foreach (var msg in ruleErrors)
@@ -162,20 +171,20 @@ public class ImportPersonsCommandHandler(
                 Name = row.Name!,
                 PersonType = personType,
                 Ciiu = string.IsNullOrWhiteSpace(row.Ciiu) ? null : row.Ciiu,
-                Address = row.Address!,
+                Address = string.IsNullOrWhiteSpace(row.Address) ? null : row.Address,
                 DocumentTypeId = documentType!.Id,
-                DocumentNumber = row.DocumentNumber!,
+                DocumentNumber = string.IsNullOrWhiteSpace(row.DocumentNumber) ? null : row.DocumentNumber,
                 EntityCode = row.EntityCode,
                 RepresentativeId = representativeId,
                 ReportFlag = reportFlag,
                 CountryId = countryId!.Value,
-                InternalLocation = row.InternalLocation!
+                LocationId = locationId!.Value
             };
 
             staged.Add(person);
 
-            // Immediately update the in-batch map so subsequent rows can reference this person
-            personMap[person.DocumentNumber] = new PersonLookup(person.Id, person.PersonType);
+            if (person.DocumentNumber is not null)
+                personMap[person.DocumentNumber] = new PersonLookup(person.Id, person.PersonType);
         }
 
         if (request.Mode == ImportMode.Atomic && errors.Count > 0)

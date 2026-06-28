@@ -21,18 +21,12 @@ public class UpdatePersonCommandHandler(
         var documentType = await documentTypeRepository.Query()
             .Include(d => d.AllowedPersonTypes)
             .FirstOrDefaultAsync(d => d.Id == request.DocumentTypeId, cancellationToken)
-            ?? throw new ValidationException("DocumentType not found.");
+            ?? throw new NotFoundException(nameof(DocumentType), request.DocumentTypeId);
 
         if (!documentType.AllowedPersonTypes.Any(a => a.PersonType == request.PersonType))
             throw new ValidationException($"DocumentType '{documentType.Name}' is not allowed for PersonType '{request.PersonType}'.");
 
-        if (request.PersonType is PersonType.Legal or PersonType.LegalEntity && request.RepresentativeId is null)
-            throw new ValidationException("A representative is required for Legal and LegalEntity persons.");
-
-        if (request.PersonType is PersonType.Natural && request.RepresentativeId is not null)
-            throw new ValidationException("Natural persons cannot have a representative.");
-
-        if (documentType.ValidationRegex is not null
+        if (documentType.ValidationRegex is not null && request.DocumentNumber is not null
             && !System.Text.RegularExpressions.Regex.IsMatch(request.DocumentNumber, documentType.ValidationRegex))
             throw new ValidationException($"DocumentNumber does not match the required format for '{documentType.Name}'.");
 
@@ -46,7 +40,7 @@ public class UpdatePersonCommandHandler(
         person.RepresentativeId = request.RepresentativeId;
         person.ReportFlag = request.ReportFlag;
         person.CountryId = request.CountryId;
-        person.InternalLocation = request.InternalLocation;
+        person.LocationId = request.LocationId;
 
         personRepository.Update(person);
         await personRepository.SaveChangesAsync(cancellationToken);

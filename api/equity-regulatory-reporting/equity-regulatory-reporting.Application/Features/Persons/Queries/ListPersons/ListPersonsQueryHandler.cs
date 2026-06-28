@@ -27,7 +27,7 @@ public class ListPersonsQueryHandler(IRepository<Person> repository, IMapper map
             var term = request.Page.Search.ToLower();
             filtered = filtered.Where(p =>
                 p.Name.ToLower().Contains(term) ||
-                p.DocumentNumber.ToLower().Contains(term));
+                (p.DocumentNumber != null && p.DocumentNumber.ToLower().Contains(term)));
         }
 
         var total = await filtered.CountAsync(cancellationToken);

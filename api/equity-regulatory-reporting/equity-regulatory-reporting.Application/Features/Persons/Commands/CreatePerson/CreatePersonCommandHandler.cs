@@ -1,6 +1,8 @@
+using equity_regulatory_reporting.Application.Common.Exceptions;
 using equity_regulatory_reporting.Application.Common.Interfaces;
 using equity_regulatory_reporting.Application.Features.Persons.Import;
 using equity_regulatory_reporting.Domain.Entities;
+using equity_regulatory_reporting.Domain.Enums;
 using FluentValidation;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
@@ -17,7 +19,7 @@ public class CreatePersonCommandHandler(
         var documentType = await documentTypeRepository.Query()
             .Include(d => d.AllowedPersonTypes)
             .FirstOrDefaultAsync(d => d.Id == request.DocumentTypeId, cancellationToken)
-            ?? throw new ValidationException("DocumentType not found.");
+            ?? throw new NotFoundException(nameof(DocumentType), request.DocumentTypeId);
 
         var ruleErrors = PersonImportRules.Check(
             documentType,
@@ -40,7 +42,7 @@ public class CreatePersonCommandHandler(
             RepresentativeId = request.RepresentativeId,
             ReportFlag = request.ReportFlag,
             CountryId = request.CountryId,
-            InternalLocation = request.InternalLocation
+            LocationId = request.LocationId
         };
 
         await personRepository.AddAsync(person, cancellationToken);

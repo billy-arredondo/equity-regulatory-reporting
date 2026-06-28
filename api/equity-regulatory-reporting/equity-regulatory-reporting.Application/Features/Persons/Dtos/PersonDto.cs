@@ -7,7 +7,7 @@ public record PersonDto(
     string Name,
     PersonType PersonType,
     string DocumentTypeName,
-    string DocumentNumber,
+    string? DocumentNumber,
     string CountryName,
     bool ReportFlag);
 
@@ -16,14 +16,18 @@ public record PersonDetailDto(
     string Name,
     PersonType PersonType,
     string? Ciiu,
-    string Address,
+    string? Address,
     Guid DocumentTypeId,
     string DocumentTypeName,
-    string DocumentNumber,
+    string? DocumentNumber,
     string? EntityCode,
     Guid? RepresentativeId,
     string? RepresentativeName,
     bool ReportFlag,
     Guid CountryId,
     string CountryName,
-    string InternalLocation);
+    Guid LocationId,
+    string LocationCode,
+    string LocationDepartment,
+    string LocationProvince,
+    string LocationDistrict);

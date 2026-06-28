@@ -234,7 +234,7 @@ export function PersonFormPage({ personType, baseRoute, entityLabel }: Props) {
           />
         </div>
         <div className="space-y-2">
-          <Label>Código entidad (opcional)</Label>
+          <Label>Código SBS (opcional)</Label>
           <Input
             value={form.entityCode ?? ""}
             onChange={(e) => setForm((f) => ({ ...f, entityCode: e.target.value || null }))}

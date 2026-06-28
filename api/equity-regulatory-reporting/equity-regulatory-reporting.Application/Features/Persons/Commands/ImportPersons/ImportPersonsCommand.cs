@@ -15,6 +15,6 @@ public record PersonImportRow(
     string? RepresentativeDocumentNumber,
     string? ReportFlag,
     string? CountryAbbreviation,
-    string? InternalLocation);
+    string? LocationCode);
 
 public record ImportPersonsCommand(IReadOnlyList<PersonImportRow> Rows, ImportMode Mode) : IRequest<ImportResult>;

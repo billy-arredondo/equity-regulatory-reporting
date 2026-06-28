@@ -15,8 +15,9 @@ public class ImportParticipationsCommandHandler(
     public async Task<ImportResult> Handle(ImportParticipationsCommand request, CancellationToken cancellationToken)
     {
         var personMap = await personRepository.Query()
+            .Where(p => p.DocumentNumber != null)
             .ToDictionaryAsync(
-                p => p.DocumentNumber,
+                p => p.DocumentNumber!,
                 p => p,
                 StringComparer.OrdinalIgnoreCase,
                 cancellationToken);
