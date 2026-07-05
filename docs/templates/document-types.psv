@@ -1,4 +1,16 @@
-Name|Abbreviation|ValidationRegex
-National Identity Document|NID|^\d{8}$
-Tax Registration Number|TRN|^\d{11}$
-Passport|PASS|
+CodTipoDoc|Descripcion|DescripcionLarga|CodigoReporte|CodTipoP
+1|0|Otros|99|0
+2|DNI - Documento Nacional de Identidad|Documento Nacional de Identidad|01|1
+3|CI - Carnet de Identidad|Carnet de Identidad|07|1
+4|CE - Carnet de Extranjería|Carnet de Extranjería|02|1
+5|PAS - Pasaporte|Pasaporte|05|1
+6|CPTP - Carnet de Permiso Temporal de Permanencia|Carnet de Permiso Temporal de Permanencia|08|1
+7|PTP - Permiso Temporal de Permanencia|Permiso Temporal de Permanencia|09|1
+8|RUC - Registro Único del Contribuyente|Registro Único del Contribuyente|06|2
+9|JUR Local  (S/ RUC)|Personas Jurídicas Locales sin RUC|20|2
+10|JUR Extranjero (S/ RUC)|Empresas Extranjeras sin RUC|21|2
+11|Código SWIFT|Society for Worldwide Interbank Financial Telecommunication|61|2
+12|Código Fiscal de País de Origen|Código Fiscal de País de Origen|62|2
+13|Código IBAN|Código IBAN - InternationalBank Account Number|63|2
+14|Código ABA|Código ABA - American Bankers Association|64|2
+15|No Identificado|No Identificado|98|0

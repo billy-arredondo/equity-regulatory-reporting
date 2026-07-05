@@ -63,7 +63,7 @@ if (app.Environment.IsDevelopment())
     var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
     await db.Database.MigrateAsync();
 
-    if (app.Configuration.GetValue<bool>("Seed:Enabled", defaultValue: true))
+    if (app.Configuration.GetValue("Seed:Enabled", defaultValue: true))
     {
         var seeder = scope.ServiceProvider.GetRequiredService<DatabaseSeeder>();
         await seeder.SeedAsync();

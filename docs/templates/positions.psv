@@ -1,4 +1,8 @@
-Name|ReportCode
-No position|NOPOS
-President|PRES
-Vice President|VPRES
+CodCargo|Descripcion|CodigoReporte
+2|Presidente del Directorio|1
+3|Director|2
+4|Gerente|3
+5|Principal funcionario|4
+6|Asesor|5
+7|Sin Cargo|0
+8|Gestor|6
