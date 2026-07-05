@@ -14,14 +14,6 @@ public partial class DatabaseSeeder
         if (await context.Locations.AnyAsync())
             return;
 
-        context.Locations.Add(new Location
-        {
-            Code = "999999",
-            Department = "Extranjero",
-            Province = "Extranjero",
-            District = "Extranjero"
-        });
-
         var rows = LoadGeocodeSeedRows();
         foreach (var row in rows)
         {
