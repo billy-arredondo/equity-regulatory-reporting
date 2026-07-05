@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -9,6 +9,8 @@ import { PositionSummaryPanel } from "@/components/shared/PositionSummaryPanel";
 import { PermissionGuard } from "@/components/shared/PermissionGuard";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { usePositionsQuery } from "@/hooks/usePositions";
+import { useDebouncedSearch } from "@/hooks/useDebouncedSearch";
+import { PAGE_SIZE } from "@/lib/constants";
 import { Permission } from "@/lib/permissions";
 import type { PositionDto } from "@/types/position";
 
@@ -17,16 +19,16 @@ const columns: Column<PositionDto>[] = [
   { key: "reportCode", header: "Código", render: (r) => r.reportCode, priority: "medium" },
 ];
 
-const PAGE_SIZE = 25;
-
 export function PositionListPage() {
   const [page, setPage] = useState(1);
-  const [search, setSearch] = useState("");
+  const { search, setSearch, debouncedSearch } = useDebouncedSearch();
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [panelOpen, setPanelOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 1024px)");
 
-  const { data, isLoading } = usePositionsQuery({ page, pageSize: PAGE_SIZE, search: search || undefined });
+  useEffect(() => { setPage(1); }, [debouncedSearch]);
+
+  const { data, isLoading } = usePositionsQuery({ page, pageSize: PAGE_SIZE, search: debouncedSearch || undefined });
 
   function handleRowClick(row: PositionDto) {
     setSelectedId(row.id);
@@ -50,7 +52,7 @@ export function PositionListPage() {
         <Input
           placeholder="Buscar cargos..."
           value={search}
-          onChange={(e) => { setSearch(e.target.value); setPage(1); }}
+          onChange={(e) => setSearch(e.target.value)}
           className="max-w-xs"
         />
       </div>

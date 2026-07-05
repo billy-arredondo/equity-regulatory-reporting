@@ -3,13 +3,43 @@ import { ParticipationListPage } from "./ParticipationListPage";
 import { ParticipationDetailPage } from "./ParticipationDetailPage";
 import { ParticipationFormPage } from "./ParticipationFormPage";
 
-export function ParticipationsPage() {
+interface Props {
+  companyId: string;
+  companyName: string;
+  basePath: string;
+}
+
+export function PersonParticipationsSection({ companyId, companyName, basePath }: Props) {
   return (
     <Routes>
-      <Route index element={<ParticipationListPage />} />
-      <Route path="new" element={<ParticipationFormPage />} />
-      <Route path=":id" element={<ParticipationDetailPage />} />
-      <Route path=":id/edit" element={<ParticipationFormPage />} />
+      <Route
+        index
+        element={<ParticipationListPage companyId={companyId} basePath={basePath} />}
+      />
+      <Route
+        path="new"
+        element={
+          <ParticipationFormPage
+            lockedCompanyId={companyId}
+            lockedCompanyName={companyName}
+            basePath={basePath}
+          />
+        }
+      />
+      <Route
+        path=":participationId"
+        element={<ParticipationDetailPage basePath={basePath} />}
+      />
+      <Route
+        path=":participationId/edit"
+        element={
+          <ParticipationFormPage
+            lockedCompanyId={companyId}
+            lockedCompanyName={companyName}
+            basePath={basePath}
+          />
+        }
+      />
     </Routes>
   );
 }

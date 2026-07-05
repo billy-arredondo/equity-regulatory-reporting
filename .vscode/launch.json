@@ -1,0 +1,11 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": ".NET: Launch API",
+      "type": "dotnet",
+      "request": "launch",
+      "projectPath": "${workspaceFolder}/api/equity-regulatory-reporting/equity-regulatory-reporting.Api/equity-regulatory-reporting.Api.csproj"
+    }
+  ]
+}

@@ -1,6 +1,9 @@
+using equity_regulatory_reporting.Api.Common;
+using equity_regulatory_reporting.Api.Import;
 using equity_regulatory_reporting.Application.Common.Models;
 using equity_regulatory_reporting.Application.Features.BoardMembers.Commands.CreateBoardMember;
 using equity_regulatory_reporting.Application.Features.BoardMembers.Commands.DeleteBoardMember;
+using equity_regulatory_reporting.Application.Features.BoardMembers.Commands.ImportBoardMembers;
 using equity_regulatory_reporting.Application.Features.BoardMembers.Commands.UpdateBoardMember;
 using equity_regulatory_reporting.Application.Features.BoardMembers.Queries.GetBoardMemberById;
 using equity_regulatory_reporting.Application.Features.BoardMembers.Queries.ListBoardMembers;
@@ -53,5 +56,14 @@ public class BoardMembersController(ISender sender) : ControllerBase
     {
         await sender.Send(new DeleteBoardMemberCommand(id), ct);
         return NoContent();
+    }
+
+    [HttpPost("import")]
+    [HasPermission(Permission.BoardWrite)]
+    public async Task<IActionResult> Import(IFormFile file, [FromForm] ImportMode mode, CancellationToken ct)
+    {
+        var rows = BoardMembersImportParser.Parse(file);
+        var result = await sender.Send(new ImportBoardMembersCommand(rows, mode), ct);
+        return this.ToActionResult(result, mode);
     }
 }

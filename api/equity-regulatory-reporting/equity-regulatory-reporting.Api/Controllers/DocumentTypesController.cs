@@ -1,6 +1,10 @@
+using equity_regulatory_reporting.Api.Common;
+using equity_regulatory_reporting.Api.Import;
 using equity_regulatory_reporting.Application.Common.Models;
 using equity_regulatory_reporting.Application.Features.DocumentTypes.Commands.CreateDocumentType;
 using equity_regulatory_reporting.Application.Features.DocumentTypes.Commands.DeleteDocumentType;
+using equity_regulatory_reporting.Application.Features.DocumentTypes.Commands.ImportDocumentTypePersonTypes;
+using equity_regulatory_reporting.Application.Features.DocumentTypes.Commands.ImportDocumentTypes;
 using equity_regulatory_reporting.Application.Features.DocumentTypes.Commands.UpdateDocumentType;
 using equity_regulatory_reporting.Application.Features.DocumentTypes.Queries.GetDocumentTypeById;
 using equity_regulatory_reporting.Application.Features.DocumentTypes.Queries.ListDocumentTypes;
@@ -53,5 +57,23 @@ public class DocumentTypesController(ISender sender) : ControllerBase
     {
         await sender.Send(new DeleteDocumentTypeCommand(id), ct);
         return NoContent();
+    }
+
+    [HttpPost("import")]
+    [HasPermission(Permission.DocumentTypeWrite)]
+    public async Task<IActionResult> Import(IFormFile file, [FromForm] ImportMode mode, CancellationToken ct)
+    {
+        var rows = DocumentTypesImportParser.ParseDocumentTypes(file);
+        var result = await sender.Send(new ImportDocumentTypesCommand(rows, mode), ct);
+        return this.ToActionResult(result, mode);
+    }
+
+    [HttpPost("import-person-types")]
+    [HasPermission(Permission.DocumentTypeWrite)]
+    public async Task<IActionResult> ImportPersonTypes(IFormFile file, [FromForm] ImportMode mode, CancellationToken ct)
+    {
+        var rows = DocumentTypesImportParser.ParsePersonTypeMappings(file);
+        var result = await sender.Send(new ImportDocumentTypePersonTypesCommand(rows, mode), ct);
+        return this.ToActionResult(result, mode);
     }
 }

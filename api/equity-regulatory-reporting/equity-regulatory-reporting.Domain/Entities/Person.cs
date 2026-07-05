@@ -7,22 +7,26 @@ public class Person : AuditableEntity
 {
     public string Name { get; set; } = string.Empty;
     public PersonType PersonType { get; set; }
-    public string Ciiu { get; set; } = string.Empty;
-    public string Address { get; set; } = string.Empty;
+    public string? Ciiu { get; set; }
+    public string? Address { get; set; }
 
     public Guid DocumentTypeId { get; set; }
     public DocumentType DocumentType { get; set; } = null!;
 
-    public string DocumentNumber { get; set; } = string.Empty;
+    public string? DocumentNumber { get; set; }
     public string? EntityCode { get; set; }
+
+    public int? LegacyId { get; set; }
 
     public Guid? RepresentativeId { get; set; }
     public Person? Representative { get; set; }
+    public string? RepresentativeDescription { get; set; }
 
     public bool ReportFlag { get; set; }
 
     public Guid CountryId { get; set; }
     public Country Country { get; set; } = null!;
 
-    public string InternalLocation { get; set; } = string.Empty;
+    public Guid LocationId { get; set; }
+    public Location Location { get; set; } = null!;
 }

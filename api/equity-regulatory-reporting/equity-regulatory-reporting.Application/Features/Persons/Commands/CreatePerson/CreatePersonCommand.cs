@@ -6,12 +6,12 @@ namespace equity_regulatory_reporting.Application.Features.Persons.Commands.Crea
 public record CreatePersonCommand(
     string Name,
     PersonType PersonType,
-    string Ciiu,
-    string Address,
+    string? Ciiu,
+    string? Address,
     Guid DocumentTypeId,
-    string DocumentNumber,
+    string? DocumentNumber,
     string? EntityCode,
     Guid? RepresentativeId,
     bool ReportFlag,
     Guid CountryId,
-    string InternalLocation) : IRequest<Guid>;
+    Guid LocationId) : IRequest<Guid>;

@@ -17,7 +17,12 @@ public class ListCountriesQueryHandler(IRepository<Country> repository, IMapper 
         var query = repository.Query();
 
         if (!string.IsNullOrWhiteSpace(request.Page.Search))
-            query = query.Where(c => c.Name.Contains(request.Page.Search) || c.Abbreviation.Contains(request.Page.Search));
+        {
+            var term = request.Page.Search.ToLower();
+            query = query.Where(c =>
+                c.Name.ToLower().Contains(term) ||
+                c.Abbreviation.ToLower().Contains(term));
+        }
 
         var total = await query.CountAsync(cancellationToken);
 

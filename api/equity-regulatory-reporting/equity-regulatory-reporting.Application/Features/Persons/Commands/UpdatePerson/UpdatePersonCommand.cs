@@ -7,12 +7,12 @@ public record UpdatePersonCommand(
     Guid Id,
     string Name,
     PersonType PersonType,
-    string Ciiu,
-    string Address,
+    string? Ciiu,
+    string? Address,
     Guid DocumentTypeId,
-    string DocumentNumber,
+    string? DocumentNumber,
     string? EntityCode,
     Guid? RepresentativeId,
     bool ReportFlag,
     Guid CountryId,
-    string InternalLocation) : IRequest;
+    Guid LocationId) : IRequest;

@@ -1,0 +1,1002 @@
+[
+  {
+    "name": "ANDORRA",
+    "abbreviation": "AD"
+  },
+  {
+    "name": "EMIRATOS ÁRABES UNIDOS",
+    "abbreviation": "AE"
+  },
+  {
+    "name": "AFGANISTÁN",
+    "abbreviation": "AF"
+  },
+  {
+    "name": "ANTIGUA Y BARBUDA",
+    "abbreviation": "AG"
+  },
+  {
+    "name": "ANGUILA",
+    "abbreviation": "AI"
+  },
+  {
+    "name": "ALBANIA",
+    "abbreviation": "AL"
+  },
+  {
+    "name": "ARMENIA",
+    "abbreviation": "AM"
+  },
+  {
+    "name": "ANTILLAS HOLANDESAS (ACTUALMENTE: CURAZAO, DESDE 10/10/2010)",
+    "abbreviation": "AN"
+  },
+  {
+    "name": "ANGOLA",
+    "abbreviation": "AO"
+  },
+  {
+    "name": "ANTÁRTIDA",
+    "abbreviation": "AQ"
+  },
+  {
+    "name": "ARGENTINA",
+    "abbreviation": "AR"
+  },
+  {
+    "name": "SAMOA AMERICANA",
+    "abbreviation": "AS"
+  },
+  {
+    "name": "AUSTRIA",
+    "abbreviation": "AT"
+  },
+  {
+    "name": "AUSTRALIA",
+    "abbreviation": "AU"
+  },
+  {
+    "name": "ARUBA",
+    "abbreviation": "AW"
+  },
+  {
+    "name": "ISLAS ALAND",
+    "abbreviation": "AX"
+  },
+  {
+    "name": "AZERBAIYÁN",
+    "abbreviation": "AZ"
+  },
+  {
+    "name": "BOSNIA Y HERZEGOVINA",
+    "abbreviation": "BA"
+  },
+  {
+    "name": "BARBADOS",
+    "abbreviation": "BB"
+  },
+  {
+    "name": "BANGLADESH",
+    "abbreviation": "BD"
+  },
+  {
+    "name": "BÉLGICA",
+    "abbreviation": "BE"
+  },
+  {
+    "name": "BURKINA FASO",
+    "abbreviation": "BF"
+  },
+  {
+    "name": "BULGARIA",
+    "abbreviation": "BG"
+  },
+  {
+    "name": "BAHRÉIN",
+    "abbreviation": "BH"
+  },
+  {
+    "name": "BURUNDI",
+    "abbreviation": "BI"
+  },
+  {
+    "name": "BENÍN",
+    "abbreviation": "BJ"
+  },
+  {
+    "name": "SAN BARTOLOMÉ",
+    "abbreviation": "BL"
+  },
+  {
+    "name": "BERMUDAS",
+    "abbreviation": "BM"
+  },
+  {
+    "name": "BRUNÉI DARUSSALAM",
+    "abbreviation": "BN"
+  },
+  {
+    "name": "BOLIVIA, ESTADO PLURINACIONAL DE",
+    "abbreviation": "BO"
+  },
+  {
+    "name": "BONAIRE, SAN EUSTAQUIO Y SABA",
+    "abbreviation": "BQ"
+  },
+  {
+    "name": "BRASIL",
+    "abbreviation": "BR"
+  },
+  {
+    "name": "BAHAMAS",
+    "abbreviation": "BS"
+  },
+  {
+    "name": "BUTÁN",
+    "abbreviation": "BT"
+  },
+  {
+    "name": "ISLA BOUVET",
+    "abbreviation": "BV"
+  },
+  {
+    "name": "BOTSUANA",
+    "abbreviation": "BW"
+  },
+  {
+    "name": "BIELORRUSIA",
+    "abbreviation": "BY"
+  },
+  {
+    "name": "BELICE",
+    "abbreviation": "BZ"
+  },
+  {
+    "name": "CANADÁ",
+    "abbreviation": "CA"
+  },
+  {
+    "name": "ISLAS COCOS",
+    "abbreviation": "CC"
+  },
+  {
+    "name": "CONGO, REPÚBLICA DEMOCRÁTICA DEL",
+    "abbreviation": "CD"
+  },
+  {
+    "name": "REPÚBLICA CENTROAFRICANA",
+    "abbreviation": "CF"
+  },
+  {
+    "name": "CONGO",
+    "abbreviation": "CG"
+  },
+  {
+    "name": "SUIZA",
+    "abbreviation": "CH"
+  },
+  {
+    "name": "COSTA DE MARFIL",
+    "abbreviation": "CI"
+  },
+  {
+    "name": "ISLAS COOK",
+    "abbreviation": "CK"
+  },
+  {
+    "name": "CHILE",
+    "abbreviation": "CL"
+  },
+  {
+    "name": "CAMERÚN",
+    "abbreviation": "CM"
+  },
+  {
+    "name": "CHINA",
+    "abbreviation": "CN"
+  },
+  {
+    "name": "COLOMBIA",
+    "abbreviation": "CO"
+  },
+  {
+    "name": "COSTA RICA",
+    "abbreviation": "CR"
+  },
+  {
+    "name": "SERBIA Y MONTENEGRO (DIVIDIDO)",
+    "abbreviation": "CS"
+  },
+  {
+    "name": "CUBA",
+    "abbreviation": "CU"
+  },
+  {
+    "name": "CABO VERDE",
+    "abbreviation": "CV"
+  },
+  {
+    "name": "CURAZAO",
+    "abbreviation": "CW"
+  },
+  {
+    "name": "ISLA DE NAVIDAD",
+    "abbreviation": "CX"
+  },
+  {
+    "name": "CHIPRE",
+    "abbreviation": "CY"
+  },
+  {
+    "name": "REPÚBLICA CHECA",
+    "abbreviation": "CZ"
+  },
+  {
+    "name": "ALEMANIA",
+    "abbreviation": "DE"
+  },
+  {
+    "name": "YIBUTI",
+    "abbreviation": "DJ"
+  },
+  {
+    "name": "DINAMARCA",
+    "abbreviation": "DK"
+  },
+  {
+    "name": "DOMINICA",
+    "abbreviation": "DM"
+  },
+  {
+    "name": "REPÚBLICA DOMINICANA",
+    "abbreviation": "DO"
+  },
+  {
+    "name": "ARGELIA",
+    "abbreviation": "DZ"
+  },
+  {
+    "name": "ECUADOR",
+    "abbreviation": "EC"
+  },
+  {
+    "name": "ESTONIA",
+    "abbreviation": "EE"
+  },
+  {
+    "name": "EGIPTO",
+    "abbreviation": "EG"
+  },
+  {
+    "name": "SAHARA OCCIDENTAL",
+    "abbreviation": "EH"
+  },
+  {
+    "name": "ERITREA",
+    "abbreviation": "ER"
+  },
+  {
+    "name": "ESPAÑA",
+    "abbreviation": "ES"
+  },
+  {
+    "name": "ETIOPÍA",
+    "abbreviation": "ET"
+  },
+  {
+    "name": "FINLANDIA",
+    "abbreviation": "FI"
+  },
+  {
+    "name": "FIYI",
+    "abbreviation": "FJ"
+  },
+  {
+    "name": "ISLAS MALVINAS",
+    "abbreviation": "FK"
+  },
+  {
+    "name": "MICRONESIA, ESTADOS FEDERADOS DE",
+    "abbreviation": "FM"
+  },
+  {
+    "name": "ISLAS FEROE",
+    "abbreviation": "FO"
+  },
+  {
+    "name": "FRANCIA",
+    "abbreviation": "FR"
+  },
+  {
+    "name": "GABÓN",
+    "abbreviation": "GA"
+  },
+  {
+    "name": "REINO UNIDO",
+    "abbreviation": "GB"
+  },
+  {
+    "name": "GRANADA",
+    "abbreviation": "GD"
+  },
+  {
+    "name": "GEORGIA",
+    "abbreviation": "GE"
+  },
+  {
+    "name": "GUAYANA FRANCESA",
+    "abbreviation": "GF"
+  },
+  {
+    "name": "GUERNESEY",
+    "abbreviation": "GG"
+  },
+  {
+    "name": "GHANA",
+    "abbreviation": "GH"
+  },
+  {
+    "name": "GIBRALTAR",
+    "abbreviation": "GI"
+  },
+  {
+    "name": "GROENLANDIA",
+    "abbreviation": "GL"
+  },
+  {
+    "name": "GAMBIA",
+    "abbreviation": "GM"
+  },
+  {
+    "name": "GUINEA",
+    "abbreviation": "GN"
+  },
+  {
+    "name": "GUADALUPE",
+    "abbreviation": "GP"
+  },
+  {
+    "name": "GUINEA ECUATORIAL",
+    "abbreviation": "GQ"
+  },
+  {
+    "name": "GRECIA",
+    "abbreviation": "GR"
+  },
+  {
+    "name": "ISLAS GEORGIAS DEL SUR Y SANDWICH DEL SUR",
+    "abbreviation": "GS"
+  },
+  {
+    "name": "GUATEMALA",
+    "abbreviation": "GT"
+  },
+  {
+    "name": "GUAM",
+    "abbreviation": "GU"
+  },
+  {
+    "name": "GUINEA-BISSAU",
+    "abbreviation": "GW"
+  },
+  {
+    "name": "GUYANA",
+    "abbreviation": "GY"
+  },
+  {
+    "name": "HONG KONG",
+    "abbreviation": "HK"
+  },
+  {
+    "name": "ISLA HEARD E ISLAS MCDONALD",
+    "abbreviation": "HM"
+  },
+  {
+    "name": "HONDURAS",
+    "abbreviation": "HN"
+  },
+  {
+    "name": "CROACIA",
+    "abbreviation": "HR"
+  },
+  {
+    "name": "HAITÍ",
+    "abbreviation": "HT"
+  },
+  {
+    "name": "HUNGRÍA",
+    "abbreviation": "HU"
+  },
+  {
+    "name": "INDONESIA",
+    "abbreviation": "ID"
+  },
+  {
+    "name": "IRLANDA",
+    "abbreviation": "IE"
+  },
+  {
+    "name": "ISRAEL",
+    "abbreviation": "IL"
+  },
+  {
+    "name": "ISLA DE MAN",
+    "abbreviation": "IM"
+  },
+  {
+    "name": "INDIA",
+    "abbreviation": "IN"
+  },
+  {
+    "name": "TERRITORIO BRITÁNICO DEL OCÉANO ÍNDICO",
+    "abbreviation": "IO"
+  },
+  {
+    "name": "IRAQ",
+    "abbreviation": "IQ"
+  },
+  {
+    "name": "IRÁN",
+    "abbreviation": "IR"
+  },
+  {
+    "name": "ISLANDIA",
+    "abbreviation": "IS"
+  },
+  {
+    "name": "ITALIA",
+    "abbreviation": "IT"
+  },
+  {
+    "name": "JERSEY",
+    "abbreviation": "JE"
+  },
+  {
+    "name": "JAMAICA",
+    "abbreviation": "JM"
+  },
+  {
+    "name": "JORDANIA",
+    "abbreviation": "JO"
+  },
+  {
+    "name": "JAPÓN",
+    "abbreviation": "JP"
+  },
+  {
+    "name": "KENIA",
+    "abbreviation": "KE"
+  },
+  {
+    "name": "KIRGUISTÁN",
+    "abbreviation": "KG"
+  },
+  {
+    "name": "CAMBOYA",
+    "abbreviation": "KH"
+  },
+  {
+    "name": "KIRIBATI",
+    "abbreviation": "KI"
+  },
+  {
+    "name": "COMORAS",
+    "abbreviation": "KM"
+  },
+  {
+    "name": "SAN CRISTÓBAL Y NIEVES",
+    "abbreviation": "KN"
+  },
+  {
+    "name": "COREA, REPÚBLICA DEMOCRÁTICA POPULAR DE (NORTE)",
+    "abbreviation": "KP"
+  },
+  {
+    "name": "COREA, REPÚBLICA DE (SUR)",
+    "abbreviation": "KR"
+  },
+  {
+    "name": "KUWAIT",
+    "abbreviation": "KW"
+  },
+  {
+    "name": "ISLAS CAIMÁN",
+    "abbreviation": "KY"
+  },
+  {
+    "name": "KAZAJSTÁN",
+    "abbreviation": "KZ"
+  },
+  {
+    "name": "LAOS",
+    "abbreviation": "LA"
+  },
+  {
+    "name": "LÍBANO",
+    "abbreviation": "LB"
+  },
+  {
+    "name": "SANTA LUCÍA",
+    "abbreviation": "LC"
+  },
+  {
+    "name": "LIECHTENSTEIN",
+    "abbreviation": "LI"
+  },
+  {
+    "name": "SRI LANKA",
+    "abbreviation": "LK"
+  },
+  {
+    "name": "LIBERIA",
+    "abbreviation": "LR"
+  },
+  {
+    "name": "LESOTHO",
+    "abbreviation": "LS"
+  },
+  {
+    "name": "LITUANIA",
+    "abbreviation": "LT"
+  },
+  {
+    "name": "LUXEMBURGO",
+    "abbreviation": "LU"
+  },
+  {
+    "name": "LETONIA",
+    "abbreviation": "LV"
+  },
+  {
+    "name": "LIBIA",
+    "abbreviation": "LY"
+  },
+  {
+    "name": "MARRUECOS",
+    "abbreviation": "MA"
+  },
+  {
+    "name": "MÓNACO",
+    "abbreviation": "MC"
+  },
+  {
+    "name": "MOLDAVIA, REPÚBLICA DE",
+    "abbreviation": "MD"
+  },
+  {
+    "name": "MONTENEGRO",
+    "abbreviation": "ME"
+  },
+  {
+    "name": "SAN MARTÍN",
+    "abbreviation": "MF"
+  },
+  {
+    "name": "MADAGASCAR",
+    "abbreviation": "MG"
+  },
+  {
+    "name": "ISLAS MARSHALL",
+    "abbreviation": "MH"
+  },
+  {
+    "name": "MACEDONIA, ANTIGUA REPÚBLICA YUGOSLAVA DE",
+    "abbreviation": "MK"
+  },
+  {
+    "name": "MALÍ",
+    "abbreviation": "ML"
+  },
+  {
+    "name": "MYANMAR (BIRMANIA)",
+    "abbreviation": "MM"
+  },
+  {
+    "name": "MONGOLIA",
+    "abbreviation": "MN"
+  },
+  {
+    "name": "MACAO",
+    "abbreviation": "MO"
+  },
+  {
+    "name": "ISLAS MARIANAS DEL NORTE",
+    "abbreviation": "MP"
+  },
+  {
+    "name": "MARTINICA",
+    "abbreviation": "MQ"
+  },
+  {
+    "name": "MAURITANIA",
+    "abbreviation": "MR"
+  },
+  {
+    "name": "MONTSERRAT",
+    "abbreviation": "MS"
+  },
+  {
+    "name": "MALTA",
+    "abbreviation": "MT"
+  },
+  {
+    "name": "MAURICIO",
+    "abbreviation": "MU"
+  },
+  {
+    "name": "MALDIVAS",
+    "abbreviation": "MV"
+  },
+  {
+    "name": "MALAUI",
+    "abbreviation": "MW"
+  },
+  {
+    "name": "MÉXICO",
+    "abbreviation": "MX"
+  },
+  {
+    "name": "MALASIA",
+    "abbreviation": "MY"
+  },
+  {
+    "name": "MOZAMBIQUE",
+    "abbreviation": "MZ"
+  },
+  {
+    "name": "NAMIBIA",
+    "abbreviation": "NA"
+  },
+  {
+    "name": "NUEVA CALEDONIA",
+    "abbreviation": "NC"
+  },
+  {
+    "name": "NÍGER",
+    "abbreviation": "NE"
+  },
+  {
+    "name": "ISLA NORFOLK",
+    "abbreviation": "NF"
+  },
+  {
+    "name": "NIGERIA",
+    "abbreviation": "NG"
+  },
+  {
+    "name": "NICARAGUA",
+    "abbreviation": "NI"
+  },
+  {
+    "name": "PAÍSES BAJOS (HOLANDA)",
+    "abbreviation": "NL"
+  },
+  {
+    "name": "NORUEGA",
+    "abbreviation": "NO"
+  },
+  {
+    "name": "NEPAL",
+    "abbreviation": "NP"
+  },
+  {
+    "name": "NAURU",
+    "abbreviation": "NR"
+  },
+  {
+    "name": "NIUE",
+    "abbreviation": "NU"
+  },
+  {
+    "name": "NUEVA ZELANDA",
+    "abbreviation": "NZ"
+  },
+  {
+    "name": "OMÁN",
+    "abbreviation": "OM"
+  },
+  {
+    "name": "PANAMÁ",
+    "abbreviation": "PA"
+  },
+  {
+    "name": "PERÚ",
+    "abbreviation": "PE"
+  },
+  {
+    "name": "POLINESIA FRANCESA",
+    "abbreviation": "PF"
+  },
+  {
+    "name": "PAPÚA NUEVA GUINEA",
+    "abbreviation": "PG"
+  },
+  {
+    "name": "FILIPINAS",
+    "abbreviation": "PH"
+  },
+  {
+    "name": "PAKISTÁN",
+    "abbreviation": "PK"
+  },
+  {
+    "name": "POLONIA",
+    "abbreviation": "PL"
+  },
+  {
+    "name": "SAN PEDRO Y MIQUELÓN",
+    "abbreviation": "PM"
+  },
+  {
+    "name": "ISLAS PITCAIRN",
+    "abbreviation": "PN"
+  },
+  {
+    "name": "PUERTO RICO",
+    "abbreviation": "PR"
+  },
+  {
+    "name": "TERRITORIO PALESTINO OCUPADO",
+    "abbreviation": "PS"
+  },
+  {
+    "name": "PORTUGAL",
+    "abbreviation": "PT"
+  },
+  {
+    "name": "PALÁU",
+    "abbreviation": "PW"
+  },
+  {
+    "name": "PARAGUAY",
+    "abbreviation": "PY"
+  },
+  {
+    "name": "QATAR",
+    "abbreviation": "QA"
+  },
+  {
+    "name": "REUNIÓN",
+    "abbreviation": "RE"
+  },
+  {
+    "name": "RUMANÍA",
+    "abbreviation": "RO"
+  },
+  {
+    "name": "SERBIA",
+    "abbreviation": "RS"
+  },
+  {
+    "name": "FEDERACIÓN RUSA (RUSIA)",
+    "abbreviation": "RU"
+  },
+  {
+    "name": "RUANDA",
+    "abbreviation": "RW"
+  },
+  {
+    "name": "ARABIA SAUDITA",
+    "abbreviation": "SA"
+  },
+  {
+    "name": "ISLAS SALOMÓN",
+    "abbreviation": "SB"
+  },
+  {
+    "name": "SEYCHELLES",
+    "abbreviation": "SC"
+  },
+  {
+    "name": "SUDÁN",
+    "abbreviation": "SD"
+  },
+  {
+    "name": "SUECIA",
+    "abbreviation": "SE"
+  },
+  {
+    "name": "SINGAPUR",
+    "abbreviation": "SG"
+  },
+  {
+    "name": "SANTA HELENA",
+    "abbreviation": "SH"
+  },
+  {
+    "name": "ESLOVENIA",
+    "abbreviation": "SI"
+  },
+  {
+    "name": "SVALBARD Y JAN MAYEN",
+    "abbreviation": "SJ"
+  },
+  {
+    "name": "ESLOVAQUIA",
+    "abbreviation": "SK"
+  },
+  {
+    "name": "SIERRA LEONA",
+    "abbreviation": "SL"
+  },
+  {
+    "name": "SAN MARINO",
+    "abbreviation": "SM"
+  },
+  {
+    "name": "SENEGAL",
+    "abbreviation": "SN"
+  },
+  {
+    "name": "SOMALIA",
+    "abbreviation": "SO"
+  },
+  {
+    "name": "SURINAM",
+    "abbreviation": "SR"
+  },
+  {
+    "name": "SANTO TOMÉ Y PRÍNCIPE",
+    "abbreviation": "ST"
+  },
+  {
+    "name": "EL SALVADOR",
+    "abbreviation": "SV"
+  },
+  {
+    "name": "SAN MARTÍN (PARTE HOLANDESA)",
+    "abbreviation": "SX"
+  },
+  {
+    "name": "SIRIA",
+    "abbreviation": "SY"
+  },
+  {
+    "name": "SUAZILANDIA",
+    "abbreviation": "SZ"
+  },
+  {
+    "name": "ISLAS TURCAS Y CAICOS",
+    "abbreviation": "TC"
+  },
+  {
+    "name": "CHAD",
+    "abbreviation": "TD"
+  },
+  {
+    "name": "TERRITORIOS AUSTRALES FRANCESES",
+    "abbreviation": "TF"
+  },
+  {
+    "name": "TOGO",
+    "abbreviation": "TG"
+  },
+  {
+    "name": "TAILANDIA",
+    "abbreviation": "TH"
+  },
+  {
+    "name": "TAYIKISTÁN",
+    "abbreviation": "TJ"
+  },
+  {
+    "name": "TOKELAU",
+    "abbreviation": "TK"
+  },
+  {
+    "name": "TIMOR-LESTE",
+    "abbreviation": "TL"
+  },
+  {
+    "name": "TURKMENISTÁN",
+    "abbreviation": "TM"
+  },
+  {
+    "name": "TÚNEZ",
+    "abbreviation": "TN"
+  },
+  {
+    "name": "TONGA",
+    "abbreviation": "TO"
+  },
+  {
+    "name": "TURQUÍA",
+    "abbreviation": "TR"
+  },
+  {
+    "name": "TRINIDAD Y TOBAGO",
+    "abbreviation": "TT"
+  },
+  {
+    "name": "TUVALU",
+    "abbreviation": "TV"
+  },
+  {
+    "name": "TAIWÁN, PROVINCIA DE CHINA",
+    "abbreviation": "TW"
+  },
+  {
+    "name": "TANZANIA, REPÚBLICA UNIDA DE",
+    "abbreviation": "TZ"
+  },
+  {
+    "name": "UCRANIA",
+    "abbreviation": "UA"
+  },
+  {
+    "name": "UGANDA",
+    "abbreviation": "UG"
+  },
+  {
+    "name": "ISLAS ULTRAMARINAS DE ESTADOS UNIDOS",
+    "abbreviation": "UM"
+  },
+  {
+    "name": "ESTADOS UNIDOS DE AMÉRICA",
+    "abbreviation": "US"
+  },
+  {
+    "name": "URUGUAY",
+    "abbreviation": "UY"
+  },
+  {
+    "name": "UZBEKISTÁN",
+    "abbreviation": "UZ"
+  },
+  {
+    "name": "VATICANO, CIUDAD DEL",
+    "abbreviation": "VA"
+  },
+  {
+    "name": "SAN VICENTE Y LAS GRANADINAS",
+    "abbreviation": "VC"
+  },
+  {
+    "name": "VENEZUELA, REPÚBLICA BOLIVARIANA DE",
+    "abbreviation": "VE"
+  },
+  {
+    "name": "ISLAS VÍRGENES BRITÁNICAS",
+    "abbreviation": "VG"
+  },
+  {
+    "name": "ISLAS VÍRGENES ESTADOUNIDENSES",
+    "abbreviation": "VI"
+  },
+  {
+    "name": "VIETNAM",
+    "abbreviation": "VN"
+  },
+  {
+    "name": "VANUATU",
+    "abbreviation": "VU"
+  },
+  {
+    "name": "WALLIS Y FUTUNA",
+    "abbreviation": "WF"
+  },
+  {
+    "name": "SAMOA",
+    "abbreviation": "WS"
+  },
+  {
+    "name": "YEMEN",
+    "abbreviation": "YE"
+  },
+  {
+    "name": "MAYOTTE",
+    "abbreviation": "YT"
+  },
+  {
+    "name": "SUDÁFRICA",
+    "abbreviation": "ZA"
+  },
+  {
+    "name": "ZAMBIA",
+    "abbreviation": "ZM"
+  },
+  {
+    "name": "ZIMBABUE",
+    "abbreviation": "ZW"
+  }
+]

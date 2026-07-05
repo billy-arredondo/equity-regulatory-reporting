@@ -11,8 +11,6 @@ import { CompaniesPage } from "@/pages/companies";
 import { EntitiesPage } from "@/pages/entities";
 import { PersonTypesPage } from "@/pages/person-types";
 import { DocumentTypesPage } from "@/pages/document-types";
-import { ParticipationsPage } from "@/pages/participations";
-import { BoardPage } from "@/pages/board";
 import { PositionsPage } from "@/pages/positions";
 import { UsersPage } from "@/pages/users";
 
@@ -40,8 +38,6 @@ export function AppRouter() {
           <Route path="person-types" element={<PersonTypesPage />} />
           <Route path="document-types/*" element={<DocumentTypesPage />} />
           <Route path="countries/*" element={<CountriesPage />} />
-          <Route path="participations/*" element={<ParticipationsPage />} />
-          <Route path="board/*" element={<BoardPage />} />
           <Route path="positions/*" element={<PositionsPage />} />
           <Route
             path="users/*"

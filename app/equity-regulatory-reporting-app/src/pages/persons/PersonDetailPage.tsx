@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { PageHeader } from "@/components/shared/PageHeader";
 import { ConfirmDialog } from "@/components/shared/ConfirmDialog";
 import { PageLoading } from "@/components/shared/LoadingSpinner";
 import { PermissionGuard } from "@/components/shared/PermissionGuard";
 import { Permission } from "@/lib/permissions";
-import { personTypeLabel } from "@/lib/person-types";
 import { usePersonDetailQuery, useDeletePersonMutation } from "@/hooks/usePersons";
+import { PersonDetailFields } from "./PersonDetailFields";
 
 interface Props {
   baseRoute: string;
@@ -54,63 +53,7 @@ export function PersonDetailPage({ baseRoute }: Props) {
           </PermissionGuard>
         }
       />
-      <div className="mt-4 max-w-lg grid grid-cols-2 gap-3">
-        <div className="space-y-1.5">
-          <p className="text-xs text-muted-foreground">Tipo de persona</p>
-          <p className="flex h-9 items-center text-sm font-medium">{personTypeLabel(data.personType)}</p>
-        </div>
-        <div className="space-y-1.5">
-          <p className="text-xs text-muted-foreground">CIIU</p>
-          <p className="flex h-9 items-center font-mono text-sm font-medium">{data.ciiu}</p>
-        </div>
-        <div className="space-y-1.5">
-          <p className="text-xs text-muted-foreground">Tipo de documento</p>
-          <p className="flex h-9 items-center text-sm font-medium">{data.documentTypeName}</p>
-        </div>
-        <div className="space-y-1.5">
-          <p className="text-xs text-muted-foreground">Número de documento</p>
-          <p className="flex h-9 items-center text-sm font-medium">{data.documentNumber}</p>
-        </div>
-        <div className="col-span-2 space-y-1.5">
-          <p className="text-xs text-muted-foreground">Dirección</p>
-          <p className="flex h-9 items-center text-sm font-medium">{data.address}</p>
-        </div>
-        <div className="space-y-1.5">
-          <p className="text-xs text-muted-foreground">País</p>
-          <p className="flex h-9 items-center text-sm font-medium">{data.countryName}</p>
-        </div>
-        <div className="space-y-1.5">
-          <p className="text-xs text-muted-foreground">Ubicación interna</p>
-          <p className="flex h-9 items-center text-sm font-medium">{data.internalLocation}</p>
-        </div>
-        {data.entityCode && (
-          <div className="space-y-1.5">
-            <p className="text-xs text-muted-foreground">Código entidad</p>
-            <p className="flex h-9 items-center text-sm font-medium">{data.entityCode}</p>
-          </div>
-        )}
-        {data.representativeName && (
-          <div className="space-y-1.5">
-            <p className="text-xs text-muted-foreground">Representante</p>
-            <p className="flex h-9 items-center text-sm">
-              <Link
-                to={`/people/${data.representativeId}`}
-                className="font-medium hover:underline"
-              >
-                {data.representativeName}
-              </Link>
-            </p>
-          </div>
-        )}
-        <div className="space-y-1.5">
-          <p className="text-xs text-muted-foreground">Incluir en reporte</p>
-          <div className="flex h-9 items-center">
-            <Badge variant={data.reportFlag ? "default" : "secondary"}>
-              {data.reportFlag ? "Sí" : "No"}
-            </Badge>
-          </div>
-        </div>
-      </div>
+      <PersonDetailFields data={data} />
       <ConfirmDialog
         open={confirmOpen}
         onOpenChange={setConfirmOpen}

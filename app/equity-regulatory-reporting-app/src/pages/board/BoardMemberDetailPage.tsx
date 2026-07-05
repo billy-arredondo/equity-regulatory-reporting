@@ -7,12 +7,15 @@ import { PageLoading } from "@/components/shared/LoadingSpinner";
 import { PermissionGuard } from "@/components/shared/PermissionGuard";
 import { Permission } from "@/lib/permissions";
 import { useBoardMemberDetailQuery, useDeleteBoardMemberMutation } from "@/hooks/useBoardMembers";
-import { personBaseRoute } from "@/lib/person-routes";
 
-export function BoardMemberDetailPage() {
-  const { id } = useParams<{ id: string }>();
+interface Props {
+  basePath: string;
+}
+
+export function BoardMemberDetailPage({ basePath }: Props) {
+  const { boardMemberId } = useParams<{ boardMemberId: string }>();
   const navigate = useNavigate();
-  const { data, isLoading } = useBoardMemberDetailQuery(id ?? "");
+  const { data, isLoading } = useBoardMemberDetailQuery(boardMemberId ?? "");
   const { mutate: remove, isPending } = useDeleteBoardMemberMutation();
   const [confirmOpen, setConfirmOpen] = useState(false);
 
@@ -22,7 +25,7 @@ export function BoardMemberDetailPage() {
   return (
     <div>
       <Link
-        to="/board"
+        to={basePath}
         className="mb-5 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
         ← Volver a junta directiva
@@ -32,7 +35,11 @@ export function BoardMemberDetailPage() {
         actions={
           <PermissionGuard perm={Permission.BoardWrite}>
             <div className="flex gap-2">
-              <Button variant="outline" size="sm" render={<Link to={`/board/${id}/edit`} />}>
+              <Button
+                variant="outline"
+                size="sm"
+                render={<Link to={`${basePath}/${boardMemberId}/edit`} />}
+              >
                 Editar
               </Button>
               <PermissionGuard perm={Permission.BoardDelete}>
@@ -50,14 +57,6 @@ export function BoardMemberDetailPage() {
         }
       />
       <div className="mt-4 max-w-lg grid grid-cols-2 gap-3">
-        <div className="space-y-1.5">
-          <p className="text-xs text-muted-foreground">Empresa</p>
-          <p className="flex h-9 items-center text-sm font-medium">
-            <Link to={`${personBaseRoute(data.companyPersonType)}/${data.companyId}`} className="hover:underline">
-              {data.companyName}
-            </Link>
-          </p>
-        </div>
         <div className="space-y-1.5">
           <p className="text-xs text-muted-foreground">Miembro</p>
           <p className="flex h-9 items-center text-sm font-medium">
@@ -79,10 +78,10 @@ export function BoardMemberDetailPage() {
         open={confirmOpen}
         onOpenChange={setConfirmOpen}
         title="¿Eliminar miembro?"
-        description={`Se eliminará a "${data.memberName}" de la junta de "${data.companyName}". Esta acción no se puede deshacer.`}
+        description={`Se eliminará a "${data.memberName}" de la junta directiva. Esta acción no se puede deshacer.`}
         confirmLabel="Eliminar"
         onConfirm={() => {
-          remove(id!, { onSuccess: () => void navigate("/board") });
+          remove(boardMemberId!, { onSuccess: () => void navigate(basePath) });
           setConfirmOpen(false);
         }}
       />

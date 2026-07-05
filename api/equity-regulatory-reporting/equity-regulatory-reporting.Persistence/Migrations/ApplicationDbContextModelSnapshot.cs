@@ -320,6 +320,63 @@ namespace equity_regulatory_reporting.Persistence.Migrations
                     b.ToTable("document_type_person_types", (string)null);
                 });
 
+            modelBuilder.Entity("equity_regulatory_reporting.Domain.Entities.Location", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(6)
+                        .HasColumnType("character varying(6)")
+                        .HasColumnName("code");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("created_at");
+
+                    b.Property<Guid?>("CreatedBy")
+                        .HasColumnType("uuid")
+                        .HasColumnName("created_by");
+
+                    b.Property<string>("Department")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)")
+                        .HasColumnName("department");
+
+                    b.Property<string>("District")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)")
+                        .HasColumnName("district");
+
+                    b.Property<string>("Province")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("character varying(200)")
+                        .HasColumnName("province");
+
+                    b.Property<DateTimeOffset?>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("updated_at");
+
+                    b.Property<Guid?>("UpdatedBy")
+                        .HasColumnType("uuid")
+                        .HasColumnName("updated_by");
+
+                    b.HasKey("Id")
+                        .HasName("pk_locations");
+
+                    b.HasIndex("Code")
+                        .IsUnique()
+                        .HasDatabaseName("ix_locations_code");
+
+                    b.ToTable("locations", (string)null);
+                });
+
             modelBuilder.Entity("equity_regulatory_reporting.Domain.Entities.Participation", b =>
                 {
                     b.Property<Guid>("Id")
@@ -388,17 +445,14 @@ namespace equity_regulatory_reporting.Persistence.Migrations
                         .HasColumnName("id");
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("character varying(500)")
                         .HasColumnName("address");
 
                     b.Property<string>("Ciiu")
-                        .IsRequired()
                         .HasMaxLength(10)
-                        .HasColumnType("character(10)")
-                        .HasColumnName("ciiu")
-                        .IsFixedLength();
+                        .HasColumnType("character varying(10)")
+                        .HasColumnName("ciiu");
 
                     b.Property<Guid>("CountryId")
                         .HasColumnType("uuid")
@@ -413,7 +467,6 @@ namespace equity_regulatory_reporting.Persistence.Migrations
                         .HasColumnName("created_by");
 
                     b.Property<string>("DocumentNumber")
-                        .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("character varying(50)")
                         .HasColumnName("document_number");
@@ -427,11 +480,13 @@ namespace equity_regulatory_reporting.Persistence.Migrations
                         .HasColumnType("character varying(50)")
                         .HasColumnName("entity_code");
 
-                    b.Property<string>("InternalLocation")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("character varying(500)")
-                        .HasColumnName("internal_location");
+                    b.Property<int?>("LegacyId")
+                        .HasColumnType("integer")
+                        .HasColumnName("legacy_id");
+
+                    b.Property<Guid>("LocationId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("location_id");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -446,6 +501,11 @@ namespace equity_regulatory_reporting.Persistence.Migrations
                     b.Property<bool>("ReportFlag")
                         .HasColumnType("boolean")
                         .HasColumnName("report_flag");
+
+                    b.Property<string>("RepresentativeDescription")
+                        .HasMaxLength(300)
+                        .HasColumnType("character varying(300)")
+                        .HasColumnName("representative_description");
 
                     b.Property<Guid?>("RepresentativeId")
                         .HasColumnType("uuid")
@@ -467,6 +527,14 @@ namespace equity_regulatory_reporting.Persistence.Migrations
 
                     b.HasIndex("DocumentTypeId")
                         .HasDatabaseName("ix_persons_document_type_id");
+
+                    b.HasIndex("LegacyId")
+                        .IsUnique()
+                        .HasDatabaseName("ix_persons_legacy_id")
+                        .HasFilter("legacy_id IS NOT NULL");
+
+                    b.HasIndex("LocationId")
+                        .HasDatabaseName("ix_persons_location_id");
 
                     b.HasIndex("RepresentativeId")
                         .HasDatabaseName("ix_persons_representative_id");
@@ -838,6 +906,13 @@ namespace equity_regulatory_reporting.Persistence.Migrations
                         .IsRequired()
                         .HasConstraintName("fk_persons_document_types_document_type_id");
 
+                    b.HasOne("equity_regulatory_reporting.Domain.Entities.Location", "Location")
+                        .WithMany("Persons")
+                        .HasForeignKey("LocationId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired()
+                        .HasConstraintName("fk_persons_locations_location_id");
+
                     b.HasOne("equity_regulatory_reporting.Domain.Entities.Person", "Representative")
                         .WithMany()
                         .HasForeignKey("RepresentativeId")
@@ -847,6 +922,8 @@ namespace equity_regulatory_reporting.Persistence.Migrations
                     b.Navigation("Country");
 
                     b.Navigation("DocumentType");
+
+                    b.Navigation("Location");
 
                     b.Navigation("Representative");
                 });
@@ -872,6 +949,11 @@ namespace equity_regulatory_reporting.Persistence.Migrations
                 {
                     b.Navigation("AllowedPersonTypes");
 
+                    b.Navigation("Persons");
+                });
+
+            modelBuilder.Entity("equity_regulatory_reporting.Domain.Entities.Location", b =>
+                {
                     b.Navigation("Persons");
                 });
 

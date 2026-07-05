@@ -12,6 +12,7 @@ public class ApplicationDbContext(
     : IdentityDbContext<ApplicationUser, ApplicationRole, Guid>(options)
 {
     public DbSet<Country> Countries => Set<Country>();
+    public DbSet<Location> Locations => Set<Location>();
     public DbSet<DocumentType> DocumentTypes => Set<DocumentType>();
     public DbSet<DocumentTypePersonType> DocumentTypePersonTypes => Set<DocumentTypePersonType>();
     public DbSet<Person> Persons => Set<Person>();

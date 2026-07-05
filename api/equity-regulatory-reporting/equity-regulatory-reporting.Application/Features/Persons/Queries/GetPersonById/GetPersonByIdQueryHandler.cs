@@ -17,6 +17,7 @@ public class GetPersonByIdQueryHandler(IRepository<Person> repository, IMapper m
             .Include(p => p.DocumentType)
             .Include(p => p.Country)
             .Include(p => p.Representative)
+            .Include(p => p.Location)
             .FirstOrDefaultAsync(p => p.Id == request.Id, cancellationToken)
             ?? throw new NotFoundException(nameof(Person), request.Id);
 

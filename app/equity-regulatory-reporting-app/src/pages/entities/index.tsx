@@ -1,15 +1,15 @@
 import { Route, Routes } from "react-router-dom";
 import { LegalEntityListPage } from "./LegalEntityListPage";
 import { LegalEntityFormPage } from "./LegalEntityFormPage";
-import { PersonDetailPage } from "@/pages/persons/PersonDetailPage";
+import { LegalPersonDetailLayout } from "@/pages/persons/LegalPersonDetailLayout";
 
 export function EntitiesPage() {
   return (
     <Routes>
       <Route index element={<LegalEntityListPage />} />
       <Route path="new" element={<LegalEntityFormPage />} />
-      <Route path=":id" element={<PersonDetailPage baseRoute="/entities" />} />
       <Route path=":id/edit" element={<LegalEntityFormPage />} />
+      <Route path=":id/*" element={<LegalPersonDetailLayout baseRoute="/entities" />} />
     </Routes>
   );
 }

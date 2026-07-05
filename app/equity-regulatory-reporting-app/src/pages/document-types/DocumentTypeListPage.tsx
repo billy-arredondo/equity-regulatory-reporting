@@ -1,8 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { DataTable, type Column } from "@/components/shared/DataTable";
 import { PageHeader } from "@/components/shared/PageHeader";
@@ -10,39 +9,26 @@ import { DocumentTypeSummaryPanel } from "@/components/shared/DocumentTypeSummar
 import { PermissionGuard } from "@/components/shared/PermissionGuard";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import { useDocumentTypesQuery } from "@/hooks/useDocumentTypes";
+import { useDebouncedSearch } from "@/hooks/useDebouncedSearch";
+import { PAGE_SIZE } from "@/lib/constants";
 import { Permission } from "@/lib/permissions";
-import { personTypeLabel } from "@/lib/person-types";
 import type { DocumentTypeDto } from "@/types/document-type";
 
 const columns: Column<DocumentTypeDto>[] = [
   { key: "name", header: "Nombre", render: (r) => r.name, priority: "high" },
   { key: "abbreviation", header: "Abrev.", render: (r) => r.abbreviation, priority: "medium" },
-  {
-    key: "allowedPersonTypes",
-    header: "Tipos habilitados",
-    render: (r) => (
-      <div className="flex flex-wrap gap-1">
-        {r.allowedPersonTypes.map((t) => (
-          <Badge key={t} variant="secondary" className="text-xs">
-            {personTypeLabel(t)}
-          </Badge>
-        ))}
-      </div>
-    ),
-    priority: "low",
-  },
 ];
-
-const PAGE_SIZE = 25;
 
 export function DocumentTypeListPage() {
   const [page, setPage] = useState(1);
-  const [search, setSearch] = useState("");
+  const { search, setSearch, debouncedSearch } = useDebouncedSearch();
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [panelOpen, setPanelOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width: 1024px)");
 
-  const { data, isLoading } = useDocumentTypesQuery({ page, pageSize: PAGE_SIZE, search: search || undefined });
+  useEffect(() => { setPage(1); }, [debouncedSearch]);
+
+  const { data, isLoading } = useDocumentTypesQuery({ page, pageSize: PAGE_SIZE, search: debouncedSearch || undefined });
 
   function handleRowClick(row: DocumentTypeDto) {
     setSelectedId(row.id);
@@ -66,7 +52,7 @@ export function DocumentTypeListPage() {
         <Input
           placeholder="Buscar tipos de documento..."
           value={search}
-          onChange={(e) => { setSearch(e.target.value); setPage(1); }}
+          onChange={(e) => setSearch(e.target.value)}
           className="max-w-xs"
         />
       </div>

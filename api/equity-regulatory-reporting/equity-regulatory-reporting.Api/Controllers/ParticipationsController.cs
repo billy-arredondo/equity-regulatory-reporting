@@ -1,6 +1,9 @@
+using equity_regulatory_reporting.Api.Common;
+using equity_regulatory_reporting.Api.Import;
 using equity_regulatory_reporting.Application.Common.Models;
 using equity_regulatory_reporting.Application.Features.Participations.Commands.CreateParticipation;
 using equity_regulatory_reporting.Application.Features.Participations.Commands.DeleteParticipation;
+using equity_regulatory_reporting.Application.Features.Participations.Commands.ImportParticipations;
 using equity_regulatory_reporting.Application.Features.Participations.Commands.UpdateParticipation;
 using equity_regulatory_reporting.Application.Features.Participations.Queries.GetParticipationById;
 using equity_regulatory_reporting.Application.Features.Participations.Queries.ListParticipations;
@@ -53,5 +56,14 @@ public class ParticipationsController(ISender sender) : ControllerBase
     {
         await sender.Send(new DeleteParticipationCommand(id), ct);
         return NoContent();
+    }
+
+    [HttpPost("import")]
+    [HasPermission(Permission.ParticipationWrite)]
+    public async Task<IActionResult> Import(IFormFile file, [FromForm] ImportMode mode, CancellationToken ct)
+    {
+        var rows = ParticipationsImportParser.Parse(file);
+        var result = await sender.Send(new ImportParticipationsCommand(rows, mode), ct);
+        return this.ToActionResult(result, mode);
     }
 }

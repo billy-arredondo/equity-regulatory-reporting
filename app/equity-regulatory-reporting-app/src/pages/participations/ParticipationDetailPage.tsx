@@ -9,6 +9,10 @@ import { Permission } from "@/lib/permissions";
 import { useParticipationDetailQuery, useDeleteParticipationMutation } from "@/hooks/useParticipations";
 import { personBaseRoute } from "@/lib/person-routes";
 
+interface Props {
+  basePath: string;
+}
+
 function formatDate(d: string) {
   return new Date(d + "T00:00:00").toLocaleDateString("es-CO", {
     year: "numeric",
@@ -17,10 +21,10 @@ function formatDate(d: string) {
   });
 }
 
-export function ParticipationDetailPage() {
-  const { id } = useParams<{ id: string }>();
+export function ParticipationDetailPage({ basePath }: Props) {
+  const { participationId } = useParams<{ participationId: string }>();
   const navigate = useNavigate();
-  const { data, isLoading } = useParticipationDetailQuery(id ?? "");
+  const { data, isLoading } = useParticipationDetailQuery(participationId ?? "");
   const { mutate: remove, isPending } = useDeleteParticipationMutation();
   const [confirmOpen, setConfirmOpen] = useState(false);
 
@@ -30,7 +34,7 @@ export function ParticipationDetailPage() {
   return (
     <div>
       <Link
-        to="/participations"
+        to={basePath}
         className="mb-5 inline-flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
       >
         ← Volver a participaciones
@@ -40,7 +44,11 @@ export function ParticipationDetailPage() {
         actions={
           <PermissionGuard perm={Permission.ParticipationWrite}>
             <div className="flex gap-2">
-              <Button variant="outline" size="sm" render={<Link to={`/participations/${id}/edit`} />}>
+              <Button
+                variant="outline"
+                size="sm"
+                render={<Link to={`${basePath}/${participationId}/edit`} />}
+              >
                 Editar
               </Button>
               <PermissionGuard perm={Permission.ParticipationDelete}>
@@ -59,17 +67,12 @@ export function ParticipationDetailPage() {
       />
       <div className="mt-4 max-w-lg grid grid-cols-2 gap-3">
         <div className="space-y-1.5">
-          <p className="text-xs text-muted-foreground">Empresa</p>
-          <p className="flex h-9 items-center text-sm font-medium">
-            <Link to={`${personBaseRoute(data.companyPersonType)}/${data.companyId}`} className="hover:underline">
-              {data.companyName}
-            </Link>
-          </p>
-        </div>
-        <div className="space-y-1.5">
           <p className="text-xs text-muted-foreground">Accionista</p>
           <p className="flex h-9 items-center text-sm font-medium">
-            <Link to={`${personBaseRoute(data.shareholderPersonType)}/${data.shareholderId}`} className="hover:underline">
+            <Link
+              to={`${personBaseRoute(data.shareholderPersonType)}/${data.shareholderId}`}
+              className="hover:underline"
+            >
               {data.shareholderName}
             </Link>
           </p>
@@ -102,7 +105,7 @@ export function ParticipationDetailPage() {
         description={`Se eliminará la participación de "${data.shareholderName}" en "${data.companyName}". Esta acción no se puede deshacer.`}
         confirmLabel="Eliminar"
         onConfirm={() => {
-          remove(id!, { onSuccess: () => void navigate("/participations") });
+          remove(participationId!, { onSuccess: () => void navigate(basePath) });
           setConfirmOpen(false);
         }}
       />

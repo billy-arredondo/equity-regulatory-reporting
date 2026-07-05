@@ -15,9 +15,18 @@ public class ListDocumentTypesQueryHandler(IRepository<DocumentType> repository,
     {
         var query = repository.Query().Include(d => d.AllowedPersonTypes);
 
-        var filtered = string.IsNullOrWhiteSpace(request.Page.Search)
-            ? query
-            : query.Where(d => d.Name.Contains(request.Page.Search) || d.Abbreviation.Contains(request.Page.Search));
+        IQueryable<DocumentType> filtered;
+        if (string.IsNullOrWhiteSpace(request.Page.Search))
+        {
+            filtered = query;
+        }
+        else
+        {
+            var term = request.Page.Search.ToLower();
+            filtered = query.Where(d =>
+                d.Name.ToLower().Contains(term) ||
+                d.Abbreviation.ToLower().Contains(term));
+        }
 
         var total = await filtered.CountAsync(cancellationToken);
 

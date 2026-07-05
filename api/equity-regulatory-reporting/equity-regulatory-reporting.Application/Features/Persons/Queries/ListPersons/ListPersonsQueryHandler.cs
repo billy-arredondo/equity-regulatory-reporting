@@ -23,7 +23,12 @@ public class ListPersonsQueryHandler(IRepository<Person> repository, IMapper map
             filtered = filtered.Where(p => p.PersonType == request.PersonType.Value);
 
         if (!string.IsNullOrWhiteSpace(request.Page.Search))
-            filtered = filtered.Where(p => p.Name.Contains(request.Page.Search) || p.DocumentNumber.Contains(request.Page.Search));
+        {
+            var term = request.Page.Search.ToLower();
+            filtered = filtered.Where(p =>
+                p.Name.ToLower().Contains(term) ||
+                (p.DocumentNumber != null && p.DocumentNumber.ToLower().Contains(term)));
+        }
 
         var total = await filtered.CountAsync(cancellationToken);
 
