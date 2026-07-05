@@ -1,3 +1,4 @@
+using equity_regulatory_reporting.Domain.Common;
 using equity_regulatory_reporting.Domain.Enums;
 using MediatR;
 
@@ -7,7 +8,7 @@ public class ListPersonTypesQueryHandler : IRequestHandler<ListPersonTypesQuery,
 {
     public Task<IReadOnlyList<PersonTypeDto>> Handle(ListPersonTypesQuery request, CancellationToken cancellationToken)
     {
-        IReadOnlyList<PersonTypeDto> result = [.. Enum.GetValues<PersonType>().Select(pt => new PersonTypeDto((int)pt, pt.ToString()))];
+        IReadOnlyList<PersonTypeDto> result = [.. Enum.GetValues<PersonType>().Select(pt => new PersonTypeDto((int)pt, pt.GetDisplayName()))];
 
         return Task.FromResult(result);
     }
